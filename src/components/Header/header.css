@@ -1,0 +1,40 @@
+.header {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+    width: 474px;
+}
+
+.header .our-services {
+    color: transparent;
+    font-family: "Poppins-Bold", Helvetica;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    width: fit-content;
+}
+
+.header .text-wrapper {
+    color: #a95b1f;
+}
+
+.header .span {
+    color: #000000;
+}
+
+.header .text-wrapper-2 {
+    color: #ec6809;
+}
+
+.header .line {
+    height: 3px;
+    min-width: 250px;
+    position: relative;
+}

@@ -1,0 +1,36 @@
+/* application.css */
+
+/* Add styling for the dropdown input */
+.size-large {
+    margin-bottom: 30px;
+  }
+  
+  .label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .input-group {
+    position: relative;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    
+  }
+  @media (max-width: 600px) {
+    .input {
+     font-size: 13px;
+     width: 50%;
+      
+  
+        
+    }
+  }
+  
+  

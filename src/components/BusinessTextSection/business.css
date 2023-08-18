@@ -1,0 +1,73 @@
+.business-text {
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 82.82px;
+    height: 541px;
+    position: relative;
+    /* width: 936px; */
+    
+}
+
+.business-text .p-wrapper {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    gap: 7.96px;
+    justify-content: center;
+    padding: 7.96px;
+    position: relative;
+    
+}
+
+.business-text .headline {
+    color: #a95b1f;
+    flex: 1;
+    font-family: "Poppins-SemiBold", Helvetica;
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -0.8px;
+    position: relative;
+    text-align: center;
+}
+
+.business-text .paragraph {
+    color: #5c6670;
+    flex: 1;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    line-height: normal;
+    margin-top: -0.8px;
+    position: relative;
+    text-align: center;
+    white-space: normal;
+    
+  /* Set a fixed width for the paragraph */
+  max-width: 600px; /* Adjust the width as needed */
+  margin-left: auto; /* This will center the text by pushing it to the right */
+  margin-right: auto; /* This will center the text by pushing it to the left */
+    
+}
+@media (max-width: 600px) {
+    .business-text .paragraph {
+        font-size: 16px;
+        max-width: 200px;
+
+        
+    }
+}
+
+@media (max-width: 600px) {
+    .business-text .headline {
+        font-size: 24px;
+        max-width: 250px;
+        
+
+        
+    }
+}

@@ -1,0 +1,7 @@
+.about-banner {
+    background-image: url(../../assets/images/AboutBanner.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 561px;
+    width: auto;
+}

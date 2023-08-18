@@ -1,0 +1,200 @@
+.contact-form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30.63px;
+    justify-content: center;
+    max-width: 600px; /* Instead of fixed width, use max-width for responsiveness */
+    width: 100%;
+    
+}
+
+/* Additional styles for responsiveness */
+@media (max-width: 600px) {
+    .contact-form {
+        gap: 20px;   /* Reduce the gap between elements on smaller screens */
+        max-width: 200px; 
+    }
+}
+
+
+
+.contact-form .frame {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    position: relative;
+}
+
+
+
+
+.contact-form .get-in-touch {
+    align-self: stretch;
+    color: transparent;
+    font-family: "Montserrat-Bold", Helvetica;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 0.36px;
+    line-height: 18.9px;
+    margin-top: -1.28px;
+    position: relative;
+    white-space: nowrap;
+}
+@media (max-width: 600px) {
+    .contact-form .get-in-touch{
+        font-size: 32px; 
+    }
+}
+.contact-form .text-wrapper {
+    color: #a95b1f;
+}
+
+.contact-form .span {
+    color: #000000;
+}
+
+.contact-form .text-wrapper-2 {
+    color: #ec6809;
+}
+
+.contact-form .headlinetext {
+    align-self: stretch;
+    color: #5c6670;
+    font-family: "Inter-Medium", Helvetica;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    line-height: 30.6px;
+    position: relative;
+    white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+    .contact-form .headlinetext{
+        font-size: 15px;
+        white-space: normal;
+    }
+}
+
+.contact-form .size-large {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    gap: 15.32px;
+    justify-content: center;
+    position: relative;
+}
+
+.contact-form .label {
+    align-self: stretch;
+    color: #304050;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    line-height: 30px;
+    margin-top: -1.28px;
+    position: relative;
+}
+
+.contact-form .input-group {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.contact-form .input {
+    align-items: center;
+    align-self: stretch;
+    border: 1.28px solid;
+    border-color: #aeb3b7;
+    border-radius: 5.11px;
+    display: flex;
+    flex-direction: column;
+    gap: 12.76px;
+    justify-content: center;
+    margin:-1.28px;
+    /* margin-bottom: -1.28px;
+    margin-left: -1.28px;
+    margin-right: -1.28px;
+    margin-top: -1.28px; */
+    padding: 10.21px 20.42px;
+    position: relative;
+}
+
+.contact-form .placeholder {
+    align-self: stretch;
+    color: #808080;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 30px;
+    position: relative;
+}
+
+.contact-form .text-area-field {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    gap: 19.62px;
+    /* height: 271.35px; */
+    justify-content: center;
+    position: relative;
+}
+
+.contact-form .placeholder-wrapper {
+    align-items: flex-start;
+    align-self: stretch;
+    border: 1.63px solid;
+    border-color: #aeb3b7;
+    border-radius: 6.54px;
+    display: flex;
+    flex-direction: column;
+    gap: 16.35px;
+    height: 205.97px;
+    margin-bottom: -1.63px;
+    margin-left: -1.63px;
+    margin-right: -1.63px;
+    margin-top: -1.63px;
+    padding: 13.08px 26.15px;
+    position: relative;
+}
+
+.contact-form .div {
+    align-self: stretch;
+    color: #808080;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 32.7px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 49px;
+    position: relative;
+    white-space: nowrap;
+}
+
+.contact-form .state-default-with-icon-true {
+    /* background-image: url(./image.png) !important; */
+    margin-bottom: -1.5px !important;
+    margin-top: -1.5px !important;
+    min-width: 18px !important;
+    position: relative !important;
+    width: unset !important;
+}
+
+.contact-form .state-default-with-instance {
+    /* background-image: url(./submit-2.png) !important; */
+    margin-bottom: -1.5px !important;
+    margin-top: -1.5px !important;
+    min-width: 18px !important;
+    position: relative !important;
+    width: unset !important;
+}

@@ -1,0 +1,48 @@
+.rate-message {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 405px;
+    justify-content: center;
+    padding: 50px 10px;
+    position: relative;
+    width: 1128px;
+}
+
+.rate-message .rate-your-experience {
+    color: #ec6809;
+    font-family: "Inter-ExtraBold", Helvetica;
+    font-size: 46px;
+    font-weight: 800;
+    letter-spacing: 0;
+    line-height: 96px;
+    margin-top: -0.97px;
+    position: relative;
+    white-space: nowrap;
+    align-items: center;
+    justify-content: center;
+    /* width: fit-content; */
+}
+
+.rate-message .are-you-satisfied {
+    color: #a95b1f;
+    font-family: "Inter-SemiBold", Helvetica;
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 72px;
+    position: relative;
+    white-space: nowrap;
+    /* width: fit-content; */
+}
+
+.rate-message .size-default-instance {
+    gap: 32.32px !important;
+}
+
+.rate-message .design-component-instance-node {
+    height: 96.95px !important;
+    min-width: 96.95px !important;
+    position: relative !important;
+}

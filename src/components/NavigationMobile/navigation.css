@@ -1,0 +1,35 @@
+.navigation-mobile {
+    align-items: center;
+    display: flex;
+    gap: 800px;
+    justify-content: center;
+    padding: 17.56px 32px;
+    position: relative;
+    width: 972px;
+}
+
+.navigation-mobile .logo {
+    height: 52px;
+    margin-left: -21.5px;
+    min-width: 61px;
+    position: relative;
+}
+
+.navigation-mobile .text-wrapper {
+    color: #f78431;
+    font-family: "Poppins-Bold", Helvetica;
+    font-size: 35.1px;
+    font-weight: 700;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: -1px;
+}
+
+.navigation-mobile .menu {
+    height: 90px;
+    margin-right: -21.5px;
+    min-width: 90px;
+    position: relative;
+}

@@ -1,0 +1,23 @@
+.testimonial-images {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 576px;
+}
+
+.testimonial-images .frame {
+    flex: 1;
+    flex-grow: 1;
+    height: 94px;
+    position: relative;
+}
+
+.testimonial-images .image {
+    height: 103px;
+    left: -5px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 103px;
+}

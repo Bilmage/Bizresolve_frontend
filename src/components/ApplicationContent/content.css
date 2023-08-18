@@ -1,0 +1,75 @@
+.application-content {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 79.14px;
+    position: relative;
+    margin: auto;
+}
+
+.application-content .accreditation {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    margin-left: 10px;
+}
+
+.application-content .div-wrapper {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 4.14px;
+    padding: 4.14px;
+    position: relative;
+    width: 100%;
+}
+
+.application-content .okay-so-how-should-i {
+    color: #a95b1f;
+    flex: 1;
+    font-family: "Poppins-SemiBold", Helvetica;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    line-height: normal;
+    margin-top: 20px;
+    position: relative;
+}
+@media (max-width: 767px) {
+    .application-content .okay-so-how-should-i {    
+      font-size: 23px;
+      
+  }
+  }
+.application-content .the-first {
+    color: transparent;
+    flex: 1;
+    font-family: "Inter-Medium", Helvetica;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    line-height: normal;
+    margin-top: -0.41px;
+    position: relative;
+}
+@media (max-width: 767px) {
+    .application-content .the-first {    
+      font-size: 15px;
+      
+  }
+}  
+.application-content .text-wrapper {
+    color: #5c6670;
+}
+
+.application-content .span {
+    color: #f78431;
+    text-decoration: underline;
+}
