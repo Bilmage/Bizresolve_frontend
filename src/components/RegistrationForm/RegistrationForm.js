@@ -1,5 +1,11 @@
-import React, { useState } from "react";
-import { FaUser, FaEnvelope, FaLock, FaKey } from "react-icons/fa";
+import React from "react";
+import {
+  FaUser,
+  FaEnvelope,
+  FaLock,
+  FaKey,
+  
+} from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Button from "../../components/Button/Button";
 import GoogleButton from "react-google-button";
@@ -14,19 +20,11 @@ import {
   TextField,
   Checkbox,
   FormControlLabel,
-  Radio,
-  RadioGroup,
-  FormControl,
-  FormLabel,
+  Select,
+  MenuItem,
 } from "@mui/material";
 
 export const RegistrationForm = () => {
-  const [selectedRole, setSelectedRole] = useState("IndividualUser");
-
-  const handleRoleChange = (event) => {
-    setSelectedRole(event.target.value);
-  };
-
   return (
     <Container maxWidth="lg">
       <Card sx={{ borderRadius: "25px" }} className="text-black m-5">
@@ -44,110 +42,53 @@ export const RegistrationForm = () => {
               >
                 Welcome to Bizresolve
               </h1>
-              <FormControl component="fieldset" className="mb-4">
-                <FormLabel
-                  component="legend"
-                  className="fw-bold"
-                  style={{ color: "#5c6670" }}
-                >
-                  Choose an option you want to sign up with. Are you an
-                  IndividualUser or Business owner ? click on the link to learn
-                  more{" "}
-                  <Link to="/">
-                    <strong
-                      style={{ textDecoration: "underline", color: "#ec6809" }}
-                    >
-                      Bizresolve user roles
-                    </strong>
-                  </Link>
-                </FormLabel>
-                <RadioGroup
-                  aria-label="role"
-                  name="role"
-                  value={selectedRole}
-                  onChange={handleRoleChange}
-                  className="d-flex flex-row align-items-center"
-                  row // Add this attribute
-                >
-                  <FormControlLabel
-                    value="IndividualUser"
-                    control={<Radio />}
-                    label="Individual User"
-                  />
-                  <FormControlLabel
-                    value="BusinessOwner"
-                    control={<Radio />}
-                    label="Business Owner"
-                  />
-                </RadioGroup>
-              </FormControl>
-
+              <div className="mb-4">
+                <label htmlFor="role" className="fw-bold" style={{ color: "#5c6670" }}>
+                  Choose an option you want to sign up with.
+                </label>
+                <Select id="role" fullWidth>
+                  <MenuItem value="IndividualUser">Individual User</MenuItem>
+                  <MenuItem value="BusinessOwner">Business Owner</MenuItem>
+                </Select>
+              </div>
+              
               <div className="d-flex flex-row align-items-center mb-4">
                 <FaUser />
                 &nbsp; &nbsp;
-                <TextField
-                  label={
-                    selectedRole === "IndividualUser"
-                      ? "First Name"
-                      : "Business Name"
-                  }
-                  id="firstName"
-                  fullWidth
-                />
+                <TextField label="First Name" id="firstName" fullWidth />
               </div>
-
-              {selectedRole === "IndividualUser" && (
-                <div className="d-flex flex-row align-items-center mb-4">
-                  <FaUser />
-                  &nbsp; &nbsp;
-                  <TextField label="Last Name" id="lastName" fullWidth />
-                </div>
-              )}
-
+              
+              <div className="d-flex flex-row align-items-center mb-4">
+                <FaUser />
+                &nbsp; &nbsp;
+                <TextField label="Last Name" id="lastName" fullWidth />
+              </div>
+              
               <div className="d-flex flex-row align-items-center mb-4">
                 <FaEnvelope />
                 &nbsp; &nbsp;
-                <TextField
-                  label={
-                    selectedRole === "IndividualUser"
-                      ? "Email"
-                      : "Business Email"
-                  }
-                  id="form2"
-                  type="email"
-                  fullWidth
-                />
+                <TextField label="Email" id="form2" type="email" fullWidth />
               </div>
-
+              
               <div className="d-flex flex-row align-items-center mb-4">
                 <FaLock />
                 &nbsp; &nbsp;
-                <TextField
-                  label="Password"
-                  id="form3"
-                  type="password"
-                  fullWidth
-                />
+                <TextField label="Password" id="form3" type="password" fullWidth />
               </div>
-
+              
               <div className="d-flex flex-row align-items-center mb-4">
                 <FaKey />
                 &nbsp; &nbsp;
-                <TextField
-                  label="Repeat your password"
-                  id="form4"
-                  type="password"
-                  fullWidth
-                />
+                <TextField label="Repeat your password" id="form4" type="password" fullWidth />
               </div>
-
+              
               <div className="mb-4">
                 <FormControlLabel
                   control={<Checkbox name="flexCheck" id="flexCheckDefault" />}
                   label="I do accept the Terms and Conditions of Bizresolve."
                 />
               </div>
-
+              
               <Button text="Sign Up" />
               <br />
               <GoogleButton
@@ -161,7 +102,7 @@ export const RegistrationForm = () => {
               <br />
               <hr className="mx-n3" />
               <p style={{ color: "#ec6809" }}>
-                Already Signed up ? click button below to sign in
+                Already Signed up? Click the button below to sign in
               </p>
               <div>
                 <Link to="/SignIn">
@@ -170,7 +111,7 @@ export const RegistrationForm = () => {
               </div>
               <br />
             </Grid>
-
+            
             <Grid
               item
               md={6}

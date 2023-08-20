@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaUser, FaEnvelope, FaLock } from "react-icons/fa";
 import Button from "../Button/Button";
 import GoogleButton from "react-google-button";
@@ -11,20 +11,9 @@ import {
   CardMedia,
   Grid,
   TextField,
-  FormControlLabel,
-  Radio,
-  RadioGroup,
-  FormControl,
-  FormLabel,
 } from "@mui/material";
 
 export const SignIn = () => {
-  const [selectedRole, setSelectedRole] = useState("IndividualUser");
-
-  const handleRoleChange = (event) => {
-    setSelectedRole(event.target.value);
-  };
-
   return (
     <Container maxWidth="lg">
       <Card sx={{ borderRadius: "25px" }} className="text-black m-5">
@@ -42,74 +31,27 @@ export const SignIn = () => {
               >
                 Sign In
               </p>
-              {/* <p className="fw-bold">
-                Welcome to the best Accreditation company in Africa.
-              </p> */}
-              <FormControl component="fieldset" className="mb-4">
-                <FormLabel
-                  component="legend"
-                  className="fw-bold"
-                  style={{ color: "#5c6670" }}
-                >
-                  Choose an option you want to sign in with. Are you a User or
-                  Business owner ?
-                </FormLabel>
-                <RadioGroup
-                  aria-label="role"
-                  name="role"
-                  value={selectedRole}
-                  onChange={handleRoleChange}
-                  className="d-flex flex-row align-items-center"
-                >
-                  <FormControlLabel
-                    value="IndividualUser"
-                    control={<Radio />}
-                    label="Individual User"
-                  />
-                  <FormControlLabel
-                    value="BusinessOwner"
-                    control={<Radio />}
-                    label="Business Owner"
-                  />
-                </RadioGroup>
-              </FormControl>
-
               <div className="d-flex flex-row align-items-center mb-4">
                 <FaUser />
                 &nbsp; &nbsp;
-                <TextField
-                  label={
-                    selectedRole === "IndividualUser" ? "Name" : "Business Name"
-                  }
-                  id="form1"
-                  fullWidth
-                />
+                <TextField label="First Name" id="form1" fullWidth />
+              </div>
+              <div className="d-flex flex-row align-items-center mb-4">
+                <FaUser />
+                &nbsp; &nbsp;
+                <TextField label="Last Name" id="form2" fullWidth />
               </div>
 
               <div className="d-flex flex-row align-items-center mb-4">
                 <FaEnvelope />
                 &nbsp; &nbsp;
-                <TextField
-                  label={
-                    selectedRole === "IndividualUser"
-                      ? "Email"
-                      : "Business Email"
-                  }
-                  id="form2"
-                  type="email"
-                  fullWidth
-                />
+                <TextField label="Email" id="form3" type="email" fullWidth />
               </div>
 
               <div className="d-flex flex-row align-items-center mb-4">
                 <FaLock />
                 &nbsp; &nbsp;
-                <TextField
-                  label="Password"
-                  id="form3"
-                  type="password"
-                  fullWidth
-                />
+                <TextField label="Password" id="form4" type="password" fullWidth />
               </div>
 
               <Button text="Sign In" />
