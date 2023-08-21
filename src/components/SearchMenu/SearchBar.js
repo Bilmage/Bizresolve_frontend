@@ -2,7 +2,7 @@ import React from "react";
 import "./search.css";
 
 
-export const SearchMenu = ({ className }) => {
+export const SearchBar = ({ className }) => {
   return (
     <div className="container">
       <div className={`search-menu ${className}`}>
@@ -21,4 +21,4 @@ export const SearchMenu = ({ className }) => {
     </div>
   );
 };
-export default SearchMenu;
+export default SearchBar;

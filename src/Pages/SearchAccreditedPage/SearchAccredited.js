@@ -1,13 +1,16 @@
 import React from 'react';
 import AccreditedNavBar from "../../components/AccreditedNavbar/AccreditedNavbar";
-import SearchMenu from "../../components/SearchMenu/SearchMenu";
+import SearchBar from "../../components/SearchMenu/SearchBar";
+import SearchCounty from "../../components/SearchMenu/SearchCounty"
 import { BizFooter } from '../../components/Footer/BizFooter';
+import "../../components/SearchMenu/search.css";
 
 export default function SearchAccreditedPage() {
   return (
     <>
-    <AccreditedNavBar />
-    <SearchMenu />    
+    <AccreditedNavBar />          
+    <SearchBar />
+    <SearchCounty />     
     <BizFooter />
     </>
   )

@@ -34,13 +34,14 @@ export const RegistrationForm = () => {
               item
               md={6}
               lg={6}
+              xs={12}              
               className="order-2 order-lg-1 d-flex flex-column align-items-center"
             >
               <h1
                 className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4"
                 style={{ color: "#ec6809" }}
               >
-                Welcome to Bizresolve
+                Get started
               </h1>
               <div className="mb-4">
                 <label htmlFor="role" className="fw-bold" style={{ color: "#5c6670" }}>
@@ -89,10 +90,10 @@ export const RegistrationForm = () => {
                 />
               </div>
               
-              <Button text="Sign Up" />
+              <Button text="Sign up" />
               <br />
               <GoogleButton
-                style={{ borderRadius: "54px" }}
+                style={{ borderRadius: "54px"}}
                 type="light"
                 label="Sign up with Google"
                 onClick={() => {
@@ -102,13 +103,8 @@ export const RegistrationForm = () => {
               <br />
               <hr className="mx-n3" />
               <p style={{ color: "#ec6809" }}>
-                Already Signed up? Click the button below to sign in
-              </p>
-              <div>
-                <Link to="/SignIn">
-                  <Button text="Sign In" />
-                </Link>
-              </div>
+                Already Signed up? <Link to="/signIn" style={{ textDecoration: "underline", color: "#ec6809" }}>Sign in</Link>
+              </p>              
               <br />
             </Grid>
             
