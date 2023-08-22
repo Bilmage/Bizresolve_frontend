@@ -1,10 +1,11 @@
 import React from 'react';
+import Button from "../Button/Button";
+import { Link } from "react-router-dom";
 import {
   Container,
   FormControl,
   InputLabel,
-  Input,
-  Button,
+  Input,  
   Select,
   MenuItem,
   Grid,
@@ -18,16 +19,16 @@ const SearchBar = ({ className }) => {
           <Grid container spacing={2} alignItems="center">
             <Grid item xs={12} sm={8} md={8} lg={8}>
               <FormControl fullWidth>
-                <InputLabel htmlFor="header-search">Search blog posts</InputLabel>
+                <InputLabel htmlFor="header-search"></InputLabel>
                 <Input
                   type="text"
                   id="header-search"
-                  placeholder="Search blog posts"
+                  placeholder="Search for a business, charity, category "
                   name="s"
                 />
               </FormControl>
             </Grid>
-            <Grid item xs={12} sm={3} md={3} lg={3}>
+            <Grid item xs={12} sm={8} md={3} lg={3}>
               <Select
                 id="county"
                 label="Select County"
@@ -36,13 +37,15 @@ const SearchBar = ({ className }) => {
               >
                 <MenuItem value="Nairobi">Nairobi</MenuItem>
                 <MenuItem value="Mombasa">Mombasa</MenuItem>
-                {/* Add more counties here */}
+                <MenuItem value="Mombasa">Kisumu</MenuItem>
+                <MenuItem value="Mombasa">Nakuru</MenuItem>
+                
               </Select>
             </Grid>
             <Grid item xs={12} sm={1} md={1} lg={1}>
-              <Button variant="contained" color="primary" fullWidth>
-                Search
-              </Button>
+            <Link to="/Registration">
+              <Button text="Search"></Button>
+            </Link>
             </Grid>
           </Grid>
         </div>
