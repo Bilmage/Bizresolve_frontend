@@ -36,6 +36,7 @@ img {
 
     .section-title p {
         font-size: 14px;
+        margin: 20px;
     }
 }
 
@@ -85,6 +86,8 @@ img {
     .newsletter-form {
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+        width: auto;
     }
 }
 

@@ -4,8 +4,9 @@ import { AiOutlineUsergroupAdd, AiOutlineFileAdd } from 'react-icons/ai';
 
 export const ContactSection = ({ className }) => {
   return (
-    <div className="container-fluid">
-    <div className="newsletter">      
+    
+    <div className="newsletter">
+      <div className="container-fluid">      
         <div className="row justify-content-center">
           <div className="col-xl-9 col-lg-9">
             <div className="section-title text-center">
