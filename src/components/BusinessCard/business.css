@@ -5,8 +5,8 @@
     border-radius: 54px;
     display: flex;
     flex-direction: column;
-    gap: 4px;
-    height: 389px;
+    gap: 2px;
+    height: 420px;
     justify-content: center;
     padding: 0px 0px 0px 10px;
     position: relative;
@@ -54,7 +54,7 @@
     color: #000000;
     flex: 1;
     font-family: "Inter-Regular", Helvetica;
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 400;
     letter-spacing: 0;
     line-height: 43px;
@@ -70,7 +70,7 @@
     flex: 0 0 auto;
     gap: 16px;
     position: relative;
-    width: 100%;
+    width: auto;
 }
 
 .business-card .image {
@@ -88,7 +88,7 @@
     gap: 8px;
     justify-content: center;
     position: relative;
-    width: 541px;
+    max-width: 350px;
 }
 
 .business-card .div {
@@ -99,14 +99,14 @@
     gap: 16px;
     padding: 0px 10px;
     position: relative;
-    width: 100%;
+    width: 80%;
 }
 
 .business-card .text-wrapper-2 {
     color: #5C6670;
     flex: 1;
     font-family: "Inter-Bold", Helvetica;
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 700;
     letter-spacing: 0.16px;
     line-height: 24px;
@@ -118,7 +118,7 @@
     color: #5C6670;
     flex: 1;
     font-family: "Inter-Regular", Helvetica;
-    font-size: 16px;
+    font-size: 13px;
     font-style: var(--body-body-large-font-style);
     font-weight: 400;
     letter-spacing: 0.05em;
@@ -140,15 +140,15 @@
 }
 
 .business-card .heart {
-    height: 20px;
+    height: 18px;
     position: relative;
-    width: 20px;
+    width: 18px;
 }
 
 .business-card .text-wrapper-4 {
     color: #F78431;
     font-family: "Inter-Bold", Helvetica;
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 700;
     letter-spacing: 0.16px;
     line-height: 24px;
@@ -166,14 +166,14 @@
     gap: 10px;
     padding: 10px;
     position: relative;
-    width: 100%;
+    width: 80%;
 }
 
 .business-card .p {
     color: #0D1A26;
     flex: 1;
     font-family: "Inter-Bold", Helvetica;
-    font-size: 16px;
+    font-size: 13px;
     font-style: var(--body-body-large-font-style);
     font-weight: 400;
     letter-spacing: 0.05em;
@@ -186,9 +186,9 @@
     color: #5C6670;
     flex: 1;
     font-family: "Inter-SemiBold", Helvetica;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
-    letter-spacing: 0.16px;
+    letter-spacing: 0.05em;
     line-height: 24px;
     margin-top: -1px;
     position: relative;
@@ -211,23 +211,23 @@
     display: flex;
     flex: 1;
     flex-grow: 1;
-    gap: 50px;
+    gap: 35px;
     padding: 10px;
     position: relative;
 }
 
 .business-card .element {
-    height: 50px;
+    height: 10%;
     object-fit: cover;
     position: relative;
-    width: 50px;
+    width: 10%;
 }
 
 .business-card .text-wrapper-6 {
     color: #EC6809;
     flex: 1;
     font-family: "Montserrat-SemiBold", Helvetica;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 600;
     letter-spacing: 0;
     line-height: 43px;
@@ -273,11 +273,11 @@
 }
 
 .business-card .img {
-    height: 18px;
+    height: 15%;
     margin-bottom: -1.5px;
     margin-top: -1.5px;
     position: relative;
-    width: 18px;
+    width: 15%;
 }
 
 .business-card .state-pressed-with {
@@ -296,7 +296,7 @@
 .business-card .text-wrapper-7 {
     color: #313131;
     font-family: "Poppins-Bold", Helvetica;
-    font-size: 18px;
+    font-size: 13px;
     font-weight: 700;
     letter-spacing: 0;
     line-height: 100px;
@@ -307,3 +307,9 @@
     white-space: nowrap;
     width: fit-content;
 }
+
+.business-list-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px; /* This will align the container to the right */
+  }

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Banner } from './Banner'; // Import the Banner component
-import { TextArea } from './TextArea'; // Import the TextArea component
+import { Banner } from './Banner'; 
+import { TextArea } from './TextArea'; 
 
 
 export const BannerTextAreaSection = ({style}) => {

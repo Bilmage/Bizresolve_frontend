@@ -7,6 +7,7 @@
     height: 191px;
     justify-content: center;
     position: relative;
+    margin: auto;
     width: 360px;
 }
 
@@ -31,7 +32,11 @@
     position: relative;
     white-space: nowrap;
 }
-
+@media (max-width: 768px) {
+    .mission-headline .our-mission {
+        font-size: 28px;
+    }
+}
 .mission-headline .text-wrapper {
     color: #a95b1f;
 }
@@ -52,7 +57,8 @@
     justify-content: flex-end;
     padding: 8.13px;
     position: relative;
-    width: 611px;
+    width: 100%;
+    height: auto;
 }
 
 .mission-text .at-bizresolve-our {
@@ -64,4 +70,9 @@
     letter-spacing: 0.05em;
     line-height: 24.9px;
     position: relative;
+}
+@media (max-width: 768px) {
+    .mission-text .at-bizresolve-our {
+        font-size: 15px;
+    }
 }

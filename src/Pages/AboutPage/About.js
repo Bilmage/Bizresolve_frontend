@@ -15,8 +15,11 @@ export default function AboutPage() {
       <Navigation />
       <AboutHeadlineText />
       <AboutBanner />
+      <hr className="mx-n3" />
       <MissionSection />
+      <hr className="mx-n3" />
       <VisionSection />
+      <hr className="mx-n3" />
       <Masthead />
       <Services />
       <ContactSection />

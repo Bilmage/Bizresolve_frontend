@@ -1,3 +1,5 @@
+
+
 .about-headline-text {
     align-items: flex-start;
     display: flex;
@@ -7,7 +9,7 @@
     justify-content: center;
     padding: 0px 2.49px 0px 0px;
     position: relative;
-    width: 620px;
+    /* width: 620px; */
 }
 
 .about-headline-text .headline {
@@ -36,6 +38,11 @@
     line-height: 43.5px;
     position: relative;
 }
+@media (max-width: 768px) {
+    .about-headline-text .we-build-bridges {
+        font-size: 20px;
+    }
+}
 
 .about-headline-text .text-wrapper {
     color: #a95b1f;
@@ -59,7 +66,7 @@
     justify-content: center;
     padding: 7.61px;
     position: relative;
-    width: 456px;
+    /* width: 456px; */
 }
 
 .about-text .paragraph {
@@ -71,4 +78,13 @@
     letter-spacing: 0.05em;
     line-height: normal;
     position: relative;
+    max-width: 100%; 
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+@media (max-width: 768px) {
+    .about-text .paragraph {
+        font-size: 15px;
+    }
 }

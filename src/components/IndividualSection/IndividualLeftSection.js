@@ -5,8 +5,10 @@ import './individual.css';
 
 export const Individualleft = ({ individual }) => {
     return (
+        <div className="container-fluid">
         <div className="individualleft" style={individual}>
             <img className="image" alt="img" src={individualpic} />
+        </div>
         </div>
     );
 };

@@ -6,7 +6,8 @@
     height: 276px;
     padding: 8.47px;
     position: relative;
-    width: 637px;
+    width: 100%;
+    height: auto;
 }
 
 .vision-text .paragraph {
@@ -20,13 +21,18 @@
     margin-top: -0.85px;
     position: relative;
 }
+@media (max-width: 768px) {
+    .vision-text .paragraph {
+        font-size: 15px;
+    }
+}
 /**VisionHeadline**/
 .vision-headline-text {
     align-items: flex-start;
     display: flex;
     flex-direction: column;
     gap: 16.11px;
-    height: 218px;
+    /* height: 218px; */
     justify-content: center;
     position: relative;
     width: 370px;
@@ -54,6 +60,11 @@
     white-space: nowrap;
     
     
+}
+@media (max-width: 768px) {
+    .vision-headline-text .our-vision {
+        font-size: 28px;
+    }
 }
 
 .vision-headline-text .text-wrapper {
