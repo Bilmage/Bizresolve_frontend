@@ -5,32 +5,37 @@
     position: relative;
     display: flex;
     justify-content: space-between;
+    padding: 10px;
 }
-
+@media (max-width: 768px) {
+    .bottom-nav  {
+     flex-direction: column;
+            align-items: center;
+     
+        } 
+    }
 .bottom-nav .CTA {
     align-items: center;
     border-radius: 67.07px;
     display: inline-flex;
     flex: 0 0 auto;
-    gap: 12.42px;
-    height: 73.28px;
+    /* gap: 12.42px; */
+    /* height: 73.28px; */
     padding: 19.87px 39.74px;
     position: relative;
 }
-
-.bottom-nav .icon-back-instance {
-    /* background-image: url(./image.png) !important; */
-    height: 22.36px !important;
-    position: relative !important;
-    width: 22.36px !important;
-}
-
+@media (max-width: 768px) {
+    bottom-nav .CTA  {
+     width: 100%; 
+     
+        } 
+    }
 .bottom-nav .back-to-home {
     color: #f78431;
     font-family: "Poppins-Bold", Helvetica;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
-    letter-spacing: 0;
+    letter-spacing: 0.05em;
     line-height: 124.2px;
     margin-bottom: -44.49px;
     margin-top: -46.97px;
@@ -54,9 +59,9 @@
 .bottom-nav .next {
     color: #f78431;
     font-family: "Poppins-Bold", Helvetica;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
-    letter-spacing: 0;
+    letter-spacing: 0.05em;
     line-height: 183.7px;
     margin-bottom: -76.39px;
     margin-top: -80.06px;
@@ -66,11 +71,4 @@
     width: fit-content;
 }
 
-.bottom-nav .icon-next-instance {
-    /* background-image: url(../../assets/icons/Chevron\ Right.png) !important; */
-    height: 33.07px !important;
-    margin-bottom: -2.76px !important;
-    margin-top: -2.76px !important;
-    position: relative !important;
-    width: 33.07px !important;
-}
+

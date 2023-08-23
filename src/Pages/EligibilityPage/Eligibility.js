@@ -8,6 +8,7 @@ export default function EligibilityPage() {
   return (
     <>
     <Navigation />
+    <br /><br />
     <EligibilityHeader />
     <Accredited/>
     </>

@@ -105,8 +105,8 @@ export const Accredited = ({ className }) => {
         </FormControl>
       </div>
 
-      <div className="navigation">
-        <span className="next-icon">{<BottomNav />}</span>
+      <div >
+        <BottomNav backPath="#" nextPath="#" />
       </div>
     </>
   );

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./business.css";
 
 export const BusinessText = ({ className }) => {
@@ -15,9 +16,9 @@ export const BusinessText = ({ className }) => {
             review, tell us about a misleading advertisement, or report a scam,
             you&#39;re in the right place. There are some disputes Bizresolve
             cannot help with, You can view those{" "}
-            <strong on Link to="/" style={{ textDecoration: "underline" }}>
+            <Link to="#">  <strong style={{ textDecoration: "underline" }}>
               here.
-            </strong>
+            </strong></Link>
           </p>
         </div>
       </div>
