@@ -46,7 +46,7 @@ export const SignIn = () => {
                 <TextField label="Password" id="form4" type="password" fullWidth />
               </div>
 
-              <Button text="Sign In" />
+              <Button text="Log in" />
 
               <br />
               <p style={{ color: "#5c6670" }}>
