@@ -3,7 +3,7 @@ import "./mission.css";
 
 const MissionHeadline = ({ className }) => {
   return (
-    <div className="container-fluid">
+    <div className="container">
     <h1 className={`mission-headline ${className}`}>
       <div className="headline">
         <div className="our-mission">

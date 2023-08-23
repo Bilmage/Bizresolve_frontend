@@ -14,9 +14,9 @@ box-sizing: border-box;
     justify-content: space-between;
     padding: 32px;   
     position: relative;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
-    width: 100vw;
+    /* width: 100vw; */
     z-index: 100;
     border-bottom: 1px solid #ccc;
     

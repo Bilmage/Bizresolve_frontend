@@ -1,11 +1,12 @@
 .bottom-nav {
-    align-items: center;
-    /* display: inline-flex; */
+    align-items: center;    
     gap: 569px;
     position: relative;
     display: flex;
     justify-content: space-between;
     padding: 10px;
+    
+    
 }
 @media (max-width: 768px) {
     .bottom-nav  {
@@ -19,11 +20,8 @@
     align-items: center;
     border-radius: 67.07px;
     display: inline-flex;
-    flex: 0 0 auto;
-    /* gap: 12.42px; */
-    /* height: 73.28px; */
-    padding: 19.87px 39.74px;
-    position: relative;
+    flex: 0 0 auto;    
+    padding: 19.87px 39.74px;    
 }
 @media (max-width: 768px) {
     bottom-nav .CTA  {
@@ -36,10 +34,7 @@
     font-family: "Poppins-Bold", Helvetica;
     font-size: 16px;
     font-weight: 700;
-    letter-spacing: 0.05em;
-    line-height: 124.2px;
-    margin-bottom: -44.49px;
-    margin-top: -46.97px;
+    letter-spacing: 0.05em;    
     position: relative;
     text-align: center;
     white-space: nowrap;
@@ -47,12 +42,10 @@
 }
 
 .bottom-nav .div {
-    align-items: center;
-    /* border-radius: 99.2px; */
+    align-items: center;    
     display: inline-flex;
     flex: 0 0 auto;
-    gap: 16.37px;
-    /* height: 86.34px; */
+    gap: 16.37px;    
     padding: 29.39px 58.79px;
     position: relative;
 }

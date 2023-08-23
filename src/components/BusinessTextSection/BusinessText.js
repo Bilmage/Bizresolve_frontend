@@ -4,7 +4,7 @@ import "./business.css";
 
 export const BusinessText = ({ className }) => {
   return (
-    <div className="container-fluid">
+    <div className="container">
       <div className={`business-text ${className}`}>
         <div className="p-wrapper">
           <h1 className="headline">What Type Of Business Are You Reporting?</h1>
@@ -16,7 +16,7 @@ export const BusinessText = ({ className }) => {
             review, tell us about a misleading advertisement, or report a scam,
             you&#39;re in the right place. There are some disputes Bizresolve
             cannot help with, You can view those{" "}
-            <Link to="#">  <strong style={{ textDecoration: "underline" }}>
+            <Link to="#">  <strong style={{ textDecoration: "underline", color: '#F78431' }}>
               here.
             </strong></Link>
           </p>

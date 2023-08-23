@@ -3,7 +3,7 @@ import "./vision.css";
 
 export const VisionHeadlineText = ({ className }) => {
   return (
-    <div className="container-fluid">
+    <div className="container">
     <h1 className={`vision-headline-text ${className}`}>
       <span className="our-vision">
         <span className="text-wrapper">Our</span>

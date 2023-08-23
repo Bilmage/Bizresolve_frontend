@@ -37,7 +37,7 @@
     /* height: 218px; */
     justify-content: center;
     position: relative;
-    width: 370px;
+    /* width: 370px; */
 }
 
 .vision-headline-text .headline {
@@ -53,13 +53,13 @@
     color: transparent;
     flex: 1;
     font-family: "Poppins-Bold", Helvetica;
-    font-size: 36px;    
+    font-size: 32px;    
     font-weight: 700;
     letter-spacing: 0.05em;
     line-height: 56.4px;
     margin-top: 0.81px;
     position: relative;
-    white-space: nowrap;
+    white-space: nowrap;   
     
     
 }

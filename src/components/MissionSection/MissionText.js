@@ -3,7 +3,7 @@ import "./mission.css";
 
 export const MissionText = ({ className }) => {
     return (
-        <div className="container-fluid">
+        <div className="container">
         <div className={`mission-text ${className}`}>
             <p className="at-bizresolve-our">
                 At Bizresolve, our mission is to help businesses in Kenya manage complaints effectively and provide solutions

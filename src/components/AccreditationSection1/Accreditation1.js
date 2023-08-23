@@ -3,7 +3,7 @@ import "./accreditation.css";
 
 export const Accreditation1 = ({ className }) => {
     return (
-        <div className="container-fluid">
+        <div className="container">
         <div className={`accreditation ${className}`}>
             <h1 className="p-wrapper">
                 <p className="get-ready-to-be">Get Ready To Be Accredited</p>

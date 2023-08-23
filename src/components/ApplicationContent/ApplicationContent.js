@@ -4,7 +4,7 @@ import "./content.css";
 
 export const ApplicationContent = ({ className }) => {
   return (
-    <div className="container-fluid">
+    <div className="container">
       <div className={`application-content ${className}`}>
         <div className="accreditation">
           <div className="div-wrapper">
@@ -27,9 +27,9 @@ export const ApplicationContent = ({ className }) => {
                 six-month milestone, it is advisable to assess your alignment
                 with Bizresolve Accreditation standards and{" "}
               </span>
-              <Link to="/">
-                <span className="span">eligibility criteria</span>
-              </Link>
+              <Link to="#">  <strong style={{ textDecoration: "underline", color: '#F78431' }}>
+              eligibility criteria
+            </strong></Link>
               <span className="text-wrapper">
                 . Additionally, gather the necessary documentation outlined
                 below in preparation for your application.

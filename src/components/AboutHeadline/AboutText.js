@@ -3,7 +3,7 @@ import "./aboutheadline.css";
 
 export const AboutText = ({ className }) => {
     return (
-        <div className="container-fluid">
+        <div className="container">
         <div className={`about-text ${className}`}>
             <p className="paragraph">
                 we are dedicated to assisting businesses in Kenya in effectively managing complaints and delivering solutions

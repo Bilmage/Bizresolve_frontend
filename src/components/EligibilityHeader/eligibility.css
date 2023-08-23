@@ -9,7 +9,7 @@
 }
 @media (max-width: 768px) {
     .eligibility-header {
-     width: 500px;
+     width: auto;
      
         } 
     }

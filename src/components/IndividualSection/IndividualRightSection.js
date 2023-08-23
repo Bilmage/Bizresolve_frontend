@@ -4,7 +4,7 @@ import './individual.css';
 
 export const IndividualRight = ({ individual }) => {
     return (
-        <div className="container-fluid">
+        <div className="container">
         <div className="individual-right" style={individual}>
             <div className="headline">
                 <h1 className="for-consumers">For Consumers</h1>

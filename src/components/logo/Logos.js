@@ -7,7 +7,7 @@ import "./logo.css";
 
 export const Logos = () => {
   return (
-    <div className="container-fluid">
+    <div className="container">
       <div className="logos">
         <div className="airbnb">
           <div className="airbnb-wrapper">
