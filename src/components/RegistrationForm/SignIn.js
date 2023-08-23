@@ -1,5 +1,6 @@
 import React from "react";
-import { FaUser, FaEnvelope, FaLock } from "react-icons/fa";
+import { FaEnvelope, FaLock } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import GoogleButton from "react-google-button";
 import Lottie from "lottie-react";
@@ -21,6 +22,7 @@ export const SignIn = () => {
           <Grid container spacing={2}>
             <Grid
               item
+              xs={12}
               md={6}
               lg={6}
               className="order-2 order-lg-1 d-flex flex-column align-items-center"
@@ -29,18 +31,8 @@ export const SignIn = () => {
                 className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4"
                 style={{ color: "#ec6809" }}
               >
-                Sign In
+                Welcome back
               </p>
-              <div className="d-flex flex-row align-items-center mb-4">
-                <FaUser />
-                &nbsp; &nbsp;
-                <TextField label="First Name" id="form1" fullWidth />
-              </div>
-              <div className="d-flex flex-row align-items-center mb-4">
-                <FaUser />
-                &nbsp; &nbsp;
-                <TextField label="Last Name" id="form2" fullWidth />
-              </div>
 
               <div className="d-flex flex-row align-items-center mb-4">
                 <FaEnvelope />
@@ -59,15 +51,21 @@ export const SignIn = () => {
               <br />
               <GoogleButton
                 style={{ borderRadius: "54px" }}
-                type="light" // can be light or dark
+                type="light"
+                label="Continue with Google"
                 onClick={() => {
                   console.log("Google button clicked");
                 }}
               />
+              <hr className="mx-n3" />
+              <p style={{ color: "#ec6809" }}>
+              Don't have an account ? <Link to="/registration" style={{ textDecoration: "underline", color: "#ec6809" }}>Sign up</Link>
+              </p>
             </Grid>
 
             <Grid
               item
+              xs={12}
               md={6}
               lg={6}
               className="order-1 order-lg-2 d-flex align-items-center"

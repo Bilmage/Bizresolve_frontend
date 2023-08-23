@@ -4,7 +4,7 @@ import './business.css';
 
 export const BusinessLeft = ({ business }) => {
     return (
-        <div className="container-fluid">
+        <div className="container">
         <div className="business-left" style={business}>
             <div className="headline">
                 <div className="for-business">For Business</div>

@@ -8,8 +8,9 @@ import BottomNav from "../BottomNav/BottomNav";
 
 export const ComplaintProcess = ({ className }) => {
   return (
-    <div className={`complaint-process ${className}`}>
-      <div className="container-fluid">
+    <div className="container">
+      <div className={`complaint-process ${className}`}>
+
         <div className="sub-headline">
           <h1 className="headline">What happens when I file a complaint?</h1>
         </div>

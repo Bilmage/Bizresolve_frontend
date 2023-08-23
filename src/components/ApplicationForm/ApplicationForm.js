@@ -327,7 +327,7 @@ const ApplicationForm = ({ className }) => {
                 </Grid>
               </Grid>
 
-              <Button variant="contained" size="large" fullWidth sx={{ my: 4 }}>
+              <Button variant="contained" size="large" fullWidth sx={{ my: 4 }} style={{backgroundColor: '#F78431'}}>
               Submit
               </Button>
             </CardContent>

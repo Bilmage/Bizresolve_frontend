@@ -34,7 +34,9 @@
 }
 
 .header .line {
-    height: 3px;
-    min-width: 250px;
-    position: relative;
+  width: 100%;
+  max-width: 200px;
+  height: 2px;
+  background-color: #A95B1F;
+  margin-top: 10px;
 }

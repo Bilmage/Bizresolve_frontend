@@ -7,6 +7,13 @@
     position: relative;
     width: 1020px;
 }
+@media (max-width: 768px) {
+    .eligibility-header {
+     width: auto;
+     
+        } 
+    }
+    
 .eligibility-header .headline {
     color: #ffffff;
     flex: 1;

@@ -53,15 +53,17 @@
 }
 
 .file-complaint .paragraph{
-    color: #000000;
-    flex: 1;
-    font-family: "Inter-Medium", Helvetica;
-    font-size: 18px;
+    color: #5c6670;
+    flex: 1;    
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 16px;
     font-weight: 500;
     letter-spacing: 0.05em;
-    line-height: normal;
-    margin-top: -1px;
+    line-height: 25.9px;
+    margin-top: -0.7px;
     position: relative;
+    margin-left: 10px;
+    letter-spacing: 0.05em;
 }
 
 .file-complaint .faq {

@@ -3,7 +3,7 @@ import './banner.css';
 
 export const TextArea = ({ banner }) => {
     return (
-        <div className="container-fluid">
+        <div className="container">
         <div className="text-area" style={banner}>
             <div className="title-c">
                 <div className="headline-c">

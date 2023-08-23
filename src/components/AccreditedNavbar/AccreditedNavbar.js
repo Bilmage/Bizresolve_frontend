@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./navbar.css";
 import Button from "../Button/Button";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
-import Logo from "../../assets/images/Logo.png";
+import LogoIpsum from "../../assets/images/logoipsum.svg";
 import Profilepic2 from "../../assets/images/Profilepic2.png";
 
 const AccreditedNavBar = ({ className }) => {
@@ -18,7 +18,7 @@ const AccreditedNavBar = ({ className }) => {
       <div className={`accredited-nav-bar ${className}`}>
         <div className="logo">
           <Link to="/">
-            <img className="img" alt="Logo" src={Logo} />
+            <img className="img" alt="Logo" src={LogoIpsum} />
           </Link>
         </div>
         <div className="nav-items">

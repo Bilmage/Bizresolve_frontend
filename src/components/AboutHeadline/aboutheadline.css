@@ -1,3 +1,5 @@
+
+
 .about-headline-text {
     align-items: flex-start;
     display: flex;
@@ -7,7 +9,7 @@
     justify-content: center;
     padding: 0px 2.49px 0px 0px;
     position: relative;
-    width: 620px;
+    /* width: 620px; */
 }
 
 .about-headline-text .headline {
@@ -30,11 +32,16 @@
     color: transparent;
     flex: 1;
     font-family: "Inter-Bold", Helvetica;
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 700;
     letter-spacing: 0.36px;
     line-height: 43.5px;
     position: relative;
+}
+@media (max-width: 768px) {
+    .about-headline-text .we-build-bridges {
+        font-size: 20px;
+    }
 }
 
 .about-headline-text .text-wrapper {
@@ -59,16 +66,24 @@
     justify-content: center;
     padding: 7.61px;
     position: relative;
-    width: 456px;
+    /* width: 456px; */
 }
 
 .about-text .paragraph {
     color: #5c6670;
-    flex: 1;
-    font-family: "Poppins-Medium", Helvetica;
-    font-size: 18px;
+    flex: 1;    
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 16px;
     font-weight: 500;
     letter-spacing: 0.05em;
-    line-height: normal;
+    line-height: 25.9px;
+    margin-top: -0.7px;
     position: relative;
+    margin-left: 10px;
+    letter-spacing: 0.05em;
+}
+@media (max-width: 768px) {
+    .about-text .paragraph {
+        font-size: 15px;
+    }
 }

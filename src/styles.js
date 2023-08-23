@@ -1,28 +1,28 @@
-import { makeStyles } from '@material-ui/core/styles';
+// import { makeStyles } from '@material-ui/core/styles';
 
 
 
-export const useStyles = makeStyles((theme) => ({
+// export const useStyles = makeStyles((theme) => ({
 
-container: {
-backgroundColor: theme.palette.background.paper,
-padding: theme.spacing(8, 0, 6)
-},
+// container: {
+// backgroundColor: theme.palette.background.paper,
+// padding: theme.spacing(8, 0, 6)
+// },
 
-icon: {
-    marginRight: '20px',
-},
-buttons: {
-    marginTop: '40px',
-    backgroundColor: '#f78431',
-    fontFamily: 'Roboto',
-    fontSize: '16px',
-    fontWeight: 'bold',
-    color: '#fff',
-    '&:hover': {
-}
+// icon: {
+//     marginRight: '20px',
+// },
+// buttons: {
+//     marginTop: '40px',
+//     backgroundColor: '#f78431',
+//     fontFamily: 'Roboto',
+//     fontSize: '16px',
+//     fontWeight: 'bold',
+//     color: '#fff',
+//     '&:hover': {
+// }
 
 
-}}));
+// }}));
 
-export default useStyles;
+// export default useStyles;

@@ -111,16 +111,22 @@ width: 100%;
 }
 .newsletter-form button {
  
-  background: -webkit-linear-gradient(-30deg, #F78431 0%, #052157 100%);
-  outline: none;
-  white-space: nowrap;
-  height: 37px;
-  width: auto;
-  border: none;
-  color: #fff;
-  font-weight: 500;
-  cursor: pointer;
-  border-radius: 54px;
+  align-items: center;
+    justify-content: center;   
+    width: auto;
+    background: -webkit-linear-gradient(-30deg, #F78431 0%, #052157 100%);
+    outline: none;
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 54px;
+    display: inline-flex;
+    padding: 16px 32px;
+    position: relative;
+    white-space: nowrap;
+    height: 37px;    
+    gap: 10px;
+    cursor: pointer;
  }
  
 

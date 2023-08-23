@@ -1,12 +1,15 @@
 import React from "react";
 import "./feedback.css";
-import Thumbsup from '../../assets/images/Thumbsup.svg';
+import Lottie from "lottie-react";
+import thumbsup from '../../thumbup.json';
 import IconBack from '../IconBack/IconBack';
 
 export const FeedbackMessage = ({ className }) => {
     return (
+        <>
+        <div className="container">
         <div className={`feedback-message ${className}`}>
-            <img className="thumb-up" alt="Thumb up" src={Thumbsup} />
+        < Lottie animationData ={thumbsup} className="thumb-up"/>
             <div className="text">
                 <div className="thank-you">Thank you</div>
             </div>
@@ -17,6 +20,8 @@ export const FeedbackMessage = ({ className }) => {
                 <IconBack />
             </div>
         </div>
+        </div>
+        </>
     );
 };
 export default FeedbackMessage;

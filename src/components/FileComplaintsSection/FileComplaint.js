@@ -3,7 +3,9 @@ import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
+import { Link } from "react-router-dom";
 import FormLabel from "@mui/material/FormLabel";
+
 import "./filecomplaint.css";
 
 export const FileComplaint = ({ className }) => {
@@ -14,8 +16,9 @@ export const FileComplaint = ({ className }) => {
   };
 
   return (
+    
     <div className={`file-complaint ${className}`}>
-      <div className="container-fluid">
+      <div className="container">
         <div className="div">
           <div className="sub-headline">
             <h1 className="text-wrapper">File a complaint</h1>
@@ -25,12 +28,12 @@ export const FileComplaint = ({ className }) => {
               Bizresolve welcomes the opportunity to assist you with your market
               place challenge. Whether you need to file a complaint, post a
               review, tell us about a misleading advertisement, or report a
-              scam, you&#39;re in the right place. There are some disputes Biz
-              Resolve cannot help with, You can view those here.
+              scam, you&#39;re in the right place. There are some disputes Bizresolve cannot help with, You can view those <Link to="#"><strong style={{color: '#F78431', textDecoration: 'underline'}}>here</strong></Link>
             </p>
           </div>
         </div>
-        <FormControl style={{ marginLeft: "20px", fontFamily: "Inter" }}>
+        <div className="container">
+        <FormControl style={{ marginLeft: "20px", fontFamily: "Inter-Regular", color: '#a95b1f' }}>
           <FormLabel id="demo-controlled-radio-buttons-group"></FormLabel>
           <RadioGroup
             aria-labelledby="demo-controlled-radio-buttons-group"
@@ -61,6 +64,7 @@ export const FileComplaint = ({ className }) => {
           </RadioGroup>
         </FormControl>
       </div>
+    </div>
     </div>
   );
 };

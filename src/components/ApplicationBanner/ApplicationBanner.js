@@ -6,7 +6,7 @@ import ApplicationAnimation from "../../ApplicationAnimation.json";
 
 export const ApplicationBanner = ({ className }) => {
     return (
-        <div className="container-fluid">
+        <div className="container">
             <div className={`application-banner ${className}`}>
             <Lottie animationData={ApplicationAnimation} className="contact-map"/>
             </div>

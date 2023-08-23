@@ -21,6 +21,7 @@ export default function Home() {
 <ContactSection />
 <Masthead />
 <BusinessSection />
+<br />
 <IndividualSection />
 <BizFooter />
 

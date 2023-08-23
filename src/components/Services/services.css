@@ -51,12 +51,15 @@
   
   .services .p {
     color: #5c6670;
-    font-family: "Inter-Medium", Helvetica;
-    font-size: 16px;
+    font-family: "Inter-Regular", Helvetica;
     font-weight: 500;
+    font-size: 16px;
     letter-spacing: 0.05em;
-    line-height: normal;
+    line-height: 25.9px;
+    margin-top: -0.7px;
     position: relative;
+    margin-left: 10px;
+    letter-spacing: 0.05em;
     text-align: center;
   
     /* Additional styles if needed */

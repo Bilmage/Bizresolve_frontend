@@ -24,8 +24,8 @@ function App() {
     <>
       <Routes>
         <Route index element={<HomePage />} />
-        <Route path="/Registration" element={<RegistrationPage />} />
-        <Route path="/SignIn" element={<SignInPage />} />
+        <Route path="/registration" element={<RegistrationPage />} />
+        <Route path="/signIn" element={<SignInPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/filecomplaints" element={<FileComplaintsPage />} />

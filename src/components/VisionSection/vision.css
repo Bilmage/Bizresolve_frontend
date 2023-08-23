@@ -6,19 +6,27 @@
     height: 276px;
     padding: 8.47px;
     position: relative;
-    width: 637px;
+    width: 100%;
+    height: auto;
 }
 
 .vision-text .paragraph {
     color: #5c6670;
     flex: 1;
-    font-family: "Inter-Regular", Helvetica;
-    font-size: 18px;
-    font-weight: 400;
+    font-family: "Inter-Regular", Helvetica;    
+    font-size: 16px;
+    font-weight: 500;
     letter-spacing: 0.05em;
     line-height: 25.9px;
-    margin-top: -0.85px;
+    margin-top: -0.7px;
     position: relative;
+    margin-left: 10px;
+    letter-spacing: 0.05em;
+}
+@media (max-width: 768px) {
+    .vision-text .paragraph {
+        font-size: 15px;
+    }
 }
 /**VisionHeadline**/
 .vision-headline-text {
@@ -26,10 +34,10 @@
     display: flex;
     flex-direction: column;
     gap: 16.11px;
-    height: 218px;
+    /* height: 218px; */
     justify-content: center;
     position: relative;
-    width: 370px;
+    /* width: 370px; */
 }
 
 .vision-headline-text .headline {
@@ -45,15 +53,20 @@
     color: transparent;
     flex: 1;
     font-family: "Poppins-Bold", Helvetica;
-    font-size: 36px;    
+    font-size: 32px;    
     font-weight: 700;
     letter-spacing: 0.05em;
     line-height: 56.4px;
     margin-top: 0.81px;
     position: relative;
-    white-space: nowrap;
+    white-space: nowrap;   
     
     
+}
+@media (max-width: 768px) {
+    .vision-headline-text .our-vision {
+        font-size: 28px;
+    }
 }
 
 .vision-headline-text .text-wrapper {

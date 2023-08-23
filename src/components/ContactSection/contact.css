@@ -20,7 +20,7 @@ img {
 }
 
 .section-title h2 {
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 700;
     background-image: -webkit-linear-gradient(-30deg, #052157 0%, #F78431 100%);
     -webkit-background-clip: text;
@@ -31,11 +31,12 @@ img {
 /* Media query for smaller screens */
 @media (max-width: 600px) {
     .section-title h2 {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .section-title p {
         font-size: 14px;
+        margin: 20px;
     }
 }
 
@@ -45,7 +46,7 @@ img {
     flex-direction: column; /* Stack items vertically */
     justify-content: center; /* Center items vertically */
     align-items: center; /* Center items horizontally */
-    padding: 16% 0 5%;
+    padding: 10% 0 5%;
     background: url(https://i.ibb.co/JRrHmhv/shanghai.jpg) no-repeat center center;
     background-size: cover;
     position: relative;
@@ -85,6 +86,8 @@ img {
     .newsletter-form {
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+        width: auto;
     }
 }
 

@@ -3,6 +3,7 @@ import "./navigation.css";
 import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 
+
 const navigationItems = [
   { label: "Home", path: "/" },
   { label: "About", path: "/about" },
@@ -15,7 +16,7 @@ export const Navigation = ({ navigation }) => {
       <div className="navigation" style={navigation}>
         <div className="logo">
           <Link to="/">
-            <div className="text-wrapper">Logo</div>
+            <div className="text-wrapper"></div>
           </Link>
         </div>
         <div className="nav-items">
@@ -26,12 +27,12 @@ export const Navigation = ({ navigation }) => {
           ))}
           <div>
             <Link to="/Registration">
-              <Button text="Sign Up" />
+              <Button text="Sign up" />
             </Link>
           </div>
           <div>
             <Link to="/SignIn">
-              <Button text="Sign In" />
+              <Button text="Sign in" />
             </Link>
           </div>
         </div>
