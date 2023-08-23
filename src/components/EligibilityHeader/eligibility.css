@@ -5,8 +5,15 @@
     gap: 10px;
     padding: 10px;
     position: relative;
-    /* width: 1020px; */
+    width: 1020px;
 }
+@media (max-width: 768px) {
+    .eligibility-header {
+     width: 500px;
+     
+        } 
+    }
+    
 .eligibility-header .headline {
     color: #ffffff;
     flex: 1;

@@ -94,7 +94,7 @@ export const ContactForm = ({ className }) => {
                     variant="outlined"
                     size="small"
                     name="physicalAddresses"
-                    value={formData.physicalAddresses}
+                    value={formData.physicalAddress}
                     onChange={handleFormChange}
                   />
                 </Grid>
@@ -163,9 +163,10 @@ export const ContactForm = ({ className }) => {
                       <MenuItem value="">
                         <em>None</em>
                       </MenuItem>
-                      <MenuItem value={1}>Subject 1</MenuItem>
-                      <MenuItem value={2}>Subject 2</MenuItem>
-                      <MenuItem value={3}>Subject 3</MenuItem>
+                      <MenuItem value={1}>Nairobi</MenuItem>
+                      <MenuItem value={2}>Nakuru</MenuItem>
+                      <MenuItem value={3}>Mombasa</MenuItem>
+                      <MenuItem value={3}>Kisumu</MenuItem>
                     </Select>
                   </FormControl>
                 </Grid>

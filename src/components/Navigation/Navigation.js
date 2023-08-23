@@ -27,12 +27,12 @@ export const Navigation = ({ navigation }) => {
           ))}
           <div>
             <Link to="/Registration">
-              <Button text="Sign Up" />
+              <Button text="Sign up" />
             </Link>
           </div>
           <div>
             <Link to="/SignIn">
-              <Button text="Sign In" />
+              <Button text="Sign in" />
             </Link>
           </div>
         </div>

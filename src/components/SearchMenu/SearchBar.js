@@ -1,7 +1,5 @@
 import React from 'react';
 import Button from "../Button/Button";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { Link } from "react-router-dom";
 import {
   Container,
