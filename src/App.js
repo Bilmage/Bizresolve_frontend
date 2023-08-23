@@ -4,7 +4,7 @@ import "./style.css";
 import { Routes, Route } from "react-router-dom";
 import { RatingsRedirectPage, SignInPage } from "./components";
 import SearchAccreditedPage from "./Pages/SearchAccreditedPage/SearchAccredited";
-
+import LandingPage from "./Pages/LandingPage/Landing";
 import {
   HomePage,
   RegistrationPage,
@@ -14,7 +14,7 @@ import {
   RatingsPage,
   EligibilityPage,
   ApplicationsPage,
-  AccreditationPage,
+  AccreditationPage,  
   FeaturedReviewsPage,
   LogComplaintsPage,
 } from "./Pages";
@@ -37,6 +37,7 @@ function App() {
         <Route path="/accreditationprocess" element={<AccreditationPage />} />
         <Route path="/featuredreviews" element={<FeaturedReviewsPage />} />
         <Route path="/search" element={<SearchAccreditedPage />} />
+        <Route path="/landing" element={<LandingPage />} />
       </Routes>
     </>
   );
