@@ -46,19 +46,22 @@ export const SignIn = () => {
                 <TextField label="Password" id="form4" type="password" fullWidth />
               </div>
 
-              <Button text="Sign In" />
+              <Button text="Log in" />
 
               <br />
+              <p style={{ color: "#5c6670" }}>
+                or you can continue with
+              </p>
               <GoogleButton
-                style={{ borderRadius: "54px" }}
+                style={{ borderRadius: "54px", width: '130px', height: '50px' }}
                 type="light"
-                label="Continue with Google"
+                label="Google"
                 onClick={() => {
                   console.log("Google button clicked");
                 }}
               />
               <hr className="mx-n3" />
-              <p style={{ color: "#ec6809" }}>
+              <p style={{ color: "#5c6670" }}>
               Don't have an account ? <Link to="/registration" style={{ textDecoration: "underline", color: "#ec6809" }}>Sign up</Link>
               </p>
             </Grid>

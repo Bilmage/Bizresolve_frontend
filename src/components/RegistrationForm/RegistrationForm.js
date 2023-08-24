@@ -4,7 +4,7 @@ import {
   FaEnvelope,
   FaLock,
   FaKey,
-  
+
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Button from "../../components/Button/Button";
@@ -34,7 +34,7 @@ export const RegistrationForm = () => {
               item
               md={6}
               lg={6}
-              xs={12}              
+              xs={12}
               className="order-2 order-lg-1 d-flex flex-column align-items-center"
             >
               <h1
@@ -43,7 +43,7 @@ export const RegistrationForm = () => {
               >
                 Get started
               </h1>
-              <div className="mb-4">
+              <div className="mb-4 d-flex flex-column" style={{ gap: '1rem' }}>
                 <label htmlFor="role" className="fw-bold" style={{ color: "#5c6670" }}>
                   Choose an option you want to sign up with.
                 </label>
@@ -52,62 +52,63 @@ export const RegistrationForm = () => {
                   <MenuItem value="BusinessOwner">Business Owner</MenuItem>
                 </Select>
               </div>
-              
-              <div className="d-flex flex-row align-items-center mb-4">
+
+
+              <div className="d-flex flex-row align-items-center mb-4" style={{ display: 'flex', gap: '2rem', alignItems: 'center', width: 'auto' }}>
                 <FaUser />
-                &nbsp; &nbsp;
                 <TextField label="First Name" id="firstName" fullWidth />
               </div>
-              
-              <div className="d-flex flex-row align-items-center mb-4">
+
+              <div className="d-flex flex-row align-items-center mb-4" style={{ display: 'flex', gap: '2rem', alignItems: 'center', width: 'auto' }}>
                 <FaUser />
-                &nbsp; &nbsp;
                 <TextField label="Last Name" id="lastName" fullWidth />
               </div>
-              
-              <div className="d-flex flex-row align-items-center mb-4">
+
+              <div className="d-flex flex-row align-items-center mb-4" style={{ display: 'flex', gap: '2rem', alignItems: 'center', width: 'auto' }}>
                 <FaEnvelope />
-                &nbsp; &nbsp;
                 <TextField label="Email" id="form2" type="email" fullWidth />
               </div>
-              
-              <div className="d-flex flex-row align-items-center mb-4">
+
+              <div className="d-flex flex-row align-items-center mb-4" style={{ display: 'flex', gap: '2rem', alignItems: 'center', width: 'auto' }}>
                 <FaLock />
-                &nbsp; &nbsp;
                 <TextField label="Password" id="form3" type="password" fullWidth />
               </div>
-              
-              <div className="d-flex flex-row align-items-center mb-4">
+
+              <div className="d-flex flex-row align-items-center mb-4" style={{ display: 'flex', gap: '2rem', alignItems: 'center', width: 'auto' }}>
                 <FaKey />
-                &nbsp; &nbsp;
                 <TextField label="Repeat your password" id="form4" type="password" fullWidth />
               </div>
-              
+
               <div className="mb-4">
                 <FormControlLabel
                   control={<Checkbox name="flexCheck" id="flexCheckDefault" />}
-                  label="I do accept the Terms and Conditions of Bizresolve."
+                  label="I accept the Terms and Conditions of Bizresolve."
+                  style={{ color: "#5c6670" }}
                 />
               </div>
-              
+
+
               <Button text="Sign up" />
               <br />
+              <p style={{ color: "#5c6670" }}>
+                or you can sign up with
+              </p>
               <GoogleButton
-                style={{ borderRadius: "54px"}}
+                style={{ borderRadius: "54px", width: '130px', height: '50px' }}
                 type="light"
-                label="Sign up with Google"
+                label="Google"
                 onClick={() => {
                   console.log("Google button clicked");
                 }}
               />
               <br />
               <hr className="mx-n3" />
-              <p style={{ color: "#ec6809" }}>
-                Already Signed up? <Link to="/signIn" style={{ textDecoration: "underline", color: "#ec6809" }}>Sign in</Link>
-              </p>              
+              <p style={{ color: "#5c6670" }}>
+                Already have an account ?  <Link to="/signIn" style={{ textDecoration: "underline", color: "#ec6809" }}>Log in</Link>
+              </p>
               <br />
             </Grid>
-            
+
             <Grid
               item
               md={6}
