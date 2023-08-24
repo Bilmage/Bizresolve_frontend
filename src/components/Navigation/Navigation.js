@@ -2,7 +2,7 @@ import React from "react";
 import "./navigation.css";
 import { Link } from "react-router-dom";
 import Button from "../Button/Button";
-
+import { useAuth } from "../../hooks";
 
 const navigationItems = [
   { label: "Home", path: "/" },
@@ -11,12 +11,14 @@ const navigationItems = [
 ];
 
 export const Navigation = ({ navigation }) => {
+  const auth = useAuth();
+  console.log("Auth", auth);
   return (
     <div className="container-fluid">
       <div className="navigation" style={navigation}>
         <div className="logo">
           <Link to="/">
-            <div className="text-wrapper"></div>
+            <div className="text-wrapper">Logo</div>
           </Link>
         </div>
         <div className="nav-items">
@@ -25,16 +27,24 @@ export const Navigation = ({ navigation }) => {
               <Link to={item.path}>{item.label}</Link>
             </div>
           ))}
-          <div>
-            <Link to="/Registration">
-              <Button text="Sign up" />
-            </Link>
-          </div>
-          <div>
-            <Link to="/SignIn">
-              <Button text="Sign in" />
-            </Link>
-          </div>
+          {auth && auth.user ? (
+            <div>
+              Welcome {auth.user.firstName} {auth.user.lastName}
+            </div>
+          ) : (
+            <div>
+              <div>
+                <Link to="/Registration">
+                  <Button text="Sign Up" />
+                </Link>
+              </div>
+              <div>
+                <Link to="/SignIn">
+                  <Button text="Sign In" />
+                </Link>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>
