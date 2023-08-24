@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaUser, FaEnvelope, FaLock } from "react-icons/fa";
 import Button from "../Button/Button";
 import GoogleButton from "react-google-button";
@@ -12,8 +12,38 @@ import {
   Grid,
   TextField,
 } from "@mui/material";
+import { useLoginMutation } from "../../app/services";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setCredentials } from "../../features/auth/authSlice";
 
 export const SignIn = () => {
+  const [formData, setFormData ] = useState({
+    email:'',
+    password: ''
+  })
+ const [login] = useLoginMutation();
+ const navigate = useNavigate()
+ const dispatch = useDispatch()
+ const handleSubmit = async (event) =>{
+   event.preventDefault()
+   console.log('Data', formData)
+  try {
+    const response = await login(formData).unwrap();
+    const { user, accessToken } = response;
+    console.log("User", user)
+    console.log("Access token", accessToken)
+    if (user && accessToken) {
+      dispatch(setCredentials({ user, accessToken }));
+      // toast.success("You have logged in successfully");
+      navigate("/", { replace: true });
+      // setTimeout(() => {
+      // }, 200);
+    }
+  } catch (error) {
+    console.log('Error', error)
+  }
+ }
   return (
     <Container maxWidth="lg">
       <Card sx={{ borderRadius: "25px" }} className="text-black m-5">
@@ -31,30 +61,20 @@ export const SignIn = () => {
               >
                 Sign In
               </p>
-              <div className="d-flex flex-row align-items-center mb-4">
-                <FaUser />
-                &nbsp; &nbsp;
-                <TextField label="First Name" id="form1" fullWidth />
-              </div>
-              <div className="d-flex flex-row align-items-center mb-4">
-                <FaUser />
-                &nbsp; &nbsp;
-                <TextField label="Last Name" id="form2" fullWidth />
-              </div>
 
               <div className="d-flex flex-row align-items-center mb-4">
                 <FaEnvelope />
                 &nbsp; &nbsp;
-                <TextField label="Email" id="form3" type="email" fullWidth />
+                <TextField value={formData.email} onChange={(event) => setFormData({...formData, email: event.target.value }) } label="Email" id="form3" type="email" name="email" fullWidth />
               </div>
 
               <div className="d-flex flex-row align-items-center mb-4">
                 <FaLock />
                 &nbsp; &nbsp;
-                <TextField label="Password" id="form4" type="password" fullWidth />
+                <TextField value={formData.password} onChange={(event) => setFormData({...formData, password: event.target.value }) } label="Password" id="form4" type="password" name="password" fullWidth />
               </div>
 
-              <Button text="Sign In" />
+              <Button text="Sign In" onClick={handleSubmit} />
 
               <br />
               <GoogleButton
