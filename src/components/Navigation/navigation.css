@@ -11,7 +11,7 @@ box-sizing: border-box;
     align-items: center;
     display: flex;
     gap: 500px;
-    justify-content: space-between;
+    justify-content: center;
     padding: 32px;   
     position: relative;
     /* background-color: #ffffff; */
