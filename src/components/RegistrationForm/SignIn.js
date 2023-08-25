@@ -78,7 +78,8 @@ export const SignIn = () => {
 
               <br />
               <GoogleButton
-                style={{ borderRadius: "54px" }}
+                style={{ borderRadius: "54px", width: '130px', height: '50px' }}
+                label="Google"
                 type="light" // can be light or dark
                 onClick={() => {
                   console.log("Google button clicked");
