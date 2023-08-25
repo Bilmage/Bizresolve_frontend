@@ -4,7 +4,8 @@ import Button from "../Button/Button";
 import GoogleButton from "react-google-button";
 import Lottie from "lottie-react";
 import RegistrationAnimation from "../../RegistrationAnimation.json";
-import { toast, ToastContainer } from 'react-toastify';
+// import { toast } from 'react-toastify';
+
 import {
   Container,
   Card,
@@ -36,10 +37,10 @@ export const SignIn = () => {
     console.log("Access token", accessToken)
     if (user && accessToken) {
       dispatch(setCredentials({ user, accessToken }));
-      toast.success("You have logged in successfully");
+      // toast.success("You have logged in successfully");
       navigate("/", { replace: true });
-      setTimeout(() => {
-      }, 200);
+      // setTimeout(() => {
+      // }, 200);
     }
   } catch (error) {
     console.log('Error', error)
