@@ -1,9 +1,12 @@
 import React, { useState } from "react";
-import { FaUser, FaEnvelope, FaLock } from "react-icons/fa";
+import {  FaEnvelope, FaLock } from "react-icons/fa";
 import Button from "../Button/Button";
 import GoogleButton from "react-google-button";
+import { Link } from "react-router-dom";
 import Lottie from "lottie-react";
 import RegistrationAnimation from "../../RegistrationAnimation.json";
+// import { toast } from 'react-toastify';
+
 import {
   Container,
   Card,
@@ -74,16 +77,25 @@ export const SignIn = () => {
                 <TextField value={formData.password} onChange={(event) => setFormData({...formData, password: event.target.value }) } label="Password" id="form4" type="password" name="password" fullWidth />
               </div>
 
-              <Button text="Sign In" onClick={handleSubmit} />
+              <Button text="Log in" onClick={handleSubmit} />
 
               <br />
+            
+              <p style={{ color: "#5c6670" }}>
+                or you can continue with
+              </p>
               <GoogleButton
-                style={{ borderRadius: "54px" }}
+                style={{ borderRadius: "54px", width: '130px', height: '50px' }}
                 type="light" // can be light or dark
+                label="Google"
                 onClick={() => {
                   console.log("Google button clicked");
                 }}
               />
+              <br />
+              <p style={{ color: "#5c6670" }}>
+                Don't have an account ?  <Link to="/registration" style={{ textDecoration: "underline", color: "#ec6809" }}>sign up</Link>
+              </p>
             </Grid>
 
             <Grid

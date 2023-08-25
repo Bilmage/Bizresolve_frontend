@@ -18,7 +18,7 @@ export const Navigation = ({ navigation }) => {
       <div className="navigation" style={navigation}>
         <div className="logo">
           <Link to="/">
-            <div className="text-wrapper">Logo</div>
+            <div className="text-wrapper"></div>
           </Link>
         </div>
         <div className="nav-items">
@@ -32,15 +32,16 @@ export const Navigation = ({ navigation }) => {
               Welcome {auth.user.firstName} {auth.user.lastName}
             </div>
           ) : (
-            <div>
+            <div className="container">
               <div>
                 <Link to="/Registration">
-                  <Button text="Sign Up" />
+                  <Button text="Sign up" />
                 </Link>
               </div>
+              &nbsp; &nbsp; 
               <div>
                 <Link to="/SignIn">
-                  <Button text="Sign In" />
+                  <Button text="Log in" />
                 </Link>
               </div>
             </div>
