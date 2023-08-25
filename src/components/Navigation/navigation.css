@@ -10,7 +10,7 @@ box-sizing: border-box;
 .navigation {
     align-items: center;
     display: flex;
-    /* gap: 500px; */
+    gap: 500px;
     justify-content: space-between;
     padding: 32px;   
     position: relative;

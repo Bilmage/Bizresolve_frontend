@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import './button.css';
 
-const Button = ({ text, icon, onClick, size, disabled }) => {
+export const Button = ({ text, icon, onClick, size, disabled }) => {
   const buttonClass = classNames('CTA', {
     'small-button': size === 'small',
     'medium-button': size === 'medium',

@@ -14,7 +14,7 @@ export const Navigation = ({ navigation }) => {
   const auth = useAuth();
   console.log("Auth", auth);
   return (
-    <div className="container">
+    <div className="container-fluid">
       <div className="navigation" style={navigation}>
         <div className="logo">
           <Link to="/">
@@ -32,12 +32,13 @@ export const Navigation = ({ navigation }) => {
               Welcome {auth.user.firstName} {auth.user.lastName}
             </div>
           ) : (
-            <div>
+            <div className="container">
               <div>
                 <Link to="/Registration">
                   <Button text="Sign up" />
                 </Link>
               </div>
+              &nbsp; &nbsp; 
               <div>
                 <Link to="/SignIn">
                   <Button text="Log in" />
