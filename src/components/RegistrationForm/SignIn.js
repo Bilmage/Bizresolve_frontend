@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaUser, FaEnvelope, FaLock } from "react-icons/fa";
+import {  FaEnvelope, FaLock } from "react-icons/fa";
 import Button from "../Button/Button";
 import GoogleButton from "react-google-button";
 import Lottie from "lottie-react";
