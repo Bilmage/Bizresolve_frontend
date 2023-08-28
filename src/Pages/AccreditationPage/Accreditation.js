@@ -7,6 +7,7 @@ import AccreditationDocuments from '../../components/AccreditationDocuments/Accr
 import AdditionalMessage from '../../components/AdditionalMessage/AdditionalMessage';
 import BottomNav from '../../components/BottomNav/BottomNav';
 
+
 export default function AccreditationPage() {
   return (
     <>
@@ -15,7 +16,7 @@ export default function AccreditationPage() {
     <Accredititation2 />
     <ApplicationContent />
     <AccreditationDocuments />
-    <AdditionalMessage />
+    <AdditionalMessage />    
     <BottomNav />
     </>
   )

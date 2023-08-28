@@ -31,7 +31,7 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/landing" element={<LandingPage />} />
         {/* Protected routes */}
-        <Route element={<PrivateOutlet />}>
+        {/* <Route element={<PrivateOutlet />}> */}
           <Route path="/filecomplaints" element={<FileComplaintsPage />} />
           <Route path="/ratings" element={<RatingsPage />} />
           <Route path="/ratingsredirect" element={<RatingsRedirectPage />} />
@@ -42,7 +42,7 @@ function App() {
           <Route path="/featuredreviews" element={<FeaturedReviewsPage />} />
           <Route path="/search" element={<SearchAccreditedPage />} />
           
-        </Route>
+        {/* </Route> */}
       </Routes>
     </>
   );
