@@ -64,8 +64,8 @@
 .mission-text .at-bizresolve-our {
     color: #5c6670;
     flex: 1;
-    font-family: "Inter-Regular", Helvetica;       
-    font-size: 1.6rem;
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 16px;
     font-weight: 500;
     letter-spacing: 0.05em;
     line-height: 25.9px;
