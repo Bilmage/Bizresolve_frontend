@@ -114,7 +114,7 @@ width: 90%;
   align-items: center;
     justify-content: center;   
     width: auto;
-    background: -webkit-linear-gradient(-30deg, #F78431 0%, #052157 100%);
+    background: -webkit-linear-gradient(-30deg, #F78431 0%, #35393cff 100%);
     outline: none;
     border: none;
     color: #fff;
@@ -131,7 +131,7 @@ width: 90%;
  
 
 .newsletter-form button:hover {
-  background: -webkit-linear-gradient(-30deg, #052157 0%, #F78431 100%); }
+  background: -webkit-linear-gradient(-30deg, #35393cff 0%, #F78431 100%); }
 
   
 .footer-links

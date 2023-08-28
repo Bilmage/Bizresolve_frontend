@@ -11,22 +11,22 @@ export const IndividualRight = ({ individual }) => {
             </div>
             <div className="paragraph">
                 <p className="Line1">
-                    <FaCheckSquare style={{ color: '#A95B1F' }} />&nbsp;Get connected to an Accredited business.
+                    <FaCheckSquare style={{ color: '#63cccaff' }} />&nbsp;Get connected to an Accredited business.
                 </p>
             </div>
             <div className="paragraph">
                 <p className="Line2">
-                    <FaCheckSquare style={{ color: '#A95B1F' }} />&nbsp;Complain against Bizresolve-accredited businesses for mistreatment.
+                    <FaCheckSquare style={{ color: '#63cccaff' }} />&nbsp;Complain against Bizresolve-accredited businesses for mistreatment.
                 </p>
             </div>
             <div className="paragraph">
                 <p className="Line3">
-                    <FaCheckSquare style={{ color: '#A95B1F' }} />&nbsp;Discover top businesses to engage with through our Bizresolves’ accredited directory.
+                    <FaCheckSquare style={{ color: '#63cccaff' }} />&nbsp;Discover top businesses to engage with through our Bizresolves’ accredited directory.
                 </p>
             </div>
             <div className="paragraph">
                 <p className="Line4">
-                    <FaCheckSquare style={{ color: '#A95B1F' }} />&nbsp;Rate Bizresolve-accredited businesses on our reviews page and contribute to the community.
+                    <FaCheckSquare style={{ color: '#63cccaff' }} />&nbsp;Rate Bizresolve-accredited businesses on our reviews page and contribute to the community.
                 </p>
             </div>
         </div>

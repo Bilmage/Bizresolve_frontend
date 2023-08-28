@@ -22,7 +22,7 @@ img {
 .section-title h2 {
     font-size: 32px;
     font-weight: 700;
-    background-image: -webkit-linear-gradient(-30deg, #052157 0%, #F78431 100%);
+    background-image: -webkit-linear-gradient(0deg, #f78431ff, #63cccaff, #5da399ff, #42858cff, #35393cff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 14px;
@@ -62,7 +62,7 @@ img {
     top: 0;
     width: 100%;
     height: 100%;
-    background: -webkit-linear-gradient(-30deg, #F78431 0%, #052157 100%);
+    background: -webkit-linear-gradient(-30deg, #F78431 0%, #35393cff 100%);
     opacity: .8;
     z-index: -1;
 }
@@ -95,7 +95,7 @@ img {
     align-items: center;
     justify-content: center;   
     width: auto;
-    background: -webkit-linear-gradient(-30deg, #F78431 0%, #052157 100%);
+    background: -webkit-linear-gradient(-30deg, #F78431 0%, #35393cff 100%);
     outline: none;
     border: none;
     color: #fff;
@@ -111,5 +111,5 @@ img {
 }
 
 .newsletter .newsletter-form button:hover {
-    background: -webkit-linear-gradient(-30deg, #052157 0%, #F78431 100%);
+    background: -webkit-linear-gradient(-30deg, #35393cff 0%, #F78431 100%);
 }
