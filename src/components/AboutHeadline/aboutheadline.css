@@ -84,6 +84,6 @@
 }
 @media (max-width: 768px) {
     .about-text .paragraph {
-        font-size: 0.9375rem;
+        font-size: 1rem;
     }
 }
