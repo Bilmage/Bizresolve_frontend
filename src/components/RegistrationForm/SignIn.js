@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {  FaEnvelope, FaLock } from "react-icons/fa";
+import { FaEnvelope, FaLock } from "react-icons/fa";
 import Button from "../Button/Button";
 import GoogleButton from "react-google-button";
 import { Link } from "react-router-dom";
@@ -21,32 +21,34 @@ import { useDispatch } from "react-redux";
 import { setCredentials } from "../../features/auth/authSlice";
 
 export const SignIn = () => {
-  const [formData, setFormData ] = useState({
-    email:'',
-    password: ''
-  })
- const [login] = useLoginMutation();
- const navigate = useNavigate()
- const dispatch = useDispatch()
- const handleSubmit = async (event) =>{
-   event.preventDefault()
-   console.log('Data', formData)
-  try {
-    const response = await login(formData).unwrap();
-    const { user, accessToken } = response;
-    console.log("User", user)
-    console.log("Access token", accessToken)
-    if (user && accessToken) {
-      dispatch(setCredentials({ user, accessToken }));
-      // toast.success("You have logged in successfully");
-      navigate("/", { replace: true });
-      // setTimeout(() => {
-      // }, 200);
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+  const [login] = useLoginMutation();
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const handleSubmit = async (event) => {
+    
+    event.preventDefault();
+    console.log("Data", formData);
+    try {
+      const response = await login(formData).unwrap();
+      const { user, accessToken } = response;
+      console.log("User", user);
+      console.log("Access token", accessToken);
+      if (user && accessToken) {
+        dispatch(setCredentials({ user, accessToken }));
+        // toast.success("You have logged in successfully");
+        navigate("/", { replace: true });
+        // setTimeout(() => {
+        // }, 200);
+      }
+    } catch (error) {
+      console.log("Error", error);
     }
-  } catch (error) {
-    console.log('Error', error)
-  }
- }
+  };
   return (
     <Container maxWidth="lg">
       <Card sx={{ borderRadius: "25px" }} className="text-black m-5">
@@ -68,24 +70,42 @@ export const SignIn = () => {
               <div className="d-flex flex-row align-items-center mb-4">
                 <FaEnvelope />
                 &nbsp; &nbsp;
-                <TextField value={formData.email} onChange={(event) => setFormData({...formData, email: event.target.value }) } label="Email" id="form3" type="email" name="email" fullWidth />
+                <TextField
+                  value={formData.email}
+                  onChange={(event) =>
+                    setFormData({ ...formData, email: event.target.value })
+                  }
+                  label="Email"
+                  id="form3"
+                  type="email"
+                  name="email"
+                  fullWidth
+                />
               </div>
 
               <div className="d-flex flex-row align-items-center mb-4">
                 <FaLock />
                 &nbsp; &nbsp;
-                <TextField value={formData.password} onChange={(event) => setFormData({...formData, password: event.target.value }) } label="Password" id="form4" type="password" name="password" fullWidth />
+                <TextField
+                  value={formData.password}
+                  onChange={(event) =>
+                    setFormData({ ...formData, password: event.target.value })
+                  }
+                  label="Password"
+                  id="form4"
+                  type="password"
+                  name="password"
+                  fullWidth
+                />
               </div>
 
               <Button text="Log in" onClick={handleSubmit} />
 
               <br />
-            
-              <p style={{ color: "#5c6670" }}>
-                or you can continue with
-              </p>
+
+              <p style={{ color: "#5c6670" }}>or you can continue with</p>
               <GoogleButton
-                style={{ borderRadius: "54px", width: '130px', height: '50px' }}
+                style={{ borderRadius: "54px", width: "130px", height: "50px" }}
                 type="light" // can be light or dark
                 label="Google"
                 onClick={() => {
@@ -94,7 +114,13 @@ export const SignIn = () => {
               />
               <br />
               <p style={{ color: "#5c6670" }}>
-                Don't have an account ?  <Link to="/registration" style={{ textDecoration: "underline", color: "#ec6809" }}>sign up</Link>
+                Don't have an account ?{" "}
+                <Link
+                  to="/registration"
+                  style={{ textDecoration: "underline", color: "#ec6809" }}
+                >
+                  sign up
+                </Link>
               </p>
             </Grid>
 
