@@ -24,7 +24,7 @@ const ButtonContainer = styled.span`
   }
 `;
 
-const BackToTopButton = () => {
+export const BackToTopButton = () => {
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
