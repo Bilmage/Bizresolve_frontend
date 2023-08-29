@@ -24,6 +24,7 @@ import {
   MenuItem,
 } from "@mui/material";
 
+
 export const RegistrationForm = () => {
   return (
     <Container maxWidth="lg">

@@ -80,8 +80,9 @@
   display: flex;
   gap: 30px;
   position: relative;
-  width: 458px;
+/*   width: 458px; */
   white-space: nowrap;
+
 }
 
 .nav-item {

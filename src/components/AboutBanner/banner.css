@@ -7,20 +7,3 @@
     padding-top: 50%; 
 }
 
-/* Adjust height and width for screens smaller than 600px */
-@media (max-width: 600px) {
-    .about-banner {
-        width: 100%; 
-        padding-top: 100%; 
-    }
-}
-
-
-@media (min-width: 1201px) {
-    .about-banner {
-        width: auto; 
-        height: 50%; 
-        padding-top: 0;
-    }
-}
-
