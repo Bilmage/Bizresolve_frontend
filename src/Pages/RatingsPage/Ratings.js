@@ -8,10 +8,14 @@ import { BizFooter } from '../../components/Footer/BizFooter';
 export default function RatingsPage() {
   return (
     <>
+    
     <Navigation />
+    <div className='container'>
     <RateMessage />
     <TextAreaField />
+    </div>
     <BizFooter />
+    
     </>
   )
 }

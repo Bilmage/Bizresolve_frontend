@@ -159,4 +159,9 @@
       
   }
   }
-  
+  .container-scroll {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-behavior: smooth; /* Optional: Smooth scrolling behavior */
+}
