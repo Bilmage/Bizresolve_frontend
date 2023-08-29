@@ -3,6 +3,7 @@ import { Navigation } from '../../components/Navigation/Navigation';
 import { BusinessText } from '../../components/BusinessTextSection/BusinessText';
 import { Header } from '../../components/Header/Header';
 import { FileComplaintForm } from '../../components/FileComplaintForm/FileComplaintForm';
+import { BackToTopButton } from "../../components/BackToTop/BackToTopButton";
 import { BizFooter } from '../../components/Footer/BizFooter';
 
 export default function FileComplaintsPage() {
@@ -16,6 +17,7 @@ export default function FileComplaintsPage() {
       <BusinessText />
 
       <FileComplaintForm />
+      <BackToTopButton />
       <BizFooter />
 
     </>

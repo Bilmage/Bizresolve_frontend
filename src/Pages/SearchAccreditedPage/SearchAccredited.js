@@ -4,6 +4,7 @@ import SearchBar from "../../components/SearchMenu/SearchBar";
 import SearchText from "../../components/SearchText/SearchText";
 import BusinessCard from "../../components/BusinessCard/BusinessCard";
 import { BizFooter } from '../../components/Footer/BizFooter';
+import { BackToTopButton } from "../../components/BackToTop/BackToTopButton";
 import "../../components/SearchMenu/search.css";
 
 export default function SearchAccreditedPage() {
@@ -12,7 +13,8 @@ export default function SearchAccreditedPage() {
     <AccreditedNavBar />          
     <SearchBar />
     <SearchText />
-    <BusinessCard />    
+    <BusinessCard />
+    <BackToTopButton />    
     <BizFooter />
     </>
   )
