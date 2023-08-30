@@ -14,9 +14,11 @@ import {
   RatingsPage,
   EligibilityPage,
   ApplicationsPage,
+  BusinessRegistrationPage,
   AccreditationPage,
   FeaturedReviewsPage,
   LogComplaintsPage,
+  LandingPage,
 } from "./Pages";
 
 function App() {
@@ -28,18 +30,21 @@ function App() {
         <Route path="/SignIn" element={<SignInPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/landing" element={<LandingPage />} />
         {/* Protected routes */}
-        <Route element={<PrivateOutlet />}>
+        {/* <Route element={<PrivateOutlet />}> */}
           <Route path="/filecomplaints" element={<FileComplaintsPage />} />
           <Route path="/ratings" element={<RatingsPage />} />
           <Route path="/ratingsredirect" element={<RatingsRedirectPage />} />
           <Route path="/logcomplaint" element={<LogComplaintsPage />} />
           <Route path="/eligibilityprocess" element={<EligibilityPage />} />
           <Route path="/applicationprocess" element={<ApplicationsPage />} />
+          <Route path="/businessregistration" element={<BusinessRegistrationPage />} />
           <Route path="/accreditationprocess" element={<AccreditationPage />} />
           <Route path="/featuredreviews" element={<FeaturedReviewsPage />} />
           <Route path="/search" element={<SearchAccreditedPage />} />
-        </Route>
+          
+        {/* </Route> */}
       </Routes>
     </>
   );

@@ -117,3 +117,34 @@
 }
 
 
+
+
+/* Logo Animations */
+
+.container {
+    width: 100%; /* Adjust as needed */
+    overflow: hidden;
+  }
+  
+  .logos {
+    display: flex;
+    animation: moveLogos 50s linear infinite;
+    animation-delay: -20s; /* Match the animation duration */
+  }
+  
+  @keyframes moveLogos {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* Adjust logo styles as needed */
+  /* .logos img {
+    max-width: 100px;
+    height: auto;
+    margin: 0 20px;
+  } */
+  

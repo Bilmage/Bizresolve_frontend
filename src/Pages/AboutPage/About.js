@@ -7,6 +7,7 @@ import { VisionSection } from "../../components/VisionSection/VisionSection";
 import { Masthead } from "../../components/Headline/Masthead";
 import { Services } from "../../components/Services/Services";
 import { ContactSection } from "../../components/ContactSection/ContactSection";
+import { BackToTopButton } from "../../components/BackToTop/BackToTopButton";
 import { BizFooter } from '../../components/Footer/BizFooter';
 
 export default function AboutPage() {
@@ -23,6 +24,7 @@ export default function AboutPage() {
       <Masthead />
       <Services />
       <ContactSection />
+      <BackToTopButton />
       <BizFooter />
     </>
   );

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./navigation.css";
 import { Link } from "react-router-dom";
 import Button from "../Button/Button";
@@ -11,8 +11,21 @@ const navigationItems = [
 ];
 
 export const Navigation = ({ navigation }) => {
-  const auth = useAuth();
+  const [auth, setAuth] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleToggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleLogout = () => {
+    // Implement your logout logic here
+    console.log('Logging out...');
+  };
+
+  // const auth = useAuth();
   console.log("Auth", auth);
+
   return (
     <div className="container-fluid">
       <div className="navigation" style={navigation}>
@@ -27,9 +40,36 @@ export const Navigation = ({ navigation }) => {
               <Link to={item.path}>{item.label}</Link>
             </div>
           ))}
-          {auth && auth.user ? (
-            <div>
-              Welcome {auth.user.firstName} {auth.user.lastName}
+
+          {/* when Auth is true */}
+          {auth ? (
+            <div className="d-flex flex-row w-100">
+              <div className="dropdown">
+                <a
+                  href="#"
+                  role="button"
+                  id="avatar-dropdown"
+                  onClick={handleToggleDropdown}
+                  aria-expanded={isOpen}
+                >
+                  <img
+                    src="https://robohash.org/mail@ashallendesign.co.uk"
+                    alt="avatar-image"
+                    className="avatar-logo"
+                  />
+                </a>
+                <ul
+                  className={`dropdown-menu${isOpen ? " show" : ""}`}
+                  aria-labelledby="avatar-dropdown"
+                >
+                  <li>
+                    <a href="#" onClick={handleLogout}  className="logout-link">
+                      Logout
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <p className="welcome-text">Welcome MJ!</p>
             </div>
           ) : (
             <div className="container">
@@ -38,7 +78,7 @@ export const Navigation = ({ navigation }) => {
                   <Button text="Sign up" />
                 </Link>
               </div>
-              &nbsp; &nbsp; 
+              &nbsp; &nbsp;
               <div>
                 <Link to="/SignIn">
                   <Button text="Log in" />

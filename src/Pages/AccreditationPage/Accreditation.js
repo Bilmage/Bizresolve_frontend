@@ -5,7 +5,9 @@ import Accredititation2 from '../../components/AccreditationSection2/Accreditati
 import ApplicationContent from '../../components/ApplicationContent/ApplicationContent';
 import AccreditationDocuments from '../../components/AccreditationDocuments/AccreditationDocuments';
 import AdditionalMessage from '../../components/AdditionalMessage/AdditionalMessage';
+import { BackToTopButton } from "../../components/BackToTop/BackToTopButton";
 import BottomNav from '../../components/BottomNav/BottomNav';
+
 
 export default function AccreditationPage() {
   return (
@@ -16,6 +18,7 @@ export default function AccreditationPage() {
     <ApplicationContent />
     <AccreditationDocuments />
     <AdditionalMessage />
+    <BackToTopButton />    
     <BottomNav />
     </>
   )
