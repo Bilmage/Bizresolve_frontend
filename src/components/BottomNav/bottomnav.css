@@ -1,6 +1,6 @@
 .bottom-nav {
     align-items: center;    
-    gap: 569px;
+    /* gap: 569px; */
     position: relative;
     display: flex;
     justify-content: space-between;

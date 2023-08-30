@@ -102,9 +102,9 @@ width: 90%;
   /* padding-right: 100px;  */
 }
  
-@media (max-width: 600px) {
+@media (max-width: 780px) {
   .newsletter-form input {
-    width: 80%;
+    width: 150%;
 
       
   }

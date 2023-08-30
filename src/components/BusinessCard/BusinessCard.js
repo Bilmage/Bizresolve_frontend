@@ -26,7 +26,7 @@ const businessData = [
 
 const BusinessCard = ({ business }) => {
   return (
-    <div className="conyainer">
+    <div className="container">
       <div className="business-card">
         <div className="liked">
           <div className="user-liked">
@@ -68,7 +68,7 @@ const BusinessCard = ({ business }) => {
           </div>
         )}
         <div className="call-to-action">
-          <Link to="#">
+          <Link to="/ratings">
             <Button text="Leave a review" icon={faStar} size="small" ></Button>
           </Link>
           <Link to="#">

@@ -311,5 +311,5 @@
 .business-list-container {
     display: flex;
     justify-content: flex-start;
-    margin-left: 20px; /* This will align the container to the right */
+    margin-left: 20px; 
   }

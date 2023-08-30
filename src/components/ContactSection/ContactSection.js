@@ -1,5 +1,6 @@
 import React from "react";
 import "./contact.css";
+import { Link } from "react-router-dom";
 import { AiOutlineUsergroupAdd, AiOutlineFileAdd } from 'react-icons/ai';
 
 export const ContactSection = ({ className }) => {
@@ -18,8 +19,8 @@ export const ContactSection = ({ className }) => {
               </div>
               <br/><br/>
               <div className="newsletter-form d-flex justify-content-center">
-                <button type="submit">Get Accredited <AiOutlineUsergroupAdd /></button>
-                <button type="submit">File a complaint <AiOutlineFileAdd /></button>
+              <Link to="/eligibilityprocess"> <button type="submit">Get Accredited <AiOutlineUsergroupAdd /></button></Link>
+              <Link to="/logcomplaint">  <button type="submit">File a complaint <AiOutlineFileAdd /></button></Link>
               </div>
             </div>
           </div>

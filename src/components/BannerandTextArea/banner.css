@@ -1,20 +1,4 @@
-/**BannerTextAreaSection - Container*/
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    
-  }
-  @media (max-width: 768px) {
-    .container {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      
-    }
-  }
-/**Banner*/
+
 
 .banner {
     background-image: url('../../assets/images/Banner.png');
@@ -50,7 +34,7 @@
     justify-content: center;
     padding: 0px 10px;
     position: relative;   
-    width: 500px;
+    width: 100%;
     
     
 }
