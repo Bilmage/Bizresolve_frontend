@@ -101,7 +101,7 @@ const BusinessRegistration = ({ className }) => {
             style={{ color: "#a95b1f", fontWeight: 700 }}
             sx={{ mb: 4 }}
           >
-            Learn more about Bizresolve Accreditation today
+            Register your business with Bizresolve today
           </Typography>
           <Typography style={{ color: "#a95b1f" }} sx={{ mb: 4 }}>
             Bizresolve will use this information to contact you via phone or
