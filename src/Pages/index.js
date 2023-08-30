@@ -10,5 +10,6 @@ export {default as AccreditationPage} from "./AccreditationPage/Accreditation";
 export {default as LogComplaintsPage} from "./LogComplaintPage/LogComplaint";
 export {default as FeaturedReviewsPage} from "./FeaturedreviewsPage/FeaturedReviews"
 export {default as LandingPage} from "./LandingPage/Landing";
+export {default as BusinessRegistrationPage} from "./BusinessRegistrationPage/BusinessRegistration"
 
 

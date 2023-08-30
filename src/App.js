@@ -14,6 +14,7 @@ import {
   RatingsPage,
   EligibilityPage,
   ApplicationsPage,
+  BusinessRegistrationPage,
   AccreditationPage,
   FeaturedReviewsPage,
   LogComplaintsPage,
@@ -38,6 +39,7 @@ function App() {
           <Route path="/logcomplaint" element={<LogComplaintsPage />} />
           <Route path="/eligibilityprocess" element={<EligibilityPage />} />
           <Route path="/applicationprocess" element={<ApplicationsPage />} />
+          <Route path="/businessregistration" element={<BusinessRegistrationPage />} />
           <Route path="/accreditationprocess" element={<AccreditationPage />} />
           <Route path="/featuredreviews" element={<FeaturedReviewsPage />} />
           <Route path="/search" element={<SearchAccreditedPage />} />
