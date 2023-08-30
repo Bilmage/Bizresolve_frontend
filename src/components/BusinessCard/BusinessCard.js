@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import "./business.css";
 
-import BuisinessLogo from "../../assets/images/Safaricom.png";
+import BusinessLogo from "../../assets/images/Safaricom.png";
 import CertifiedIcon from "../../assets/icons/Certified.png";
 import HeartIcon from "../../assets/icons/Heart.svg";
 
@@ -13,7 +13,7 @@ const businessData = [
   {
     name: "Safaricom",
     type: "Business",
-    imageSrc: BuisinessLogo,
+    imageSrc: BusinessLogo,
     description:
       "It is the largest telecommunications provider in Kenya, and one of the most profitable companies in the East and Central Africa region.",
     location: "Nairobi, Westlands",
@@ -26,7 +26,7 @@ const businessData = [
 
 const BusinessCard = ({ business }) => {
   return (
-    
+    <div className="conyainer">
       <div className="business-card">
         <div className="liked">
           <div className="user-liked">
@@ -72,9 +72,10 @@ const BusinessCard = ({ business }) => {
             <Button text="Leave a review" icon={faStar} size="small" ></Button>
           </Link>
           <Link to="#">
-            <Button text="Save for later" icon={faBookmark} size="small" disabled={true} ></Button>
+            <Button text="View profile" icon={faBookmark} size="small" disabled={true} ></Button>
           </Link>
         </div>
+      </div>
       </div>
     
   );

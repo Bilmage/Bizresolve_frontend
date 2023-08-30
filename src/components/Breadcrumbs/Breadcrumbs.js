@@ -11,36 +11,38 @@ function handleClick(event) {
   console.info('You clicked a breadcrumb.');
 }
 
-export default function Breadcrumbs() {
+export default function CustomBreadcrumbs() {
   return (
-    <div role="presentation" onClick={handleClick}>
-      <Breadcrumbs aria-label="breadcrumb">
-        <Link
-          underline="hover"
-          sx={{ display: 'flex', alignItems: 'center' }}
-          color="inherit"
-          href="/"
-        >
-          <HomeIcon sx={{ mr: 0.5 }} fontSize="inherit" />
-          MUI
-        </Link>
-        <Link
-          underline="hover"
-          sx={{ display: 'flex', alignItems: 'center' }}
-          color="inherit"
-          href="/material-ui/getting-started/installation/"
-        >
-          <WhatshotIcon sx={{ mr: 0.5 }} fontSize="inherit" />
-          Core
-        </Link>
-        <Typography
-          sx={{ display: 'flex', alignItems: 'center' }}
-          color="text.primary"
-        >
-          <GrainIcon sx={{ mr: 0.5 }} fontSize="inherit" />
-          Breadcrumb
-        </Typography>
-      </Breadcrumbs>
+    <div className="container" >
+      <div role="presentation" onClick={handleClick}>
+        <Breadcrumbs aria-label="breadcrumb">
+          <Link
+            underline="hover"
+            sx={{ display: 'flex', alignItems: 'center' }}
+            color="inherit"
+            href="/search"
+          >
+            <HomeIcon sx={{ mr: 0.5 }} fontSize="inherit" />
+            All Businesses
+          </Link>
+          <Link
+            underline="hover"
+            sx={{ display: 'flex', alignItems: 'center' }}
+            color="inherit"
+            href="#"
+          >
+            <WhatshotIcon sx={{ mr: 0.5 }} fontSize="inherit" />
+            Business Name
+          </Link>
+          <Typography
+            sx={{ display: 'flex', alignItems: 'center' }}
+            color="text.primary"
+          >
+            <GrainIcon sx={{ mr: 0.5 }} fontSize="inherit" />
+            Business Profile
+          </Typography>
+        </Breadcrumbs>
+      </div>
     </div>
   );
 }

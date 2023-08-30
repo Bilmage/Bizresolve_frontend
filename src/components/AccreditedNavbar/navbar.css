@@ -4,7 +4,9 @@
   justify-content: space-between;
   padding: 24px 0px 24px 32px;
   position: relative;
-  width: 80vw;
+  /* width: 80vw; */
+  z-index: 100;
+  border-bottom: 1px solid #ccc;
 }
 
 .accredited-nav-bar .logo {
