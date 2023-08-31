@@ -10,12 +10,14 @@ export default function CustomizedGrid() {
       businessName: 'Safaricom',
       reviews: 5, // Assuming this represents reviews
       accredited: true,
+      registeredAt: '2023-08-29 10:30:00', // Date and time of registration
     },
     {
       id: 2,
       businessName: 'Zuku',
       reviews: 4, // Assuming this represents reviews
       accredited: false,
+      registeredAt: '2023-08-30 09:45:00', // Date and time of registration
     },
     // Add more rows as needed
   ];
@@ -35,6 +37,11 @@ export default function CustomizedGrid() {
       width: 150,
       valueGetter: (params) =>
         params.value ? 'Accredited' : 'Not Accredited',
+    },
+    {
+      field: 'registeredAt',
+      headerName: 'Registered Date',
+      width: 180,
     },
     {
       field: 'delete',
