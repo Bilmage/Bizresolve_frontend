@@ -10,6 +10,7 @@ const rows: GridRowsProp = [
     email: "safaricom@example.com",
     description: "Telecom company",
     registeredAt: "2023-08-29 10:30:00",
+    accredited: true,
   },
   {
     id: 2,
@@ -19,6 +20,7 @@ const rows: GridRowsProp = [
     email: "zuku@example.com",
     description: "Internet service provider",
     registeredAt: "2023-08-30 09:45:00",
+    accredited: false,
   },
   {
     id: 3,
@@ -28,6 +30,7 @@ const rows: GridRowsProp = [
     email: "surgipham@example.com",
     description: "Pharmaceutical store",
     registeredAt: "2023-08-31 14:20:00",
+    accredited: true,
   },
   {
     id: 4,
@@ -37,6 +40,7 @@ const rows: GridRowsProp = [
     email: "gengiscapital@example.com",
     description: "Financial services",
     registeredAt: "2023-09-01 08:00:00",
+    accredited: false,
   },
   {
     id: 5,
@@ -46,6 +50,7 @@ const rows: GridRowsProp = [
     email: "dimensiondata@example.com",
     description: "IT solutions provider",
     registeredAt: "2023-09-02 16:30:00",
+    accredited: true,
   },
   {
     id: 6,
@@ -55,6 +60,7 @@ const rows: GridRowsProp = [
     email: "mtn@example.com",
     description: "Telecom company",
     registeredAt: "2023-09-03 11:10:00",
+    accredited: false,
   },
 ];
 
@@ -66,9 +72,15 @@ const columns: GridColDef[] = [
   { field: "email", headerName: "Email", width: 150 },
   { field: "description", headerName: "Description", width: 200 },
   { field: "registeredAt", headerName: "Date Registered", width: 180 },
+  {
+    field: "accredited",
+    headerName: "Accredited",
+    width: 120,
+    renderCell: (params) => (params.value ? "Yes" : "No"),
+  },
 ];
 
-export default function Business() {
+export default function App() {
   return (
     <div style={{ height: 400, width: "100%" }}>
       <DataGrid rows={rows} columns={columns} pageSize={5} />
