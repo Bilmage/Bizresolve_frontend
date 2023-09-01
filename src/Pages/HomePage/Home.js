@@ -8,6 +8,7 @@ import { ContactSection } from "../../components/ContactSection/ContactSection";
 import { Masthead } from "../../components/Headline/Masthead";
 import { BusinessSection } from "../../components/BusinessSection/BusinessSection";
 import { IndividualSection } from "../../components/IndividualSection/IndividualSection";
+import { BackToTopButton } from "../../components/BackToTop/BackToTopButton";
 import { BizFooter } from "../../components/Footer/BizFooter";
 import "../../style.css";
 
@@ -22,6 +23,7 @@ export default function Home() {
       <BusinessSection />
       <br />
       <IndividualSection />
+      <BackToTopButton />
       <BizFooter />
     </>
   );

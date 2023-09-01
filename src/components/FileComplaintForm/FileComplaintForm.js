@@ -13,7 +13,7 @@ import {
   MenuItem,
 } from "@mui/material";
 
-const FileComplaintForm = ({ className }) => {
+export const FileComplaintForm = ({ className }) => {
   const [formData, setFormData] = useState({
     businessName: "",
     businessPhysicalAddress: "",

@@ -27,7 +27,7 @@ export const TextAreaField = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container-fluid">
       <div className="ratings">
         {[1, 2, 3, 4, 5].map((starIndex) => (
           <FaStar

@@ -7,7 +7,7 @@
     flex-direction: column;
     gap: 2px;
     height: 420px;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 0px 0px 0px 10px;
     position: relative;
     max-width: auto;
@@ -88,7 +88,7 @@
     gap: 8px;
     justify-content: center;
     position: relative;
-    max-width: 350px;
+    max-width: 500px;
 }
 
 .business-card .div {
@@ -99,7 +99,7 @@
     gap: 16px;
     padding: 0px 10px;
     position: relative;
-    width: 80%;
+    width: 100%;
 }
 
 .business-card .text-wrapper-2 {
@@ -155,7 +155,7 @@
     margin-top: -1px;
     position: relative;
     white-space: nowrap;
-    width: fit-content;
+    /* width: fit-content; */
 }
 
 .business-card .description {
@@ -311,5 +311,5 @@
 .business-list-container {
     display: flex;
     justify-content: flex-start;
-    margin-left: 20px; /* This will align the container to the right */
+    margin-left: 20px; 
   }

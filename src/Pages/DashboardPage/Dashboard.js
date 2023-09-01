@@ -7,16 +7,16 @@ import { BizFooter } from '../../components/Footer/BizFooter';
 import CustomBreadcrumbs from '../../components/Breadcrumbs/Breadcrumbs';
 import { BackToTopButton } from "../../components/BackToTop/BackToTopButton";
 import "../../components/SearchMenu/search.css";
-import Businesses from '../../components/AllBusinesses/business';
-
-export default function SearchAccreditedPage() {
+import MyBusiness from '../../components/MyBusinesses/MyBusiness';
+export default function DashboardPage() {
   return (
     <>
     <AccreditedNavBar />
     <CustomBreadcrumbs />          
     <SearchBar />
     <SearchText />
-    <Businesses/>    
+    
+    <MyBusiness />    
     <BusinessCard />
     <BackToTopButton />    
     <BizFooter />

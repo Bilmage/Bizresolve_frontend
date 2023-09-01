@@ -1,60 +1,67 @@
-import React from 'react';
-import Button from "../Button/Button";
+import * as React from 'react';
+import Box from '@mui/material/Box';
 import { Link } from "react-router-dom";
-import {
-  Container,
-  FormControl,
-  InputLabel,
-  Input,  
-  Select,
-  MenuItem,
-  Grid,
-} from '@mui/material';
+import Button from "../Button/Button";
+import TextField from '@mui/material/TextField';
+import MenuItem from '@mui/material/MenuItem';
 
-const SearchBar = ({ className }) => {
+const cities = ['Nairobi', 'Kisumu', 'Mombasa'];
+
+export default function SearchBar() {
+  const [searchQuery, setSearchQuery] = React.useState('');
+  const [selectedCity, setSelectedCity] = React.useState('');
+
+  const handleSearchQueryChange = (event) => {
+    setSearchQuery(event.target.value);
+  };
+
+  const handleCityChange = (event) => {
+    setSelectedCity(event.target.value);
+  };
+
+  const handleSearchClick = () => {
+    // Handle search logic here, e.g., initiate search based on searchQuery and selectedCity
+  };
+
   return (
-    <Container>
-      <div className="container" style={{ display: "flex", justifyContent: "flex-start" }}>
-        <div className="row">
-          <Grid container spacing={2} alignItems="center">
-            <Grid item xs={12} sm={8} md={7} lg={7}>
-              <FormControl fullWidth>
-                <InputLabel htmlFor="header-search"></InputLabel>
-                <div style={{ position: 'relative' }}>                  
-                  <Input
-                    type="text"
-                    id="header-search"
-                    placeholder="Search for a business, charity, category "
-                    name="s"
-                  />                  
-                </div>
-              </FormControl>
-            </Grid>
-            <Grid item xs={12} sm={4} md={3} lg={3}>
-              <Select
-                id="county"
-                label="Select County"
-                className="fw-bold"
-                fullWidth
-                
-                
-              >
-                <MenuItem value="Nairobi">Nairobi</MenuItem>
-                <MenuItem value="Mombasa">Mombasa</MenuItem>
-                <MenuItem value="Kisumu">Kisumu</MenuItem>
-                <MenuItem value="Nakuru">Nakuru</MenuItem>
-              </Select>
-            </Grid>
-            <Grid item xs={12} sm={12} md={2} lg={2}>
-              <Link to="#">
-                <Button text="Search" size="small"></Button>
-              </Link>
-            </Grid>
-          </Grid>
+    <div className='container'>
+      <Box
+        component="form"
+        sx={{
+          '& .MuiTextField-root': { m: 1, width: '25ch' },
+        }}
+        noValidate
+        autoComplete="off"
+      >
+        <div>
+          <TextField
+            id="outlined-search-input"
+            label="Search for a business"
+            value={searchQuery}
+            onChange={handleSearchQueryChange}
+            variant="outlined"
+          />
+          <TextField
+            id="outlined-select-city"
+            select
+            label="Select City"
+            value={selectedCity}
+            onChange={handleCityChange}
+            variant="outlined"
+          >
+            {cities.map((city) => (
+              <MenuItem key={city} value={city}>
+                {city}
+              </MenuItem>
+            ))}
+          </TextField>
         </div>
+      </Box>
+      <div>
+        <Link to="#">
+          <Button text="Search" onClick={handleSearchClick} />
+        </Link>
       </div>
-    </Container>
+    </div>
   );
-};
-
-export default SearchBar;
+}
