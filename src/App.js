@@ -19,6 +19,7 @@ import {
   FeaturedReviewsPage,
   LogComplaintsPage,
   LandingPage,
+  DashboardPage,
 } from "./Pages";
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
           <Route path="/accreditationprocess" element={<AccreditationPage />} />
           <Route path="/featuredreviews" element={<FeaturedReviewsPage />} />
           <Route path="/search" element={<SearchAccreditedPage />} />
+          <Route path="/dashboard" element={<DashboardPage />} />
           
         {/* </Route> */}
       </Routes>

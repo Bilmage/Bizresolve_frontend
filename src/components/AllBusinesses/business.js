@@ -1,5 +1,6 @@
 import * as React from "react";
 import { DataGrid, GridRowsProp, GridColDef } from "@mui/x-data-grid";
+import { XGrid } from '@mui/x-data-grid';
 
 const rows: GridRowsProp = [
   {
@@ -80,10 +81,12 @@ const columns: GridColDef[] = [
   },
 ];
 
-export default function App() {
+export default function Businesses() {
   return (
+    <div className="container-fluid">
     <div style={{ height: 400, width: "100%" }}>
       <DataGrid rows={rows} columns={columns} pageSize={5} />
+    </div>
     </div>
   );
 }

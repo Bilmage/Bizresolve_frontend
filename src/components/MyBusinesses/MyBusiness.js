@@ -2,7 +2,7 @@ import * as React from 'react';
 import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 import DeleteIcon from '@mui/icons-material/Delete'; // Import the delete icon
 
-export default function CustomizedGrid() {
+export default function MyBusiness() {
   // Simulate your data
   const rows = [
     {
@@ -60,6 +60,7 @@ export default function CustomizedGrid() {
   };
 
   return (
+    <div className='container-fluid'>
     <div style={{ height: 400, width: '100%' }}>
       <DataGrid
         rows={rows}
@@ -69,6 +70,7 @@ export default function CustomizedGrid() {
           Toolbar: GridToolbar,
         }}
       />
+    </div>
     </div>
   );
 }
