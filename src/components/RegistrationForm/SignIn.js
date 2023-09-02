@@ -30,7 +30,7 @@ export const SignIn = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = async (event) => {
-    
+
     event.preventDefault();
     console.log("Data", formData);
     try {
@@ -110,8 +110,10 @@ export const SignIn = () => {
                 label="Google"
 
 
+
+
                 type="light" // can be light or dark
-                
+
                 onClick={() => {
                   console.log("Google button clicked");
                 }}

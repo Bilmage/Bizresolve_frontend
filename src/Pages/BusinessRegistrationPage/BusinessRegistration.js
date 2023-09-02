@@ -1,7 +1,7 @@
 import React from 'react'
 import Navigation from '../../components/Navigation/Navigation';
 import ApplicationBanner from '../../components/ApplicationBanner/ApplicationBanner';
-import ApplicationForm from '../../components/ApplicationForm/ApplicationForm';
+import BusinessRegistration from '../../components/BusinessRegistrationForm/BusinessRegistration';
 import  BackToTopButton from '../../components/BackToTop/BackToTopButton';
 import BizFooter from '../../components/Footer/BizFooter';
 
@@ -11,7 +11,7 @@ export default function BusinessRegistrationPage() {
     
     <Navigation/>
     <ApplicationBanner />
-    <ApplicationForm />
+    <BusinessRegistration />
     <BackToTopButton />
     <BizFooter/>
 

@@ -77,6 +77,7 @@
 
 .navigation .nav-items {
 
+
     align-items: center;
     display: flex;
     gap: 30px;
@@ -84,11 +85,13 @@
     /* width: 458px; */
     white-space: nowrap;
 
-  align-items: center;
-  display: flex;
-  gap: 30px;
-  position: relative;
+
+  
+
+/*   width: 458px; */
+
   /* width: 458px; */
+
   white-space: nowrap;
 
 }

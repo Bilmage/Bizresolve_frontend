@@ -9,7 +9,7 @@ import Profilepic2 from "../../assets/images/Profilepic2.png";
 const AccreditedNavBar = ({ className }) => {
   const navItems = [
     { text: "Home", path: "/" },
-    { text: "Our featured reviews", path: "/featuredreviews" },
+    { text: "Featured reviews", path: "/featuredreviews" },
     { text: "File a complaint", path: "/filecomplaints" },
   ];
 
