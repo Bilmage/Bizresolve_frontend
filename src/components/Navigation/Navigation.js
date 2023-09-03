@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import "./navigation.css";
 import { Link } from "react-router-dom";
 import Button from "../Button/Button";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { useAuth } from "../../hooks";
 
 const navigationItems = [
   { label: "Home", path: "/" },
-  { label: "About", path: "/about" },
-  { label: "Contact", path: "/contact" },
+  { label: "Featured reviews", path: "/featuredreviews" },
+  { label: "File a complaint", path: "/logcomplaint" },
 ];
 
 export const Navigation = ({ navigation }) => {
@@ -40,6 +41,11 @@ export const Navigation = ({ navigation }) => {
               <Link to={item.path}>{item.label}</Link>
             </div>
           ))}
+          <div>
+          <Link to="/Registration">
+              <Button text="Get Accredited" icon={faPlus}></Button>
+            </Link>
+          </div>
 
           {/* when Auth is true */}
           {auth ? (
@@ -72,7 +78,7 @@ export const Navigation = ({ navigation }) => {
               <p className="welcome-text">Welcome MJ!</p>
             </div>
           ) : (
-            <div className="container">
+            <div className="container-fluid">
               <div>
                 <Link to="/Registration">
                   <Button text="Sign up" />

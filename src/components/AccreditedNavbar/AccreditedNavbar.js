@@ -6,7 +6,7 @@ import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import LogoIpsum from "../../assets/images/logoipsum.svg";
 import Profilepic2 from "../../assets/images/Profilepic2.png";
 
-const AccreditedNavBar = ({ className }) => {
+export const AccreditedNavBar = ({ className }) => {
   const navItems = [
     { text: "Home", path: "/" },
     { text: "Featured reviews", path: "/featuredreviews" },

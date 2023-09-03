@@ -55,27 +55,27 @@ export const RegistrationForm = () => {
               </div>
 
 
-              <div className="d-flex flex-row align-items-center mb-4" style={{ display: 'flex', gap: '2rem', alignItems: 'center', width: 'auto' }}>
+              <div className="d-flex flex-row align-items-center mb-4" style={{ display: 'flex', gap: '3rem', alignItems: 'center', width: 'auto' }}>
                 <FaUser />
                 <TextField label="First Name" id="firstName" fullWidth />
               </div>
 
-              <div className="d-flex flex-row align-items-center mb-4" style={{ display: 'flex', gap: '2rem', alignItems: 'center', width: 'auto' }}>
+              <div className="d-flex flex-row align-items-center mb-4" style={{ display: 'flex', gap: '3rem', alignItems: 'center', width: 'auto' }}>
                 <FaUser />
                 <TextField label="Last Name" id="lastName" fullWidth />
               </div>
 
-              <div className="d-flex flex-row align-items-center mb-4" style={{ display: 'flex', gap: '2rem', alignItems: 'center', width: 'auto' }}>
+              <div className="d-flex flex-row align-items-center mb-4" style={{ display: 'flex', gap: '3rem', alignItems: 'center', width: 'auto' }}>
                 <FaEnvelope />
                 <TextField label="Email" id="form2" type="email" fullWidth />
               </div>
 
-              <div className="d-flex flex-row align-items-center mb-4" style={{ display: 'flex', gap: '2rem', alignItems: 'center', width: 'auto' }}>
+              <div className="d-flex flex-row align-items-center mb-4" style={{ display: 'flex', gap: '3rem', alignItems: 'center', width: 'auto' }}>
                 <FaLock />
                 <TextField label="Password" id="form3" type="password" fullWidth />
               </div>
 
-              <div className="d-flex flex-row align-items-center mb-4" style={{ display: 'flex', gap: '2rem', alignItems: 'center', width: 'auto' }}>
+              <div className="d-flex flex-row align-items-center mb-4" style={{ display: 'flex', gap: '3rem', alignItems: 'center', width: 'auto' }}>
                 <FaKey />
                 <TextField label="Repeat your password" id="form4" type="password" fullWidth />
               </div>
@@ -90,7 +90,7 @@ export const RegistrationForm = () => {
 
 
               <Button text="Sign up" />
-              <br />
+              &nbsp; &nbsp; 
               <p style={{ color: "#5c6670" }}>
                 or you can sign up with
               </p>

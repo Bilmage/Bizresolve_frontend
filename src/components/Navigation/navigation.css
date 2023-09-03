@@ -10,7 +10,7 @@
 .navigation {
   align-items: center;
   display: flex;
-  gap: 500px;
+  gap: 150px;
   justify-content: center;
   padding: 32px;
   position: relative;
@@ -81,18 +81,8 @@
     align-items: center;
     display: flex;
     gap: 30px;
-    position: relative;
-    /* width: 458px; */
+    position: relative;    
     white-space: nowrap;
-
-
-  
-
-/*   width: 458px; */
-
-  /* width: 458px; */
-
-  white-space: nowrap;
 
 }
 
