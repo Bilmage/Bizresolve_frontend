@@ -5,7 +5,7 @@
     /* flex-direction: column; */
     /* border: 1px solid #ccc; */
     border-radius: 5px;
-    
+    display: flex;
   }
   @media (max-width: 768px) {
     .container {

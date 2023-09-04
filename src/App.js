@@ -3,8 +3,8 @@ import "./App.css";
 import "./style.css";
 import { Routes, Route } from "react-router-dom";
 import { RatingsRedirectPage, SignInPage } from "./components";
-import SearchAccreditedPage from "./Pages/SearchAccreditedPage/SearchAccredited";
-import PrivateOutlet from "./utils/privateOutlet";
+// import SearchAccreditedPage from "./Pages/SearchAccreditedPage/SearchAccredited";
+// import PrivateOutlet from "./utils/privateOutlet";
 import {
   HomePage,
   RegistrationPage,
@@ -18,9 +18,11 @@ import {
   AccreditationPage,
   FeaturedReviewsPage,
   LogComplaintsPage,
+  Forgot,
   LandingPage,
   DashboardPage,
 } from "./Pages";
+
 
 function App() {
   return (
@@ -29,6 +31,7 @@ function App() {
         <Route index element={<HomePage />} />
         <Route path="/Registration" element={<RegistrationPage />} />
         <Route path="/SignIn" element={<SignInPage />} />
+        <Route path="/forgotpassword" element={<Forgot />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/landing" element={<LandingPage />} />
@@ -43,7 +46,7 @@ function App() {
           <Route path="/businessregistration" element={<BusinessRegistrationPage />} />
           <Route path="/accreditationprocess" element={<AccreditationPage />} />
           <Route path="/featuredreviews" element={<FeaturedReviewsPage />} />
-          <Route path="/search" element={<SearchAccreditedPage />} />
+          {/* <Route path="/search" element={<SearchAccreditedPage />} /> */}
           <Route path="/dashboard" element={<DashboardPage />} />
           
         {/* </Route> */}

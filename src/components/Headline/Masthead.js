@@ -3,7 +3,7 @@ import './headline.css';
 
 export const Masthead = ({ headline }) => {
     return (
-        <div className="container">
+        <div >
         <h1 className="masthead" style={headline}>
             <div className="empowering">Empowering Individuals and Businesses</div>
             <div class="line" style={headline}></div>

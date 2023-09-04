@@ -104,7 +104,7 @@ width: 90%;
  
 @media (max-width: 780px) {
   .newsletter-form input {
-    width: 150%;
+    width: 100%;
 
       
   }

@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { FaEnvelope, FaLock } from "react-icons/fa";
 import Button from "../Button/Button";
-import GoogleButton from "react-google-button";
 import { Link } from "react-router-dom";
 import Lottie from "lottie-react";
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import RegistrationAnimation from "../../RegistrationAnimation.json";
 // import { toast } from 'react-toastify';
 
@@ -22,7 +21,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setCredentials } from "../../features/auth/authSlice";
 
-export const SignIn = () => {
+export const ForgotPass = () => {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -66,8 +65,14 @@ export const SignIn = () => {
                 className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4"
                 style={{ color: "#ec6809" }}
               >
-                Sign In
+                Forgot password ?
               </p>
+              <p style={{ color: "#ec6809" }}>
+                  Enter your email below to revive your account{" "}
+
+
+
+                </p>
 
               <div className="d-flex flex-row align-items-center mb-4">
                 <FaEnvelope />
@@ -84,62 +89,22 @@ export const SignIn = () => {
                   fullWidth
                 />
               </div>
+              
 
-              <div className="d-flex flex-row align-items-center mb-4">
-                <FaLock />
-                &nbsp; &nbsp;
-                <TextField
-                  value={formData.password}
-                  onChange={(event) =>
-                    setFormData({ ...formData, password: event.target.value })
-                  }
-                  label="Password"
-                  id="form4"
-                  type="password"
-                  name="password"
-                  fullWidth
-                />
-              </div>
-
-              <Button text="Log in" onClick={handleSubmit} />
-
-              &nbsp; &nbsp;
-
-              <p style={{ color: "#5c6670" }}>or you can continue with</p>
-              <GoogleButton
-                style={{ borderRadius: "54px", width: '130px', height: '50px' }}
-
-                label="Google"
-
-
-
-
-                type="light" // can be light or dark
-
-                onClick={() => {
-                  console.log("Google button clicked");
-                }}
-              />
-              &nbsp; &nbsp;
-              <p style={{ color: "#5c6670" }}>
-                Don't have an account ?{" "}
-                <Link
-                  to="/registration"
-                  style={{ textDecoration: "underline", color: "#ec6809" }}
-                >
-                  sign up
-                </Link>
-              </p>
+              <Button text="Send Reset Email" onClick={handleSubmit} />
               <Link
-                to="/forgotpassword"
+                to="/"
                 
-              >
+              >&nbsp; &nbsp;
                 <p style={{ color: "#ec6809" }}>
-                  Forgot password ? {" "}
+                  <FontAwesomeIcon icon={faChevronLeft} /> Back to Home{" "}
 
 
 
                 </p></Link>
+
+              &nbsp; &nbsp;            
+         
             </Grid>
 
             <Grid
@@ -159,4 +124,4 @@ export const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default ForgotPass;
