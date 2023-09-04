@@ -32,7 +32,6 @@ export const SignIn = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = async (event) => {
-
     event.preventDefault();
     console.log("Data", formData);
     try {
@@ -107,12 +106,9 @@ export const SignIn = () => {
 
               <p style={{ color: "#5c6670" }}>or you can continue with</p>
               <GoogleButton
-                style={{ borderRadius: "54px", width: '130px', height: '50px' }}
-
+                style={{ borderRadius: "54px", width: "130px", height: "50px" }}
                 label="Google"
-
                 type="light" // can be light or dark
-                label="Google"
                 onClick={() => {
                   console.log("Google button clicked");
                 }}
