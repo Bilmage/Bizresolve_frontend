@@ -4,6 +4,10 @@ import Button from "../Button/Button";
 import GoogleButton from "react-google-button";
 import { Link } from "react-router-dom";
 import Lottie from "lottie-react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import RegistrationAnimation from "../../RegistrationAnimation.json";
 // import { toast } from 'react-toastify';
 
@@ -81,6 +85,7 @@ export const SignIn = () => {
                   fullWidth
                 />
               </div>
+              
 
               <div className="d-flex flex-row align-items-center mb-4">
                 <FaLock />
@@ -100,7 +105,7 @@ export const SignIn = () => {
 
               <Button text="Log in" onClick={handleSubmit} />
 
-              <br />
+              &nbsp; &nbsp;
 
               <p style={{ color: "#5c6670" }}>or you can continue with</p>
               <GoogleButton
@@ -111,7 +116,7 @@ export const SignIn = () => {
                   console.log("Google button clicked");
                 }}
               />
-              <br />
+              &nbsp; &nbsp;
               <p style={{ color: "#5c6670" }}>
                 Don't have an account ?{" "}
                 <Link
@@ -121,6 +126,26 @@ export const SignIn = () => {
                   sign up
                 </Link>
               </p>
+              <Link
+                to="/forgotpassword"
+                
+              >
+                <p style={{ color: "#ec6809", fontSize: '13px' }}>
+                  Forgot password ? {" "}
+
+
+
+                </p></Link>
+                <Link
+                to="/"
+                
+              >&nbsp; &nbsp;
+                <p style={{ color: "#ec6809", fontSize: '13px' }}>
+                  <FontAwesomeIcon icon={faChevronLeft} /> Back to Home{" "}
+
+
+
+                </p></Link>
             </Grid>
 
             <Grid

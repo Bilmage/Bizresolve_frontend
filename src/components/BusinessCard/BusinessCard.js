@@ -81,7 +81,7 @@ const BusinessCard = ({ business }) => {
   );
 };
 
-const BusinessList = () => {
+export const BusinessList = () => {
   return (
     <div className="business-list-container"> {/* Add the "container" class to wrap the list */}
       {businessData.map((business, index) => (

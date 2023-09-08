@@ -3,21 +3,31 @@
     display: flex;
     justify-content: center;
     position: relative;
-    width: 576px;
+    width: 400px;
+    height: auto;
 }
 
 .testimonial-images .frame {
     flex: 1;
     flex-grow: 1;
-    height: 94px;
+    height: 60px;
     position: relative;
 }
 
 .testimonial-images .image {
-    height: 103px;
+    height: 60px;
     left: -5px;
     object-fit: cover;
     position: absolute;
     top: 0;
-    width: 103px;
+    width: 60px;
 }
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+    .testimonial-images .image {
+        height: auto; 
+        width: 100%;        
+    }
+}
+

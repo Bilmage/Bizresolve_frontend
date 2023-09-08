@@ -13,7 +13,7 @@ export default function RatingsPage() {
     
     <Navigation />
     <HeaderBanner />
-    <div className='container'>
+    <div className='container-fluid'>
       
     <RateMessage />
     <TextAreaField />

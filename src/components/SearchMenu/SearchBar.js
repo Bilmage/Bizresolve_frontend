@@ -24,7 +24,7 @@ export default function SearchBar() {
   };
 
   return (
-    <div className='container'>
+    <div className='container' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
       <Box
         component="form"
         sx={{

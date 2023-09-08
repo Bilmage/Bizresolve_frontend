@@ -19,7 +19,9 @@ export default function AccreditationPage() {
     <AccreditationDocuments />
     <AdditionalMessage />
     <BackToTopButton />    
-    <BottomNav />
+    <div >
+        <BottomNav backPath="/" nextPath="/applicationprocess" />
+      </div>
     </>
   )
 }

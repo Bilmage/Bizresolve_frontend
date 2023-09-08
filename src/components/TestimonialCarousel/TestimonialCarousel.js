@@ -1,29 +1,34 @@
 import React from "react";
 import "./testimonial.css";
-import ProfilePic from "../../assets/images/Profilepic1.png";
+// import ProfilePic from "../../assets/images/Profilepic1.png";
 
-export const TestimonialCarousel = ({ className }) => {
-  const testimonials = [
-    {
-      image: ProfilePic,
-      text: "“Bizresolve gave my business the credibility it needed to attract new customers and retain existing ones.”",
-    },
-  ];
-
+export const TestimonialCarousel = ({ className, testimonials }) => {
   return (
-    <div>
-      {testimonials.map((testimonial, index) => (
-        <div key={index} className={`testimonial-carousel ${className}`}>
-          <img className="image" alt="Img" src={testimonial.image} />
-          <div className="description">
-            <p className="text-wrapper">
-              <hr />
-              {testimonial.text}
-            </p>
-          </div>
-        </div>
-      ))}
-    </div>
+    <>
+      <h2>Top Reviews this week!</h2>
+      <ul className="timeline">
+        {testimonials.map((testimonial, index) => (
+          <li key={index} className={index % 2 === 0 ? "" : "timeline-inverted"}>
+            <div className="timeline-badge">
+              <a>
+                <i className={`fa fa-circle ${index % 2 === 0 ? "" : "invert"}`} id="" />
+              </a>
+            </div>
+            <div className="timeline-panel">
+              <div className="timeline-heading">
+                <h4>Timeline Event</h4>
+              </div>
+              <div className="timeline-body">
+                <p>{testimonial.text}</p>
+              </div>
+              <div className="timeline-footer">
+                <p className="text-right">{testimonial.date}</p>
+              </div>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </>
   );
 };
 

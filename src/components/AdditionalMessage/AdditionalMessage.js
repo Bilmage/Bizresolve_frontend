@@ -14,8 +14,17 @@ export const AddtionalMessage = ({ className }) => {
                             Bizresolve's rating system.
                         </strong></Link>
                     </span>
+                    &nbsp; &nbsp; 
+                    <span className="text-wrapper">
+                    Also please note that you cannot get accredited without registering your business.
+                    Click here to {" "}
+                        <Link to="/businessregistration">  <strong style={{ textDecoration: "underline", color: '#F78431' }}>
+                        Get registered
+                        </strong></Link>
+                    </span>
 
                 </p>
+                
             </div>
         </div>
     );

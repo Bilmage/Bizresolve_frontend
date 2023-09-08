@@ -12,4 +12,8 @@ export {default as FeaturedReviewsPage} from "./FeaturedreviewsPage/FeaturedRevi
 export {default as LandingPage} from "./LandingPage/Landing";
 export {default as BusinessRegistrationPage} from "./BusinessRegistrationPage/BusinessRegistration"
 export {default as DashboardPage} from "./DashboardPage/Dashboard";
-
+export {default as Forgot} from "./ForgotPasswordPage/Forgot";
+export {default as MyBusinessPage} from "./BusinessName/BusinessName";
+export {default as BusinessProfilePage} from "./BusinessprofilePage/Profile";
+export {default as SearchAccreditedPage} from "./SearchAccreditedPage/SearchAccreditedPage";
+ 
