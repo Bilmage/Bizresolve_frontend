@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { useAuth } from "../../hooks";
+import { useDispatch } from "react-redux";
+import { logout } from "../../features/auth/authSlice";
 
 const navigationItems = [
   { label: "Home", path: "/" },
@@ -12,7 +14,9 @@ const navigationItems = [
 ];
 
 export const Navigation = ({ navigation }) => {
-  const [auth, setAuth] = useState(true);
+  // const [auth, setAuth] = useState(true);
+  const auth = useAuth();
+  const dispatch = useDispatch();
   const [isOpen, setIsOpen] = useState(false);
 
   const handleToggleDropdown = () => {
@@ -20,8 +24,7 @@ export const Navigation = ({ navigation }) => {
   };
 
   const handleLogout = () => {
-    // Implement your logout logic here
-    console.log('Logging out...');
+    dispatch(logout());
   };
 
   // const auth = useAuth();
@@ -48,7 +51,7 @@ export const Navigation = ({ navigation }) => {
           </div>
 
           {/* when Auth is true */}
-          {auth ? (
+          {auth && auth.user ? (
             <div className="d-flex flex-row w-100">
               <div className="dropdown">
                 <a
@@ -69,7 +72,7 @@ export const Navigation = ({ navigation }) => {
                   aria-labelledby="avatar-dropdown"
                 >
                   <li>
-                    <a href="/" onClick={handleLogout} className="logout-link">
+                    <a href="#" onClick={handleLogout} className="logout-link">
                       Logout
                     </a>
                   </li>
@@ -80,7 +83,7 @@ export const Navigation = ({ navigation }) => {
                   </li>
                 </ul>
               </div>
-              <p className="welcome-text">Welcome MJ!</p>
+              <p className="welcome-text">Welcome {auth.user.firstName} {auth.user.lastName}</p>
             </div>
           ) : (
             <div className="container-fluid">

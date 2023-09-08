@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   FaUser,
   FaEnvelope,
@@ -26,6 +26,21 @@ import {
 
 
 export const RegistrationForm = () => {
+  const [formData,setFormData] = useState({
+    email: '',
+    firstName: '',
+    lastName: '',
+    role: ''
+  })
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
   return (
     <Container maxWidth="lg">
       <Card sx={{ borderRadius: "25px" }} className="text-black m-5">
@@ -57,7 +72,7 @@ export const RegistrationForm = () => {
 
               <div className="d-flex flex-row align-items-center mb-4" style={{ display: 'flex', gap: '3rem', alignItems: 'center', width: 'auto' }}>
                 <FaUser />
-                <TextField label="First Name" id="firstName" fullWidth />
+                <TextField onChange={handleInputChange} label="First Name" id="firstName" fullWidth  value={formData.firstName}/>
               </div>
 
               <div className="d-flex flex-row align-items-center mb-4" style={{ display: 'flex', gap: '3rem', alignItems: 'center', width: 'auto' }}>
