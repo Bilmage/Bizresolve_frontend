@@ -4,7 +4,7 @@ import OfficeBuilding from "../../assets/images/OfficeBuilding.svg";
 import ClockOutline from "../../assets/images/ClockOutline.svg";
 import Notifications from "../../assets/images/Notifications none.svg";
 import Calender from "../../assets/images/Calendar.svg";
-import BottomNav from "../BottomNav/BottomNav";
+
 
 export const ComplaintProcess = ({ className }) => {
   return (
@@ -52,10 +52,7 @@ export const ComplaintProcess = ({ className }) => {
             </p>
           </div>
         </div>
-      </div>
-      <div class="navigation">
-        <span class="next-icon">{<BottomNav />}</span>
-      </div>
+      </div>      
     </div>
   );
 };

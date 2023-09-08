@@ -4,7 +4,7 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import FormGroup from "@mui/material/FormGroup";
 import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
-import BottomNav from "../BottomNav/BottomNav";
+
 import "./accredited.css";
 
 export const Accredited = ({ className }) => {
@@ -105,9 +105,7 @@ export const Accredited = ({ className }) => {
         </FormControl>
       </div>
 
-      <div >
-        <BottomNav backPath="#" nextPath="#" />
-      </div>
+
     </>
   );
 };

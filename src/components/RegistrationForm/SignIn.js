@@ -4,6 +4,8 @@ import Button from "../Button/Button";
 import GoogleButton from "react-google-button";
 import { Link } from "react-router-dom";
 import Lottie from "lottie-react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import RegistrationAnimation from "../../RegistrationAnimation.json";
@@ -84,6 +86,7 @@ export const SignIn = () => {
                   fullWidth
                 />
               </div>
+              
 
               <div className="d-flex flex-row align-items-center mb-4">
                 <FaLock />
@@ -131,8 +134,18 @@ export const SignIn = () => {
                 to="/forgotpassword"
                 
               >
-                <p style={{ color: "#ec6809" }}>
+                <p style={{ color: "#ec6809", fontSize: '13px' }}>
                   Forgot password ? {" "}
+
+
+
+                </p></Link>
+                <Link
+                to="/"
+                
+              >&nbsp; &nbsp;
+                <p style={{ color: "#ec6809", fontSize: '13px' }}>
+                  <FontAwesomeIcon icon={faChevronLeft} /> Back to Home{" "}
 
 
 

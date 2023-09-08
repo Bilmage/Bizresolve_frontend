@@ -83,7 +83,15 @@ export const RegistrationForm = () => {
               <div className="mb-4">
                 <FormControlLabel
                   control={<Checkbox name="flexCheck" id="flexCheckDefault" />}
-                  label="I accept the Terms and Conditions of Bizresolve."
+                  label={
+                    <span>
+                      I accept the{" "}
+                      <a href="/" target="_blank" rel="noopener noreferrer" style={{textDecoration: 'underline'}}>
+                        Terms and Conditions
+                      </a>{" "}
+                      of Bizresolve.
+                    </span>
+                  }
                   style={{ color: "#5c6670" }}
                 />
               </div>

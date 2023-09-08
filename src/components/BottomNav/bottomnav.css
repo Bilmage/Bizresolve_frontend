@@ -1,6 +1,6 @@
 .bottom-nav {
     align-items: center;    
-    /* gap: 569px; */
+    gap: 569px;
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -13,6 +13,7 @@
      flex-direction: column;
             align-items: center;
             grid-gap: 0;
+            gap: 0;
      
         } 
     }

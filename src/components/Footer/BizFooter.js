@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import './footer.css';
 import { FaPaperPlane } from 'react-icons/fa';
-import { Link } from "react-router-dom";
-// import TextField from '@material-ui/core/TextField';
+
 
 export const BizFooter = ({ footer }) => {
   const [email, setEmail] = useState(""); // State to store the entered email

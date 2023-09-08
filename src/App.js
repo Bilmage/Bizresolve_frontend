@@ -3,7 +3,6 @@ import "./App.css";
 import "./style.css";
 import { Routes, Route } from "react-router-dom";
 import { RatingsRedirectPage, SignInPage } from "./components";
-// import SearchAccreditedPage from "./Pages/SearchAccreditedPage/SearchAccredited";
 // import PrivateOutlet from "./utils/privateOutlet";
 import {
   HomePage,
@@ -16,11 +15,14 @@ import {
   ApplicationsPage,
   BusinessRegistrationPage,
   AccreditationPage,
+  MyBusinessPage,
   FeaturedReviewsPage,
   LogComplaintsPage,
   Forgot,
   LandingPage,
   DashboardPage,
+  BusinessProfilePage,
+  SearchAccreditedPage,
 } from "./Pages";
 
 
@@ -46,8 +48,10 @@ function App() {
           <Route path="/businessregistration" element={<BusinessRegistrationPage />} />
           <Route path="/accreditationprocess" element={<AccreditationPage />} />
           <Route path="/featuredreviews" element={<FeaturedReviewsPage />} />
-          {/* <Route path="/search" element={<SearchAccreditedPage />} /> */}
+          <Route path="/search" element={<SearchAccreditedPage />} />
           <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/my-business" element={<MyBusinessPage />} />
+          <Route path="/business-profile" element={<BusinessProfilePage />} />
           
         {/* </Route> */}
       </Routes>

@@ -7,8 +7,8 @@ import { useAuth } from "../../hooks";
 
 const navigationItems = [
   { label: "Home", path: "/" },
-  { label: "Featured reviews", path: "/featuredreviews" },
-  { label: "File a complaint", path: "/logcomplaint" },
+  { label: "About", path: "/about" },
+  { label: "Contact", path: "/contact" },
 ];
 
 export const Navigation = ({ navigation }) => {
@@ -30,11 +30,11 @@ export const Navigation = ({ navigation }) => {
   return (
     <div className="container-fluid">
       <div className="navigation" style={navigation}>
-        <div className="logo">
-          <Link to="/">
-            <div className="text-wrapper"></div>
-          </Link>
-        </div>
+        <Link to="/"> <div className="logo">
+
+          <div className="text-wrapper"></div>
+
+        </div></Link>
         <div className="nav-items">
           {navigationItems.map((item, index) => (
             <div className="nav-item" key={index}>
@@ -42,8 +42,8 @@ export const Navigation = ({ navigation }) => {
             </div>
           ))}
           <div>
-          <Link to="/Registration">
-              <Button text="Get Accredited" icon={faPlus}></Button>
+            <Link to="/businessregistration">
+              <Button text="Register your Business" icon={faPlus}></Button>
             </Link>
           </div>
 
@@ -69,8 +69,13 @@ export const Navigation = ({ navigation }) => {
                   aria-labelledby="avatar-dropdown"
                 >
                   <li>
-                    <a href="#" onClick={handleLogout}  className="logout-link">
+                    <a href="/" onClick={handleLogout} className="logout-link">
                       Logout
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/dashboard" className="logout-link">
+                      Dashboard
                     </a>
                   </li>
                 </ul>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaEnvelope, FaLock } from "react-icons/fa";
+import { FaEnvelope } from "react-icons/fa";
 import Button from "../Button/Button";
 import { Link } from "react-router-dom";
 import Lottie from "lottie-react";
@@ -96,7 +96,7 @@ export const ForgotPass = () => {
                 to="/"
                 
               >&nbsp; &nbsp;
-                <p style={{ color: "#ec6809" }}>
+                <p style={{ color: "#ec6809", fontSize: '13px' }}>
                   <FontAwesomeIcon icon={faChevronLeft} /> Back to Home{" "}
 
 

@@ -16,9 +16,10 @@ export const FileComplaint = ({ className }) => {
   };
 
   return (
+    <div className="container">
     
     <div className={`file-complaint ${className}`}>
-      <div className="container">
+      
         <div className="div">
           <div className="sub-headline">
             <h1 className="text-wrapper">File a complaint</h1>

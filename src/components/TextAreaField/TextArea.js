@@ -27,27 +27,29 @@ export const TextAreaField = () => {
   };
 
   return (
-    <div className="container-fluid">
-      <div className="ratings">
-        {[1, 2, 3, 4, 5].map((starIndex) => (
-          <FaStar
-            key={starIndex}
-            className={`star-icon ${starIndex <= rating ? 'filled' : ''}`}
-            style={{ color: starIndex <= rating ? '#F78431' : 'gray' }}
-            onClick={() => handleRatingChange(starIndex)}
-          />
-        ))}
-      </div>
-      <textarea
-        className="form-control"
-        placeholder="Leave a comment..."
-        required
-        rows="3"
-        value={comment}
-        onChange={handleCommentChange}
-      /><br />
-      <Button text="Submit" icon={FaPaperPlane} onClick={handleSubmit} />
-    </div>
+    <div className="container-fluid" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+  <div className="ratings">
+    {[1, 2, 3, 4, 5].map((starIndex) => (
+      <FaStar
+        key={starIndex}
+        className={`star-icon ${starIndex <= rating ? 'filled' : ''}`}
+        style={{ color: starIndex <= rating ? '#F78431' : 'gray', fontSize: '50px' }}
+        onClick={() => handleRatingChange(starIndex)}
+      />
+    ))}
+  </div>
+  &nbsp; &nbsp; 
+  <textarea
+    className="form-control"
+    placeholder="Leave a comment..."
+    required
+    rows="3"
+    value={comment}
+    onChange={handleCommentChange}
+  />&nbsp; &nbsp; 
+  <Button text="Submit" icon={FaPaperPlane} onClick={handleSubmit} />
+</div>
+
   );
 };
 
