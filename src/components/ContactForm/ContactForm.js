@@ -15,8 +15,7 @@ import {
 
 export const ContactForm = ({ className }) => {
   const [formData, setFormData] = useState({
-    name: "",
-    physicalAddress: "",
+    name: "",    
     email: "",
     phone: "",
     county: "",
@@ -81,7 +80,7 @@ export const ContactForm = ({ className }) => {
               </Grid>
 
               <hr className="mx-n3" />
-              <Grid container spacing={2} sx={{ pt: 4, pb: 3 }}>
+              {/* <Grid container spacing={2} sx={{ pt: 4, pb: 3 }}>
                 <Grid item xs={12} md={3}>
                   <Typography variant="subtitle1">
                     Physical Addresses
@@ -100,7 +99,7 @@ export const ContactForm = ({ className }) => {
                 </Grid>
               </Grid>
 
-              <hr className="mx-n3" />
+              <hr className="mx-n3" /> */}
 
               <Grid container spacing={2} sx={{ pt: 4, pb: 3 }}>
                 <Grid item xs={12} md={3}>

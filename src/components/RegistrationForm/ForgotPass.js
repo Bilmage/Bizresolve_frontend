@@ -96,7 +96,7 @@ export const ForgotPass = () => {
                 to="/"
                 
               >&nbsp; &nbsp;
-                <p style={{ color: "#ec6809", fontSize: '13px' }}>
+                <p style={{ color: "#ec6809"}}>
                   <FontAwesomeIcon icon={faChevronLeft} /> Back to Home{" "}
 
 
