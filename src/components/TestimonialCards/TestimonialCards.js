@@ -1,64 +1,85 @@
-import React from "react";
+import React from 'react';
+import { styled } from '@mui/material/styles';
+import Grid from '@mui/material/Grid';
+import Paper from '@mui/material/Paper';
+import Typography from '@mui/material/Typography';
+import ButtonBase from '@mui/material/ButtonBase';
 import "./testimonial.css";
 import ProfilePic from "../../assets/images/Profilepic1.png";
+import { Link } from "react-router-dom";
+import HeartIcon from "../../assets/icons/Heart.svg";
 
+const Img = styled('img')({
+  margin: 'auto',
+  display: 'block',
+  maxWidth: '100%',
+  maxHeight: '100%',
+});
 
-
-export const TestimonialCards = ({ className }) => {
+export const TestimonialCard = () => {
   return (
-    
-    <div className="container">
-  <div className="row">
-    <div className="col-xs-12">
-      <div className="card">
-        <div className="card-image">
-          <a href="#" type="button" className="btn">
-            <img
-              src="https://farm3.staticflickr.com/2764/4350166105_be2c85cdb5_z_d.jpg"
-              alt="user-image"
-            />
-          </a>
-        </div>
-        <div className="card-modal">Take a look at my Profile!</div>
-        <div className="card-info">
-          <div className="name">
-            <p>Nunc Lorem Interdum</p>
-          </div>
-          <div className="social-network">
-            <a href="#" className="icon youtube">
-              <i className="fa fa-youtube" />
-            </a>
-            <a href="#" className="icon twitter">
-              <i className="fa fa-twitter" />
-            </a>
-            <a href="#" className="icon facebook">
-              <i className="fa fa-facebook" />
-            </a>
-          </div>
-          <hr />
-          <div className="content">
-            <p>
-              <b>Info:</b>
-              Praesent faucibus sem tortor, sed imperdiet enim interdum in.
-              Etiam feugiat rutrum ex, quis maximus quam commodo eu.
-              Pellentesque eget tortor convallis, vestibulum tortor in, lacinia
-              diam.
-            </p>
-            <p>
-              <b>Skills:</b> Feugiat, Ipsum, Pellentesque, Maximus
-            </p>
-            <p>
-              <b>Website:</b>{" "}
-              <a href="https://codepen.io/jaguilera">www.codepen.io</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-    
+    <Paper
+      sx={{
+        p: 2,
+        margin: 'auto',
+        maxWidth: 500,
+        flexGrow: 1,
+        backgroundColor: (theme) =>
+          theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+      }}
+    >
+      <Grid container spacing={2}>
+        <Grid item>
+          <ButtonBase sx={{ width: 128, height: 128 }}>
+            <Img alt="complex" src={ProfilePic} />
+          </ButtonBase>
+        </Grid>
+        <Grid item xs={12} sm container>
+          <Grid item xs container direction="column" spacing={2}>
+            <Grid item xs>
+              <Typography gutterBottom variant="subtitle1" component="div">
+                Safaricom
+              </Typography>
+              <Typography variant="body2" gutterBottom>
+              <div className="new">
+                  <img className="heart" alt="Heart" src={HeartIcon} />
+                  <div className="text-wrapper-4">New</div>
+                </div>
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                Nairobi, Westlands
+              </Typography>
+            </Grid>
+            <Grid item>
+              <Typography variant="body2">
+              <i>Registred</i>&nbsp;Sept 12/10/2023
+              </Typography>
+            </Grid>
+          </Grid>
+          <Grid item>
+            <Link to="#">
+            <Typography variant="subtitle1" sx={{ cursor: 'pointer', color: '#f78431ff' }} component="div" >
+              Add to collection
+            </Typography>
+            </Link>
+          </Grid>
+        </Grid>
+      </Grid>
+    </Paper>
   );
-};
+}
 
-export default TestimonialCards;
+export default function TestimonialCardsArray() {
+ 
+  const numberOfCards = 3;
+
+  return (
+    <div className='container'>
+    <div className="testimonial-card-container">
+      {[...Array(numberOfCards)].map((_, index) => (
+        <TestimonialCard key={index} />
+      ))}
+    </div>
+    </div>
+  );
+}
