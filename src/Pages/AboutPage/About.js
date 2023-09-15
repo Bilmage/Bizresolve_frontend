@@ -4,7 +4,7 @@ import { AboutHeadlineText } from "../../components/AboutHeadline/AboutHeadlineT
 import { AboutBanner } from "../../components/AboutBanner/AboutBanner";
 import { MissionSection } from "../../components/MissionSection/MissionSection";
 import { VisionSection } from "../../components/VisionSection/VisionSection";
-import { Masthead } from "../../components/Headline/Masthead";
+import { Header } from '../../components/Header/Header';
 import { Services } from "../../components/Services/Services";
 import { ContactSection } from "../../components/ContactSection/ContactSection";
 import { BackToTopButton } from "../../components/BackToTop/BackToTopButton";
@@ -21,7 +21,10 @@ export default function AboutPage() {
       <hr className="mx-n3" />
       <VisionSection />
       <hr className="mx-n3" />
-      <Masthead />
+      <div>
+        <Header mainText="Our" secondaryText="Core Values" />
+
+      </div>
       <Services />
       <ContactSection />
       <BackToTopButton />

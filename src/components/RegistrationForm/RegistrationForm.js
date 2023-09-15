@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import {
   FaUser,
   FaEnvelope,
@@ -131,6 +133,16 @@ export const RegistrationForm = () => {
                 Already have an account ?  <Link to="/signIn" style={{ textDecoration: "underline", color: "#ec6809" }}>Log in</Link>
               </p>
               <br />
+              <Link
+                to="/"
+                
+              >&nbsp; &nbsp;
+                <p style={{ color: "#ec6809"}}>
+                  <FontAwesomeIcon icon={faChevronLeft} /> Back to Home{" "}
+
+
+
+                </p></Link>
             </Grid>
 
             <Grid

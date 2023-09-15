@@ -5,12 +5,13 @@ import { Navigation } from "../../components/Navigation/Navigation";
 import { BannerTextAreaSection } from "../../components/BannerandTextArea/BannerTextAreaSection";
 import { Logos } from "../../components/logo/Logos";
 import { ContactSection } from "../../components/ContactSection/ContactSection";
-import { Masthead } from "../../components/Headline/Masthead";
 import { BusinessSection } from "../../components/BusinessSection/BusinessSection";
 import { IndividualSection } from "../../components/IndividualSection/IndividualSection";
 import { BackToTopButton } from "../../components/BackToTop/BackToTopButton";
 import { BizFooter } from "../../components/Footer/BizFooter";
+import { Header } from '../../components/Header/Header';
 import "../../style.css";
+import Testimony from "../../components/Testimony/Testimony";
 
 export default function Home() {
   return (
@@ -19,10 +20,18 @@ export default function Home() {
       <BannerTextAreaSection />
       <Logos />
       <ContactSection />
-      <Masthead />
+      <div>
+        <Header mainText="Empowering Individuals and " secondaryText="Businesses" />
+
+      </div> 
       <BusinessSection />
       <br />
       <IndividualSection />
+      <div>
+        <Header mainText="Featured" secondaryText="Reviews" />
+
+      </div> 
+      <Testimony />
       <BackToTopButton />
       <BizFooter />
     </>

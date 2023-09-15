@@ -3,20 +3,12 @@ import Box from '@mui/material/Box';
 import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import TextField from '@mui/material/TextField';
-import MenuItem from '@mui/material/MenuItem';
-
-const cities = ['Nairobi', 'Kisumu', 'Mombasa'];
 
 export default function SearchBar() {
   const [searchQuery, setSearchQuery] = React.useState('');
-  const [selectedCity, setSelectedCity] = React.useState('');
 
   const handleSearchQueryChange = (event) => {
     setSearchQuery(event.target.value);
-  };
-
-  const handleCityChange = (event) => {
-    setSelectedCity(event.target.value);
   };
 
   const handleSearchClick = () => {
@@ -28,7 +20,7 @@ export default function SearchBar() {
       <Box
         component="form"
         sx={{
-          '& .MuiTextField-root': { m: 1, width: '25ch' },
+          '& .MuiTextField-root': { m: 1, width: '40ch' }, // Adjust the width here
         }}
         noValidate
         autoComplete="off"
@@ -40,21 +32,7 @@ export default function SearchBar() {
             value={searchQuery}
             onChange={handleSearchQueryChange}
             variant="outlined"
-          />
-          <TextField
-            id="outlined-select-city"
-            select
-            label="Select City"
-            value={selectedCity}
-            onChange={handleCityChange}
-            variant="outlined"
-          >
-            {cities.map((city) => (
-              <MenuItem key={city} value={city}>
-                {city}
-              </MenuItem>
-            ))}
-          </TextField>
+          />          
         </div>
       </Box>
       <div>

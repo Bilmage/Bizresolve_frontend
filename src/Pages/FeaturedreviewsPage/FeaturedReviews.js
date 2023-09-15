@@ -5,6 +5,8 @@ import { Header } from '../../components/Header/Header';
 import { BackToTopButton } from "../../components/BackToTop/BackToTopButton";
 import { BizFooter } from '../../components/Footer/BizFooter';
 
+
+
 export default function FeaturedReviewsPage() {
   return (
     <>
@@ -16,6 +18,7 @@ export default function FeaturedReviewsPage() {
     <TestimonialCards />
     <BackToTopButton />
     <BizFooter />
+    
     </>
   )
 }

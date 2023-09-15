@@ -8,16 +8,16 @@
 }
 
 .search-text .text-wrapper {
-    color: #5C6670;
+    color: #35393cff;
     flex: 1;
-    font-family: "Inter-Medium", Helvetica;
+    font-family: "Poppins", Helvetica;
     font-size: 16px;
     font-weight: 500;
     letter-spacing: 0.05em;
     line-height: 24px;
     margin-top: -1px;
     position: relative;
-    margin-left: 20px;
+    
 }
 /* Media query for medium screens */
 @media screen and (max-width: 768px) {

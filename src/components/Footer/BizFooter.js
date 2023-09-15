@@ -41,7 +41,7 @@ export const BizFooter = ({ footer }) => {
       <footer className="site-footer">
         <div className="container">
           <div className="row">
-            <div className="col-sm-12 col-md-6">
+            <div className="col-sm-12 col-md-6" >
               <h1>Subscribe to our newsletter!</h1>
               <form className="newsletter-form" onSubmit={handleSubmit}>
               <input
