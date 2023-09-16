@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import { FaMapPin } from "react-icons/fa";
+import Avatar from '@mui/material/Avatar';
+import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+import Profile1 from "../../assets/images/Profilepic1.png";
 import {
   Container,
   Grid,
@@ -8,10 +10,7 @@ import {
   Typography,
   TextField,
   Button,
-  FormControl,
-  RadioGroup,
-  FormControlLabel,
-  Radio,
+  FormControl,  
   InputLabel,
   Select,
   MenuItem,
@@ -29,6 +28,7 @@ const BusinessRegistration = ({ className }) => {
     logo: null, // Initialize logo as null
   });
 
+<<<<<<< HEAD
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -40,26 +40,16 @@ const BusinessRegistration = ({ className }) => {
     // Add your form submission logic here
     // For example, you can send the form data to a backend server
   };
-
-  const handleSetLocation = () => {
-    // Get user's current location using Geolocation API
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          const { latitude, longitude } = position.coords;
-          setFormData((prevData) => ({
-            ...prevData,
-            location: { latitude, longitude },
-          }));
-        },
-        (error) => {
-          console.error("Error getting location:", error);
-        }
-      );
-    } else {
-      console.error("Geolocation is not supported by this browser.");
-    }
+=======
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    // Add your form submission logic here
+    // For example, you can send the form data to a backend server
   };
+
+
+>>>>>>> aad2d5e80d37755f223a160908b7f83ba0642c20
+
 
   const handleLogoUpload = (event) => {
     const logoFile = event.target.files[0];
@@ -115,6 +105,34 @@ const BusinessRegistration = ({ className }) => {
 
             <Card variant="outlined">
               <CardContent sx={{ px: 4 }}>
+                <div style={{ alignItems: 'center', textAlign: 'center' }}>
+                  <Typography
+                    variant="h5"
+                    color="textSecondary"
+                    style={{ color: "#a95b1f", fontWeight: 700 }}
+                    sx={{ mt: 2 }}
+                  >
+                    Click to Upload Your Business logo
+                  </Typography>
+                  <label htmlFor="logoInput">
+                    {Profile1 ? (
+                      <img src={Profile1} alt="Profile" style={{ width: '100px', height: '100px' }} />
+                    ) : (
+                      <Avatar sx={{ m: 1, bgcolor: 'secondary.main', cursor: 'pointer' }}>
+                        <LockOutlinedIcon />
+                      </Avatar>
+                    )}
+                    <input
+                      accept=".png, .jpg, .jpeg"
+                      id="logoInput"
+                      type="file"
+                      style={{ display: 'none' }}
+                      onChange={handleLogoUpload}
+                    />
+                  </label>
+                </div>
+
+
                 <Grid container spacing={2} sx={{ pt: 4, pb: 3 }}>
                   <Grid item xs={12} md={3}>
                     <Typography variant="subtitle1">
@@ -178,11 +196,11 @@ const BusinessRegistration = ({ className }) => {
 
                 <hr className="mx-n3" />
 
+
+
                 <Grid container spacing={2} sx={{ pt: 4, pb: 3 }}>
                   <Grid item xs={12} md={3}>
-                    <Typography variant="subtitle1">
-                      Business Category
-                    </Typography>
+                    <Typography variant="subtitle1">Business Category</Typography>
                   </Grid>
                   <Grid item xs={12} md={9}>
                     <FormControl fullWidth variant="outlined" size="small">
@@ -234,9 +252,7 @@ const BusinessRegistration = ({ className }) => {
 
                 <Grid container spacing={2} sx={{ pt: 4, pb: 3 }}>
                   <Grid item xs={12} md={3}>
-                    <Typography variant="subtitle1">
-                      Upload Documents
-                    </Typography>
+                    <Typography variant="subtitle1">Upload Document</Typography>
                   </Grid>
                   <Grid item xs={12} md={9}>
                     <input
@@ -248,7 +264,7 @@ const BusinessRegistration = ({ className }) => {
                     />
                     <label htmlFor="fileInput">
                       <Button variant="outlined" size="large" component="span">
-                        Upload required documents
+                        Click to upload
                       </Button>
                     </label>
                     <Typography
@@ -256,7 +272,7 @@ const BusinessRegistration = ({ className }) => {
                       color="textSecondary"
                       sx={{ mt: 2 }}
                     >
-                      Upload required documents or any other relevant file. Max
+                      Upload your business license (Required) Max
                       file size 50 MB
                     </Typography>
                   </Grid>
@@ -264,83 +280,11 @@ const BusinessRegistration = ({ className }) => {
 
                 <hr className="mx-n3" />
 
-                <Grid item xs={12}>
-                  <FormControl component="fieldset">
-                    <Typography
-                      variant="subtitle1"
-                      sx={{ fontWeight: "bold", mt: 4 }}
-                    >
-                      Have you been in business for more than six months?
-                    </Typography>
-                    <RadioGroup
-                      row
-                      aria-label="Verified"
-                      name="hasBeenInBusiness"
-                      value={formData.hasBeenInBusiness}
-                      onChange={handleFormChange}
-                    >
-                      <FormControlLabel
-                        value="Yes"
-                        control={<Radio />}
-                        label="Yes"
-                      />
-                      <FormControlLabel
-                        value="No"
-                        control={<Radio />}
-                        label="No"
-                      />
-                    </RadioGroup>
-                  </FormControl>
-                </Grid>
 
-                <Grid container spacing={2} sx={{ pt: 4, pb: 3 }}>
-                  <Grid item xs={12} md={9}>
-                    <Button
-                      variant="outlined"
-                      size="small"
-                      onClick={handleSetLocation}
-                    >
-                      <FaMapPin />
-                      &nbsp;Set Location
-                    </Button>
-                  </Grid>
-                </Grid>
 
-                <Grid container spacing={2} sx={{ pt: 4, pb: 3 }}>
-                  <Grid item xs={12} md={9}>
-                    <input
-                      accept=".png, .jpg, .jpeg"
-                      id="logoInput"
-                      type="file"
-                      style={{ display: "none" }}
-                      onChange={handleLogoUpload}
-                    />
-                    <label htmlFor="logoInput">
-                      <Button variant="outlined" size="large" component="span">
-                        Upload your company logo
-                      </Button>
-                    </label>
-                    {formData.logo && (
-                      <img
-                        src={formData.logo}
-                        alt="Business Logo"
-                        style={{
-                          maxWidth: "25%",
-                          maxHeight: "25%",
-                          marginTop: "8px",
-                        }}
-                      />
-                    )}
-                  </Grid>
-                </Grid>
 
-                <Button
-                  variant="contained"
-                  size="large"
-                  fullWidth
-                  sx={{ my: 4 }}
-                  style={{ backgroundColor: "#F78431" }}
-                >
+
+                <Button variant="contained" size="large" fullWidth sx={{ my: 4 }} style={{ backgroundColor: '#F78431' }}>
                   Submit
                 </Button>
               </CardContent>

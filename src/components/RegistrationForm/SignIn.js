@@ -73,6 +73,7 @@ export const SignIn = () => {
               <div className="d-flex flex-row align-items-center mb-4">
                 <FaEnvelope />
                 &nbsp; &nbsp;
+                <Grid item xs={12}>
                 <TextField
                   value={formData.email}
                   onChange={(event) =>
@@ -82,14 +83,17 @@ export const SignIn = () => {
                   id="form3"
                   type="email"
                   name="email"
+                  autoComplete="new-email"
                   fullWidth
                 />
+                </Grid>
               </div>
               
 
               <div className="d-flex flex-row align-items-center mb-4">
                 <FaLock />
                 &nbsp; &nbsp;
+                <Grid item xs={12}>
                 <TextField
                   value={formData.password}
                   onChange={(event) =>
@@ -99,8 +103,10 @@ export const SignIn = () => {
                   id="form4"
                   type="password"
                   name="password"
+                  autoComplete="new-password"
                   fullWidth
                 />
+                </Grid>
               </div>
 
               <Button text="Log in" onClick={handleSubmit} />
@@ -130,7 +136,7 @@ export const SignIn = () => {
                 to="/forgotpassword"
                 
               >
-                <p style={{ color: "#ec6809", fontSize: '13px' }}>
+                <p style={{ color: "#ec6809"}}>
                   Forgot password ? {" "}
 
                 </p></Link>
@@ -138,7 +144,7 @@ export const SignIn = () => {
                 to="/"
                 
               >&nbsp; &nbsp;
-                <p style={{ color: "#ec6809", fontSize: '13px' }}>
+                <p style={{ color: "#ec6809"}}>
                   <FontAwesomeIcon icon={faChevronLeft} /> Back to Home{" "}
 
 

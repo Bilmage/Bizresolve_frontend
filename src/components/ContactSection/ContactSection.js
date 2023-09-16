@@ -19,7 +19,7 @@ export const ContactSection = ({ className }) => {
               </div>
               <br/><br/>
               <div className="newsletter-form d-flex justify-content-center">
-              <Link to="/eligibilityprocess"> <button type="submit">Get Accredited <AiOutlineUsergroupAdd /></button></Link>
+              <Link to="/ratings"> <button type="submit">Leave a review <AiOutlineUsergroupAdd /></button></Link>
               <Link to="/logcomplaint">  <button type="submit">File a complaint <AiOutlineFileAdd /></button></Link>
               </div>
             </div>

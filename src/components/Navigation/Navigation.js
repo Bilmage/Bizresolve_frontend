@@ -86,7 +86,7 @@ export const Navigation = ({ navigation }) => {
               <p className="welcome-text">Welcome {auth.user.firstName} {auth.user.lastName}</p>
             </div>
           ) : (
-            <div className="container-fluid">
+            <div className="container">
               <div>
                 <Link to="/Registration">
                   <Button text="Sign up" />
