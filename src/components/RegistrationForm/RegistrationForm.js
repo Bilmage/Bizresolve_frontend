@@ -25,24 +25,51 @@ import {
   Select,
   MenuItem,
 } from "@mui/material";
+import { useSignupMutation } from "../../app/services";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setCredentials } from "../../features/auth/authSlice";
 
 
 export const RegistrationForm = () => {
+  const [signup,{isLoading} ] = useSignupMutation()
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [formData,setFormData] = useState({
     email: '',
     firstName: '',
     lastName: '',
+    password: '',
+    confirmPassword: '',
     role: ''
   })
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-
     setFormData({
       ...formData,
       [name]: value,
     });
   };
+
+  const handleSubmit = async() =>{
+    console.log("formData", formData)
+    try {
+      const response = await signup(formData).unwrap();
+      const { user, accessToken } = response;
+      console.log("User", user);
+      console.log("Access token", accessToken);
+      if (user && accessToken) {
+        dispatch(setCredentials({ user, accessToken }));
+        // toast.success("You have logged in successfully");
+        navigate("/", { replace: true });
+        // setTimeout(() => {
+        // }, 200);
+      }
+    } catch (error) {
+      console.log("Error", error);
+    }
+  }
   return (
     <Container maxWidth="lg">
       <Card sx={{ borderRadius: "25px" }} className="text-black m-5">
@@ -65,36 +92,35 @@ export const RegistrationForm = () => {
                 <label htmlFor="role" className="fw-bold" style={{ color: "#5c6670" }}>
                   Choose an option you want to sign up with.
                 </label>
-                <Select id="role" fullWidth>
-                  <MenuItem value="IndividualUser">Individual User</MenuItem>
-                  <MenuItem value="BusinessOwner">Business Owner</MenuItem>
+                <Select name="role" fullWidth value={formData.role} onChange={handleInputChange}>
+                  <MenuItem value="individual_user">Individual User</MenuItem>
+                  <MenuItem value="business_owner">Business Owner</MenuItem>
                 </Select>
               </div>
 
-
               <div className="d-flex flex-row align-items-center mb-4" style={{ display: 'flex', gap: '3rem', alignItems: 'center', width: 'auto' }}>
                 <FaUser />
-                <TextField onChange={handleInputChange} label="First Name" id="firstName" fullWidth  value={formData.firstName}/>
+                <TextField onChange={handleInputChange} label="First Name" name="firstName" fullWidth  value={formData.firstName}/>
               </div>
 
               <div className="d-flex flex-row align-items-center mb-4" style={{ display: 'flex', gap: '3rem', alignItems: 'center', width: 'auto' }}>
                 <FaUser />
-                <TextField label="Last Name" id="lastName" fullWidth />
+                <TextField value={formData.lastName} onChange={handleInputChange} label="Last Name" name="lastName" fullWidth />
               </div>
 
               <div className="d-flex flex-row align-items-center mb-4" style={{ display: 'flex', gap: '3rem', alignItems: 'center', width: 'auto' }}>
                 <FaEnvelope />
-                <TextField label="Email" id="form2" type="email" fullWidth />
+                <TextField value={formData.email} onChange={handleInputChange} label="Email" name="email" type="email" fullWidth />
               </div>
 
               <div className="d-flex flex-row align-items-center mb-4" style={{ display: 'flex', gap: '3rem', alignItems: 'center', width: 'auto' }}>
                 <FaLock />
-                <TextField label="Password" id="form3" type="password" fullWidth />
+                <TextField value={formData.password} onChange={handleInputChange} label="Password" name="password" type="password" fullWidth />
               </div>
 
               <div className="d-flex flex-row align-items-center mb-4" style={{ display: 'flex', gap: '3rem', alignItems: 'center', width: 'auto' }}>
                 <FaKey />
-                <TextField label="Repeat your password" id="form4" type="password" fullWidth />
+                <TextField value={formData.confirmPassword} onChange={handleInputChange} label="Repeat your password" name="confirmPassword" type="password" fullWidth />
               </div>
 
               <div className="mb-4">
@@ -114,13 +140,13 @@ export const RegistrationForm = () => {
               </div>
 
 
-              <Button text="Sign up" />
+              <Button onClick={handleSubmit} text="Sign up" />
               &nbsp; &nbsp; 
               <p style={{ color: "#5c6670" }}>
                 or you can sign up with
               </p>
               <GoogleButton
-                style={{ borderRadius: "54px", width: '130px', height: '50px' }}
+                style={{ borderRadius: "50px", width: '150px', height: '50px' }}
                 type="light"
                 label="Google"
                 onClick={() => {
@@ -139,9 +165,6 @@ export const RegistrationForm = () => {
               >&nbsp; &nbsp;
                 <p style={{ color: "#ec6809"}}>
                   <FontAwesomeIcon icon={faChevronLeft} /> Back to Home{" "}
-
-
-
                 </p></Link>
             </Grid>
 

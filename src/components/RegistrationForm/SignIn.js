@@ -39,8 +39,8 @@ export const SignIn = () => {
     try {
       const response = await login(formData).unwrap();
       const { user, accessToken } = response;
-      console.log("User", user);
-      console.log("Access token", accessToken);
+      // console.log("User", user);
+      // console.log("Access token", accessToken);
       if (user && accessToken) {
         dispatch(setCredentials({ user, accessToken }));
         // toast.success("You have logged in successfully");
@@ -138,8 +138,6 @@ export const SignIn = () => {
               >
                 <p style={{ color: "#ec6809"}}>
                   Forgot password ? {" "}
-
-
 
                 </p></Link>
                 <Link
