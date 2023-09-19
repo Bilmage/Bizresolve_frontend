@@ -19,17 +19,12 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { mainListItems, secondaryListItems } from '../../components/ListItems/listItems';
 import Features from '../../components/Features/Features';
-// import FeaturedReviews from '../../components/FeaturedReviews/FeaturedReviews';
+
 import Chart from '../../components/Chart/Chart';
 import MyAreaChart from '../Chart/Area';
-// import BusinessCard from '';
-// import TestimonialCarousel from '../TestimonialCarousel/TestimonialCarousel';
-// import MyBusiness from '../MyBusinesses/MyBusiness';
+
 import { BusinessList } from '../BusinessCard/BusinessCard';
-// import Chart from './Chart';
-// import Deposits from './Deposits';
-// import Orders from './Orders';
-import LogoIpsum from "../../assets/images/logoipsum.svg";
+
 
 function Copyright(props) {
   return (
@@ -118,7 +113,7 @@ export default function BusinessProfilePage() {
     <ThemeProvider theme={defaultTheme}>
       <Box sx={{ display: 'flex' }}>
         <CssBaseline />
-        <AppBar position="absolute" open={open} style={{backgroundColor: '#35393cff'}}>
+        <AppBar position="absolute" open={open} style={{ backgroundColor: '#35393cff' }}>
           <Toolbar
             sx={{
               pr: '24px', // keep right padding when drawer closed
@@ -143,8 +138,8 @@ export default function BusinessProfilePage() {
               noWrap
               sx={{ flexGrow: 1 }}
             >
-               Business Profile
-            </Typography>           
+              Business Profile
+            </Typography>
             <IconButton color="inherit">
               <Badge badgeContent={4} color="secondary">
                 <NotificationsIcon />
@@ -189,16 +184,9 @@ export default function BusinessProfilePage() {
             <Grid container spacing={3}>
               {/* Features*/}
               <Grid item xs={12} md={8} lg={15}>
-                <Paper
-                  sx={{
-                    p: 2,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    height: 300,
-                  }}
-                >
+                
                   <Features />
-                </Paper>
+               
               </Grid>
               {/* Chart */}
               <Grid item xs={12} md={8} lg={10}>
@@ -228,16 +216,9 @@ export default function BusinessProfilePage() {
               </Grid>
               {/* Reviews */}
               <Grid item xs={12} md={8} lg={10}>
-                <Paper
-                  sx={{
-                    p: 2,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    height: 600,
-                  }}
-                >
+                
                   <BusinessList />
-                </Paper>
+               
               </Grid>
             </Grid>
             <Copyright sx={{ pt: 4 }} />

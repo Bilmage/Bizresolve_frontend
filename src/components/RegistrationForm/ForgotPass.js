@@ -54,7 +54,7 @@ export const ForgotPass = () => {
     <Container maxWidth="lg">
       <Card sx={{ borderRadius: "25px" }} className="text-black m-5">
         <CardContent>
-          <Grid container spacing={2}>
+          <Grid container spacing={2} justifyContent="center">
             <Grid
               item
               md={6}

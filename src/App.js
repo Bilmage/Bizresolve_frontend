@@ -23,6 +23,7 @@ import {
   DashboardPage,
   BusinessProfilePage,
   SearchAccreditedPage,
+  ProfilePage,
 } from "./Pages";
 
 
@@ -49,6 +50,7 @@ function App() {
           <Route path="/accreditationprocess" element={<AccreditationPage />} />
           <Route path="/featuredreviews" element={<FeaturedReviewsPage />} />
           <Route path="/search" element={<SearchAccreditedPage />} />
+          <Route path="/profile" element={<ProfilePage/>} />
           <Route path="/dashboard" element={<DashboardPage />} />
           <Route path="/my-business" element={<MyBusinessPage />} />
           <Route path="/business-profile" element={<BusinessProfilePage />} />

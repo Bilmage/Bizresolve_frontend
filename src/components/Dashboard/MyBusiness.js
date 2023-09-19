@@ -19,15 +19,9 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { mainListItems, secondaryListItems } from '../../components/ListItems/listItems';
 import Features from '../../components/Features/Features';
-// import FeaturedReviews from '../../components/FeaturedReviews/FeaturedReviews';
 import Chart from '../../components/Chart/Chart';
 import MyAreaChart from '../Chart/Area';
-// import TestimonialCarousel from '../TestimonialCarousel/TestimonialCarousel';
 import MyBusiness from '../MyBusinesses/MyBusiness';
-// import Chart from './Chart';
-// import Deposits from './Deposits';
-// import Orders from './Orders';
-import LogoIpsum from "../../assets/images/logoipsum.svg";
 
 function Copyright(props) {
   return (
@@ -92,7 +86,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 const defaultTheme = createTheme();
 
 
-export default function MyBusinessPage() {
+export default function Dashboard() {
   const data = [10, 20, 30, 40, 50];
   const testimonials = [
     {
@@ -139,10 +133,8 @@ export default function MyBusinessPage() {
               noWrap
               sx={{ flexGrow: 1 }}
             >
-             
-              My Businesses
+              Dashboard
             </Typography>
-            
             <IconButton color="inherit">
               <Badge badgeContent={4} color="secondary">
                 <NotificationsIcon />
@@ -187,16 +179,9 @@ export default function MyBusinessPage() {
             <Grid container spacing={3}>
               {/* Features*/}
               <Grid item xs={12} md={8} lg={15}>
-                <Paper
-                  sx={{
-                    p: 2,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    height: 300,
-                  }}
-                >
+                
                     <Features />                  
-                </Paper>
+                
               </Grid>
               {/* Chart */}
               <Grid item xs={12} md={8} lg={10}>
@@ -226,16 +211,9 @@ export default function MyBusinessPage() {
               </Grid>
               {/* Reviews */}
               <Grid item xs={12} md={8} lg={12}>
-                <Paper
-                  sx={{
-                    p: 2,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    height: 400,
-                  }}
-                >
-                    <MyBusiness />                 
-                </Paper>
+                
+                   <MyBusiness />                  
+                
               </Grid>
             </Grid>
             <Copyright sx={{ pt: 4 }} />

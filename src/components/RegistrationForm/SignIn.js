@@ -56,7 +56,7 @@ export const SignIn = () => {
     <Container maxWidth="lg">
       <Card sx={{ borderRadius: "25px" }} className="text-black m-5">
         <CardContent>
-          <Grid container spacing={2}>
+          <Grid container spacing={2} justifyContent="center">
             <Grid
               item
               md={6}
@@ -65,7 +65,7 @@ export const SignIn = () => {
             >
               <p
                 className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4"
-                style={{ color: "#ec6809" }}
+                style={{ color: "#ec6809"}}
               >
                 Sign In
               </p>

@@ -16,4 +16,5 @@ export {default as Forgot} from "./ForgotPasswordPage/Forgot";
 export {default as MyBusinessPage} from "./BusinessName/BusinessName";
 export {default as BusinessProfilePage} from "./BusinessprofilePage/Profile";
 export {default as SearchAccreditedPage} from "./SearchAccreditedPage/SearchAccreditedPage";
+export {default as ProfilePage} from "./ProfilePage/ProfilePage";
  

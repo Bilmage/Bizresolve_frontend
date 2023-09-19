@@ -180,16 +180,9 @@ export default function Dashboard() {
             <Grid container spacing={3}>
               {/* Features*/}
               <Grid item xs={12} md={8} lg={15}>
-                <Paper
-                  sx={{
-                    p: 2,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    height: 300,
-                  }}
-                >
+                
                     <Features />                  
-                </Paper>
+                
               </Grid>
               {/* Chart */}
               <Grid item xs={12} md={8} lg={10}>
@@ -224,7 +217,7 @@ export default function Dashboard() {
                     p: 2,
                     display: 'flex',
                     flexDirection: 'column',
-                    height: 400,
+                    height: 600,
                   }}
                 >
                     <TestimonialCarousel testimonials={testimonials}/>                 

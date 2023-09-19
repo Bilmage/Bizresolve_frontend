@@ -135,6 +135,7 @@
     min-width: 360px;
     object-fit: cover;
     position: relative;
+    
 }
 @media (max-width: 767px) {
     .individualleft .image {

@@ -75,6 +75,9 @@ export const Navigation = ({ navigation }) => {
                     <a href="#" onClick={handleLogout} className="logout-link">
                       Logout
                     </a>
+                    <a href="#"  className="logout-link">
+                      Dashboard
+                    </a>
                   </li>
                   <li>
                     <a href="/dashboard" className="logout-link">

@@ -16,7 +16,6 @@ export default function Toggle({ labelLeft, labelRight, toggled, onClick }) {
   };
 
   const spanStyle = {
-  // Change to relative positioning
     display: "flex",
     width: "60px",
     height: "30px",
@@ -48,7 +47,16 @@ export default function Toggle({ labelLeft, labelRight, toggled, onClick }) {
   };
 
   return (
-    <div style={{ position: "relative", width: "60px", height: "30px", display: "flex", alignItems: "center" }}>
+    <div
+      style={{
+        position: "relative",
+        width: "100%", // Use a percentage width for responsiveness
+        maxWidth: "60px", // Set a maximum width if needed
+        height: "30px",
+        display: "flex",
+        alignItems: "center",
+      }}
+    >
       <label>
         <input
           type="checkbox"
@@ -67,7 +75,7 @@ export default function Toggle({ labelLeft, labelRight, toggled, onClick }) {
               width: "max-content",
               height: "100%",
               lineHeight: "30px",
-              marginLeft: "10px",             
+              marginLeft: "10px",
               cursor: "pointer",
             }}
           >

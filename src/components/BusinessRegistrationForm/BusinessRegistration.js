@@ -10,17 +10,22 @@ import {
   Typography,
   TextField,
   Button,
-  FormControl,  
+  FormControl,
   InputLabel,
   Select,
   MenuItem,
 } from "@mui/material";
+import BasicDatePicker from "../Date/Date";
 
 const BusinessRegistration = ({ className }) => {
   const [formData, setFormData] = useState({
     businessName: "",
     businessEmail: "",
     businessPhone: "",
+    businessPhysicalAddress: {
+      county: "",
+      city: "",
+    },
     businessCategory: "",
     businessDescription: "",
     hasBeenInBusiness: "Yes", // Default value
@@ -181,6 +186,62 @@ const BusinessRegistration = ({ className }) => {
                 </Grid>
 
                 <hr className="mx-n3" />
+                <Grid container spacing={2} sx={{ pt: 4, pb: 3 }}>
+                  <Grid item xs={12} md={3}>
+                    <Typography variant="subtitle1">Business Physical Address</Typography>
+                  </Grid>
+                  <Grid item xs={12} md={4}> 
+                    <FormControl fullWidth variant="outlined" size="small">
+                      <InputLabel id="subject-label">
+                        county
+                      </InputLabel>
+                      <Select
+                        labelId="subject-label"
+                        label="county"
+                        name="businessPhysicalAddress"
+                        value={formData.businessPhysicalAddress.county}
+                        onChange={handleFormChange}
+                      >
+                        <MenuItem value="">
+                          <em>County</em>
+                        </MenuItem>
+                        <MenuItem value={1}>Nairobi</MenuItem>
+                        <MenuItem value={2}>Kisumu</MenuItem>
+                        <MenuItem value={3}>Mombasa</MenuItem>
+                        <MenuItem value={4}>Nakuru</MenuItem>
+                        <MenuItem value={5}>Naivasha</MenuItem>
+                        <MenuItem value={6}>Kisii</MenuItem>
+                      </Select>
+                    </FormControl>
+                  </Grid>
+                  <Grid item xs={12} md={4}> 
+                    <FormControl fullWidth variant="outlined" size="small">
+                      <InputLabel id="subject-label-2">
+                        city
+                      </InputLabel>
+                      <Select
+                        labelId="subject-label-2"
+                        label="city"
+                        name="businessPhysicalAddress"
+                        value={formData.businessPhysicalAddress.city}
+                        onChange={handleFormChange}
+                      >
+                        <MenuItem value="">
+                          <em>City</em>
+                        </MenuItem>
+                        <MenuItem value={1}>Nairobi</MenuItem>
+                        <MenuItem value={2}>Kisumu</MenuItem>
+                        <MenuItem value={3}>Mombasa</MenuItem>
+                        <MenuItem value={4}>Nakuru</MenuItem>
+                        <MenuItem value={5}>Naivasha</MenuItem>
+                        <MenuItem value={6}>Kisii</MenuItem>
+                      </Select>
+                    </FormControl>
+                  </Grid>
+                </Grid>
+
+
+                <hr className="mx-n3" />
 
 
 
@@ -260,6 +321,23 @@ const BusinessRegistration = ({ className }) => {
                     >
                       Upload your business license (Required) Max
                       file size 50 MB
+                    </Typography>
+                  </Grid>
+                </Grid>
+
+                <hr className="mx-n3" />
+                <Grid container spacing={2} sx={{ pt: 4, pb: 3 }}>
+                  <Grid item xs={12} md={3}>
+                    <Typography variant="subtitle1">Registration Date</Typography>
+                  </Grid>
+                  <Grid item xs={12} md={9}>
+                  <BasicDatePicker />
+                    <Typography
+                      variant="body2"
+                      color="textSecondary"
+                      sx={{ mt: 2 }}
+                    >
+                      Select todays date (Required) 
                     </Typography>
                   </Grid>
                 </Grid>
