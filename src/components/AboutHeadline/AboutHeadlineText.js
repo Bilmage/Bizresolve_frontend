@@ -4,7 +4,7 @@ import AboutHeadline from "./AboutHeadline";
 
 export const AboutHeadlineText = ({style}) => {
   return (
-    <div className="container-fluid" style={style}>
+    <div className="container" style={style}>
       <AboutHeadline style={style} />
       <AboutText style={style} />
       

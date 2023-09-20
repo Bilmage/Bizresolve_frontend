@@ -9,6 +9,7 @@ import { Services } from "../../components/Services/Services";
 import { ContactSection } from "../../components/ContactSection/ContactSection";
 import { BackToTopButton } from "../../components/BackToTop/BackToTopButton";
 import { BizFooter } from '../../components/Footer/BizFooter';
+import Frequents from "../../components/Faqs/Faqs";
 
 export default function AboutPage() {
   return (
@@ -27,6 +28,11 @@ export default function AboutPage() {
       </div>
       <Services />
       <ContactSection />
+      <div>
+        <Header mainText="Frequently" secondaryText="asked questions" />
+
+      </div>
+      <Frequents />
       <BackToTopButton />
       <BizFooter />
     </>

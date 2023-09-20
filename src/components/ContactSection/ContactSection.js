@@ -7,9 +7,9 @@ export const ContactSection = ({ className }) => {
   return (
     
     <div className="newsletter">
-      <div className="container-fluid">      
-        <div className="row justify-content-center">
-          <div className="col-xl-9 col-lg-9">
+      <div className="container">      
+        <div className="row justify-content-center" style={{alignItems: 'center', margin: 'auto'}}>
+          <div className="col-xl-9 col-lg-9 text-center">
             <div className="section-title text-center">
               <div className="text-center"> {/* Center-align the h2 and p elements */}
                 <h2>Get Ready To Be Accredited</h2>

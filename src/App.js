@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-// import "./style.css";
+import "./style.css";
 import { Routes, Route } from "react-router-dom";
 import { RatingsRedirectPage, SignInPage } from "./components";
 // import PrivateOutlet from "./utils/privateOutlet";
