@@ -15,7 +15,7 @@ import {
   Select,
   MenuItem,
 } from "@mui/material";
-import BasicDatePicker from "../Date/Date";
+import BasicDatePicker from "./Date";
 
 const BusinessRegistration = ({ className }) => {
   const [formData, setFormData] = useState({

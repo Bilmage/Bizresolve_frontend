@@ -1,7 +1,7 @@
 import React from "react";
 import { Navigation } from "../../components/Navigation/Navigation";
 import { AboutHeadlineText } from "../../components/AboutHeadline/AboutHeadlineText";
-import { AboutBanner } from "../../components/AboutBanner/AboutBanner";
+import { AboutBanner } from "../../components/AboutHeadline/AboutBanner";
 import { MissionSection } from "../../components/MissionSection/MissionSection";
 import { VisionSection } from "../../components/VisionSection/VisionSection";
 import { Header } from '../../components/Header/Header';
