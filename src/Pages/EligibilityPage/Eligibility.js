@@ -1,6 +1,6 @@
 import React from 'react'
 import Navigation from '../../components/Navigation/Navigation';
-import EligibilityHeader from '../../components/EligibilityHeader/EligibilityHeader';
+import EligibilityHeader from '../../components/AccreditedQuestions/EligibilityHeader';
 import Accredited from '../../components/AccreditedQuestions/Accreditedrequirements';
 import { BackToTopButton } from "../../components/BackToTop/BackToTopButton";
 import BottomNav from '../../components/BottomNav/BottomNav';

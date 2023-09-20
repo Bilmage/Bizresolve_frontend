@@ -5,7 +5,7 @@ import TestimonialCards from '../../components/TestimonialCards/TestimonialCards
 import SearchText from '../../components/SearchText/SearchText';
 import { BizFooter } from "../../components/Footer/BizFooter";
 
-import Popular from '../../components/Popular/Popular'
+import Popular from '../../components/SearchText/Popular'
 import CustomBreadcrumbs from '../../components/Breadcrumbs/BreadCrumbs';
 import Features from '../../components/Features/Features';
 

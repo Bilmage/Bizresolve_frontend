@@ -29,7 +29,7 @@ export default function AboutPage() {
       <Services />
       <ContactSection />
       <div>
-        <Header mainText="Frequently" secondaryText="asked questions" />
+        <Header mainText="Frequently" secondaryText="Asked Questions" />
 
       </div>
       <Frequents />

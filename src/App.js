@@ -16,10 +16,8 @@ import {
   BusinessRegistrationPage,
   AccreditationPage,
   MyBusinessPage,
-  FeaturedReviewsPage,
   LogComplaintsPage,
-  Forgot,
-  LandingPage,
+  Forgot,  
   DashboardPage,
   BusinessProfilePage,
   SearchAccreditedPage,
@@ -36,8 +34,7 @@ function App() {
         <Route path="/SignIn" element={<SignInPage />} />
         <Route path="/forgotpassword" element={<Forgot />} />
         <Route path="/about" element={<AboutPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/landing" element={<LandingPage />} />
+        <Route path="/contact" element={<ContactPage />} />        
         {/* Protected routes */}
         {/* <Route element={<PrivateOutlet />}> */}
           <Route path="/filecomplaints" element={<FileComplaintsPage />} />
@@ -47,8 +44,7 @@ function App() {
           <Route path="/eligibilityprocess" element={<EligibilityPage />} />
           <Route path="/applicationprocess" element={<ApplicationsPage />} />
           <Route path="/businessregistration" element={<BusinessRegistrationPage />} />
-          <Route path="/accreditationprocess" element={<AccreditationPage />} />
-          <Route path="/featuredreviews" element={<FeaturedReviewsPage />} />
+          <Route path="/accreditationprocess" element={<AccreditationPage />} />          
           <Route path="/search" element={<SearchAccreditedPage />} />
           <Route path="/profile" element={<ProfilePage/>} />
           <Route path="/dashboard" element={<DashboardPage />} />

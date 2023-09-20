@@ -8,8 +8,6 @@ export {default as EligibilityPage} from "./EligibilityPage/Eligibility";
 export {default as ApplicationsPage} from "./ApplicationsPage/Applications";
 export {default as AccreditationPage} from "./AccreditationPage/Accreditation";
 export {default as LogComplaintsPage} from "./LogComplaintPage/LogComplaint";
-export {default as FeaturedReviewsPage} from "./FeaturedreviewsPage/FeaturedReviews"
-export {default as LandingPage} from "./LandingPage/Landing";
 export {default as BusinessRegistrationPage} from "./BusinessRegistrationPage/BusinessRegistration"
 export {default as DashboardPage} from "./DashboardPage/Dashboard";
 export {default as Forgot} from "./ForgotPasswordPage/Forgot";

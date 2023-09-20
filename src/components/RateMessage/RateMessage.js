@@ -1,4 +1,5 @@
 import React from "react";
+
 import Avatar from '@mui/material/Avatar';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Profile1 from "../../assets/images/Profilepic1.png";
@@ -42,6 +43,7 @@ export const RateMessage = ({ className }) => {
 
       </div>
     </div>
+
   );
 };
 export default RateMessage;
