@@ -33,19 +33,6 @@ const BusinessRegistration = ({ className }) => {
     logo: null, // Initialize logo as null
   });
 
-<<<<<<< HEAD
-  const handleFormSubmit = async (event) => {
-    event.preventDefault();
-    try {
-      console.log("formData", formData);
-      // const result = await
-    } catch (error) {
-      console.log("Error", error);
-    }
-    // Add your form submission logic here
-    // For example, you can send the form data to a backend server
-  };
-=======
   const handleFormSubmit = (event) => {
     event.preventDefault();
     // Add your form submission logic here
@@ -53,7 +40,6 @@ const BusinessRegistration = ({ className }) => {
   };
 
 
->>>>>>> aad2d5e80d37755f223a160908b7f83ba0642c20
 
 
   const handleLogoUpload = (event) => {

@@ -87,8 +87,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 const defaultTheme = createTheme();
 
 
-export default function Dashboard() {
-  const data = [10, 20, 30, 40, 50];
+export default function Dashboard() {  
   const testimonials = [
     {
       text: "First testimonial text goes here.",

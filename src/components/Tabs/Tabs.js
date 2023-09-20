@@ -34,12 +34,12 @@ TabPanel.propTypes = {
     value: PropTypes.number.isRequired,
 };
 
-function a11yProps(index) {
-    return {
-        id: `full-width-tab-${index}`,
-        'aria-controls': `full-width-tabpanel-${index}`,
-    };
-}
+// function a11yProps(index) {
+//     return {
+//         id: `full-width-tab-${index}`,
+//         'aria-controls': `full-width-tabpanel-${index}`,
+//     };
+// }
 
 export default function FullWidthTabs() {
     const theme = useTheme();

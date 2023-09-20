@@ -28,7 +28,7 @@ function Copyright(props) {
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {' © '}
       <Link color="inherit" href="#">
-       Bizresolve. All rights reserved
+        Bizresolve. All rights reserved
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -87,18 +87,7 @@ const defaultTheme = createTheme();
 
 
 export default function Dashboard() {
-  const data = [10, 20, 30, 40, 50];
-  const testimonials = [
-    {
-      text: "First testimonial text goes here.",
-      date: "Feb-21-2014",
-    },
-    {
-      text: "Second testimonial text goes here.",
-      date: "Feb-23-2014",
-    },
-    // Add more testimonials as needed
-  ];
+
   const [open, setOpen] = React.useState(true);
   const toggleDrawer = () => {
     setOpen(!open);
@@ -108,7 +97,7 @@ export default function Dashboard() {
     <ThemeProvider theme={defaultTheme}>
       <Box sx={{ display: 'flex' }}>
         <CssBaseline />
-        <AppBar position="absolute" open={open} style={{backgroundColor: '#35393cff'}}>
+        <AppBar position="absolute" open={open} style={{ backgroundColor: '#35393cff' }}>
           <Toolbar
             sx={{
               pr: '24px', // keep right padding when drawer closed
@@ -179,9 +168,9 @@ export default function Dashboard() {
             <Grid container spacing={3}>
               {/* Features*/}
               <Grid item xs={12} md={8} lg={15}>
-                
-                    <Features />                  
-                
+
+                <Features />
+
               </Grid>
               {/* Chart */}
               <Grid item xs={12} md={8} lg={10}>
@@ -193,7 +182,7 @@ export default function Dashboard() {
                     height: 300,
                   }}
                 >
-                    <Chart />                 
+                  <Chart />
                 </Paper>
               </Grid>
               {/* My AreaChart */}
@@ -206,14 +195,14 @@ export default function Dashboard() {
                     height: 300,
                   }}
                 >
-                    <MyAreaChart />                 
+                  <MyAreaChart />
                 </Paper>
               </Grid>
               {/* Reviews */}
               <Grid item xs={12} md={8} lg={12}>
-                
-                   <MyBusiness />                  
-                
+
+                <MyBusiness />
+
               </Grid>
             </Grid>
             <Copyright sx={{ pt: 4 }} />

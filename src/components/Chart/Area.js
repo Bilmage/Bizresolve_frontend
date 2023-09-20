@@ -5,8 +5,7 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  Area,
-  defs,
+  Area,  
 } from 'recharts';
 
 const data = [

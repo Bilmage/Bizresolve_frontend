@@ -90,19 +90,6 @@ const defaultTheme = createTheme();
 
 
 export default function BusinessProfilePage() {
-  const data = [10, 20, 30, 40, 50];
-  const testimonials = [
-    {
-      text: "First testimonial text goes here.",
-      date: "Feb-21-2014",
-    },
-    {
-      text: "Second testimonial text goes here.",
-      date: "Feb-23-2014",
-    },
-    // Add more testimonials as needed
-  ];
-
 
   const [open, setOpen] = React.useState(true);
   const toggleDrawer = () => {
@@ -184,9 +171,9 @@ export default function BusinessProfilePage() {
             <Grid container spacing={3}>
               {/* Features*/}
               <Grid item xs={12} md={8} lg={15}>
-                
-                  <Features />
-               
+
+                <Features />
+
               </Grid>
               {/* Chart */}
               <Grid item xs={12} md={8} lg={10}>
@@ -216,9 +203,9 @@ export default function BusinessProfilePage() {
               </Grid>
               {/* Reviews */}
               <Grid item xs={12} md={8} lg={10}>
-                
-                  <BusinessList />
-               
+
+                <BusinessList />
+
               </Grid>
             </Grid>
             <Copyright sx={{ pt: 4 }} />
