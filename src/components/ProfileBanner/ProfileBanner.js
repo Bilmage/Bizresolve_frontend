@@ -6,6 +6,7 @@ import { faFolderPlus, faStar, faThumbsUp } from "@fortawesome/free-solid-svg-ic
 
 
 
+
 export default function ProfileBanner() {
 
 
@@ -61,18 +62,14 @@ export default function ProfileBanner() {
                         <div className="content">
                             <div className="details">
 
-                                <p style={{ color: '#a95b1f', fontWeight: '700px' }}>Biography</p>
+                                <p style={{ color: '#a95b1f', fontWeight: '700px' }}>Featured Reviews</p>
                             </div>
 
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro officiis
                                 fugit hic vel voluptates perferendis aut quibusdam sit omnis unde
                                 aspernatur quae repellat blanditiis autem, a libero asperiores neque
-                                illum aliquid est tempore. Eveniet velit voluptate amet facere,
-                                repellendus aperiam, cumque est ipsam. Asperiores expedita iusto,
-                                inventore sit suscipit nihil repudiandae? Laboriosam cum maxime dolorem
-                                neque, in veniam expedita ad. Hic fugit necessitatibus blanditiis, optio
-                                dignissimos molestiae nam, numquam odio.
+                                illum aliquid est tempore. 
                             </p>
                         </div>
                         <hr />

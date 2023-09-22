@@ -1,6 +1,8 @@
 
   main {
     padding-top: 64px;
+    text-align: center;
+    justify-content: center;
     
   }
   main .jumbo {
