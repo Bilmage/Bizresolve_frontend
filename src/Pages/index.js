@@ -10,7 +10,7 @@ export {default as AccreditationPage} from "./AccreditationPage/Accreditation";
 export {default as LogComplaintsPage} from "./LogComplaintPage/LogComplaint";
 export {default as BusinessRegistrationPage} from "./BusinessRegistrationPage/BusinessRegistration"
 export {default as DashboardPage} from "./DashboardPage/Dashboard";
-export {default as Forgot} from "./ForgotPasswordPage/Forgot";
+export {default as Forgot} from "./RegistrationPage/Forgot";
 export {default as MyBusinessPage} from "./BusinessName/BusinessName";
 export {default as BusinessProfilePage} from "./BusinessprofilePage/Profile";
 export {default as SearchAccreditedPage} from "./SearchAccreditedPage/SearchAccreditedPage";
