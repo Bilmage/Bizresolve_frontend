@@ -14,14 +14,17 @@ import {
   EligibilityPage,
   ApplicationsPage,
   BusinessRegistrationPage,
-  AccreditationPage,
-  MyBusinessPage,
+  AccreditationPage, 
   LogComplaintsPage,
   Forgot,  
   DashboardPage,
-  BusinessProfilePage,
+  DetailsPage,  
   SearchAccreditedPage,
   ProfilePage,
+  AnalyticsPage,
+  ReportsPage,
+  SettingsPage,
+  HelpPage,
 } from "./Pages";
 
 
@@ -47,9 +50,16 @@ function App() {
           <Route path="/accreditationprocess" element={<AccreditationPage />} />          
           <Route path="/search" element={<SearchAccreditedPage />} />
           <Route path="/profile" element={<ProfilePage/>} />
+          
+          
+
+
           <Route path="/dashboard" element={<DashboardPage />} />
-          <Route path="/my-business" element={<MyBusinessPage />} />
-          <Route path="/business-profile" element={<BusinessProfilePage />} />
+          <Route path="/details" element={<DetailsPage />} />
+          <Route path="/analytics" element={<AnalyticsPage />} />
+          <Route path="/reports" element={<ReportsPage/>} />
+          <Route path="/settings" element={<SettingsPage />} />
+          <Route path="/help" element={<HelpPage />} />
           
         {/* </Route> */}
       </Routes>

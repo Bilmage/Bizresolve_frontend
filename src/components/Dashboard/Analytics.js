@@ -1,22 +1,14 @@
 import React from 'react';
 import "./dashboard.css";
 import Features from "../../components/Features/Features";
-import { Link } from 'react-router-dom';
-import safaricom from "../../assets/images/Safaricom.png";
-import Eye from "../../assets/icons/Redeye.svg";
+import MyAreaChart from '../Chart/Area';
+import Chart from '../../components/Chart/Chart';
 
-const businessData = [
-  {
-    businessName: 'Safaricom',
-    businessCategory: 'Internet',
-    status: 'Accredited',
-    postedAgo: '1 day ago',
-    logoSrc: 'safaricom',
-  },
 
-];
 
-export default function Dashboard() {
+
+
+export default function Analytics() {
 
 
   return (
@@ -27,9 +19,9 @@ export default function Dashboard() {
             <p className='welcome'>Hi John doe ! Welcome to your dashboard !</p>
           </div>
           <div className="main-body">
-            <h1>Registered Businesses </h1>
+            <h1>Analytics</h1>
             <div className="search_bar">
-              <input type="search" placeholder="Search for a Business, charity..." />
+              <input type="search" placeholder="Search for a Business, Charity..." />
               <select name="" id="">
                 <option>Category</option>
                 <option>Charity</option>
@@ -64,32 +56,15 @@ export default function Dashboard() {
             <Features />
             <div className="row">
               <p>
-                You have more than <span>40</span> Registered business
-              </p>
-              <Link to="#">See all</Link>
+                Traffic History
+              </p>              
             </div>
 
-            <div>
-              {businessData.map((business, index) => (
-                <div className="business_card" key={index}>
-                  <div className="business_details">
-                    <div className="img">
-                      <img src={safaricom} alt="Logo" />
-                    </div>
-                    <div className="text">
-                      <h2>{business.businessName}</h2>
-                      <span>{business.businessCategory}</span>
-                    </div>
-                  </div>
-                  <div className="status">
-                    <h4>{business.status}</h4>
-                    <span>{business.postedAgo}</span>                    
-                  </div>
-                  <div><Link to="/"> {/* Specify the URL for the Eye icon */}
-                <img className="description" alt="Description" src={Eye} />
-              </Link></div>
-                </div>
-              ))}
+            <div className='card'>
+            <MyAreaChart /> 
+            </div>
+            <div className='card'>
+            <Chart /> 
             </div>
           </div>
         </section>

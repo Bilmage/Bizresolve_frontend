@@ -7,7 +7,7 @@ export const AboutHeadline = ({ className }) => {
         <div className="container">
             <h1 className={`about-headline-text ${className}`}>
                 <div className="headline">
-                    <img className="line" alt="Line" src={Line} />
+                    <img className="smalline" alt="Line" src={Line} />
                     <p className="we-build-bridges">
                         <span className="text-wrapper">We build bridges between</span>
                         <span className="span">&nbsp;</span>

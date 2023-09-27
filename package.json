@@ -33,6 +33,7 @@
     "framer-motion": "^10.16.1",
     "lottie-react": "^2.4.0",
     "react": "^18.2.0",
+    "react-burger-menu": "^3.0.9",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
     "react-faq-component": "^1.3.4",
@@ -76,6 +77,6 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "daisyui": "^3.6.3"
+    "daisyui": "^3.8.0"
   }
 }

@@ -20,7 +20,7 @@ function MyAreaChart() {
   const chartHeight = 250; // You can adjust the height as needed
 
   return (
-    <div style={{ width: '100%', maxWidth: '100%' }}>
+    <div >
       <AreaChart
         width={chartWidth}
         height={chartHeight}
