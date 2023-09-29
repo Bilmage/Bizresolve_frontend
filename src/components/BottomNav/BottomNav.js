@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import ChevronLeft from "../../assets/icons/Chevron Left.png";
-import ChevronRight from "../../assets/icons/Chevron Right.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import "./bottomnav.css";
 
 export const BottomNav = ({ className, nextPath }) => {
@@ -10,14 +10,14 @@ export const BottomNav = ({ className, nextPath }) => {
       <div className={`bottom-nav ${className}`}>
         <Link to="/">
           <div className="div">
-            <img src={ChevronLeft} alt="img" />
+            <FontAwesomeIcon icon={faChevronLeft} className="icon-style"/>
             <div className="back-to-home">Back to home</div>
           </div>
         </Link>
         <Link to={nextPath}>
           <div className="div">
             <div className="next">Next</div>
-            <img src={ChevronRight} alt="img" />
+            <FontAwesomeIcon icon={faChevronRight} className="icon-style right"/>
           </div>
         </Link>
       </div>

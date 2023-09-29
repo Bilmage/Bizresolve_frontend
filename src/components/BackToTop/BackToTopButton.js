@@ -1,28 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
-
-const ButtonContainer = styled.span`
-  position: fixed;
-  bottom: 32px;
-  right: 32px;
-  align-items: center;
-  height: 32px;
-  width: 32px;
-  justify-content: center;
-  z-index: 1000;
-  cursor: pointer;
-  animation: fadeIn 0.3s;
-  opacity: 0.5;
-  background: #a95b1f;
-  border-radius: 4px;
-  transition: opacity 0.4s, color ease-in-out 0.2s, background ease-in-out 0.2s;
-  display: ${({ isScrollButtonVisible }) =>
-    isScrollButtonVisible ? 'flex' : 'none'};
-
-  &:hover {
-    opacity: 1;
-  }
-`;
+import './BackToTopButton.css';
 
 export const BackToTopButton = () => {
   const [showButton, setShowButton] = useState(false);
@@ -47,7 +24,10 @@ export const BackToTopButton = () => {
   };
 
   return (
-    <ButtonContainer isScrollButtonVisible={showButton} onClick={scrollToTop}>
+    <div
+      className={`back-to-top-button ${showButton ? 'visible' : 'hidden'}`}
+      onClick={scrollToTop}
+    >
       <svg
         width={24}
         height={24}
@@ -60,8 +40,7 @@ export const BackToTopButton = () => {
       >
         <path d="M12 19V5M5 12l7-7 7 7" />
       </svg>
-    </ButtonContainer>
+    </div>
   );
 };
-
 export default BackToTopButton;

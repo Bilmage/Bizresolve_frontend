@@ -1,6 +1,6 @@
 .eligibility-header {
     align-items: center;
-    background-color: #f78431;
+    background-color: rgba(247, 132, 49, 1);
     display: flex;
     gap: 10px;
     padding: 10px;
@@ -19,7 +19,7 @@
     flex: 1;
     font-family: "Poppins-Medium", Helvetica;
     font-size: 50px;
-    font-weight: 500;
+    font-weight: 700;
     letter-spacing: 0;
     line-height: normal;
     margin-top: -1px;

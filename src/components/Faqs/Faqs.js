@@ -1,83 +1,47 @@
 import React from "react";
-import {
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
-  Container,
-  Typography,
-} from "@mui/material";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import {Link} from "react-router-dom";
+import "./faqs.css";
 
 export default function Frequents() {
   return (
     <div className="container">
-    <Container className="mt-5" style={{ maxWidth: "auto" }}>
-      <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        >
-          <Typography variant="h6">Question #1</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            <strong>This is the first item's accordion body.</strong> It is shown
-            by default, until the collapse plugin adds the appropriate classes
-            that we use to style each element. These classes control the overall
-            appearance, as well as the showing and hiding via CSS transitions. You
-            can modify any of this with custom CSS or overriding our default
-            variables. It's also worth noting that just about any HTML can go
-            within the <code>.accordion-body</code>, though the transition does
-            limit overflow.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
+      <div className="faq-content">
+        <div className="faq-question">
+          <input id="q1" type="checkbox" className="panel" />
+          <div className="plus">+</div>
+          <label htmlFor="q1" className="panel-title">
+            What documents do I need to have to get Accredited ?
+          </label>
+          <div className="panel-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Maecenas volutpat blandit aliquam etiam erat velit.</div>
+        </div>
+        <div className="faq-question">
+          <input id="q2" type="checkbox" className="panel" />
+          <div className="plus">+</div>
+          <label htmlFor="q2" className="panel-title">
+            How many businesses can I have Registered with Biz-resolve ?
+          </label>
+          <div className="panel-content">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Maecenas volutpat blandit aliquam etiam erat velit.
+          </div>
+        </div>
+        <div className="faq-question">
+          <input id="q3" type="checkbox" className="panel" />
+          <div className="plus">+</div>
+          <label htmlFor="q3" className="panel-title">
+            What happens after I rate a particular business ?
+          </label>
+          <div className="panel-content">
+            Certain questions are better left &nbsp;{" "}
+            <Link to=""
+              href="https://en.wikipedia.org/wiki/The_Unanswered_Question"
+              target="_blank"
+            >
+              unanswered
+            </Link>
+          </div>
+        </div>
+      </div>
 
-      <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel2a-content"
-          id="panel2a-header"
-        >
-          <Typography variant="h6">Question #2</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            <strong>This is the second item's accordion body.</strong> It is
-            hidden by default, until the collapse plugin adds the appropriate
-            classes that we use to style each element. These classes control the
-            overall appearance, as well as the showing and hiding via CSS
-            transitions. You can modify any of this with custom CSS or overriding
-            our default variables. It's also worth noting that just about any HTML
-            can go within the <code>.accordion-body</code>, though the transition
-            does limit overflow.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-
-      <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel3a-content"
-          id="panel3a-header"
-        >
-          <Typography variant="h6">Question #3</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            <strong>This is the third item's accordion body.</strong> It is hidden
-            by default, until the collapse plugin adds the appropriate classes
-            that we use to style each element. These classes control the overall
-            appearance, as well as the showing and hiding via CSS transitions. You
-            can modify any of this with custom CSS or overriding our default
-            variables. It's also worth noting that just about any HTML can go
-            within the <code>.accordion-body</code>, though the transition does
-            limit overflow.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-    </Container>
     </div>
   );
 }
