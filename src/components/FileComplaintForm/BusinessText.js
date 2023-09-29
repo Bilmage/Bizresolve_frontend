@@ -16,7 +16,7 @@ export const BusinessText = ({ className }) => {
             review, tell us about a misleading advertisement, or report a scam,
             you&#39;re in the right place. There are some disputes Bizresolve
             cannot help with, You can view those{" "}
-            <Link to="#">  <strong style={{ textDecoration: "underline", color: '#F78431' }}>
+            <Link to="#">  <strong >
               here.
             </strong></Link>
           </p>

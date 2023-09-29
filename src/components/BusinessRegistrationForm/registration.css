@@ -82,7 +82,8 @@ body {
 
 .form .text-input input[type="text"],
 .form .text-input input[type="email"],
-.form .text-input input[type="tel"] {
+.form .text-input input[type="tel"],
+.form .text-input input[type="physicalAddress"] {
     flex: 2;
     border: 1px solid #ddd;
     border-radius: 5px;

@@ -154,7 +154,7 @@ const BusinessRegistration = ({ className }) => {
 
         </div>
         <hr />
-        <button type="submit" onSubmit={handleFormSubmit}>Submit</button>
+        <button type="submit">Submit</button>
       </form>
     </div>
 

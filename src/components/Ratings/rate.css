@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    height: 405px;
+    height: auto;
     justify-content: center;
     padding: 50px 10px;
     position: relative;
@@ -76,7 +76,72 @@
 .text-wrapper {
     color: #5c6670;
 }
-span {
+span, strong {
     color: #f78431;
     
 }
+
+/** textarea **/
+
+
+  
+.star-icon {
+    cursor: pointer;
+    font-size: 50px;
+    margin-right: 5px;
+    
+   
+  }
+  @media screen and (max-width: 768px) {
+    .star-icon {
+      font-size: 30px; /* Font size for small screens */
+    }
+  }
+  .star-icon.filled {
+    color: #f78431;
+    
+  }
+  .star-icon:not(.filled) {
+    color: gray;
+  }
+  .form-control {
+    width: 50%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+  }
+  @media screen and (max-width: 768px) {
+    .form-control  {
+      width: 80%; 
+    }
+  }
+
+.avatarr img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  }
+  .submit-button {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f78431;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+  }
+  
+  .submit-button:hover {
+    background-color: #d76a21;
+  }
+  

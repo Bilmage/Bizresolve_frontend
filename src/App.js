@@ -50,10 +50,6 @@ function App() {
           <Route path="/accreditationprocess" element={<AccreditationPage />} />          
           <Route path="/search" element={<SearchAccreditedPage />} />
           <Route path="/profile" element={<ProfilePage/>} />
-          
-          
-
-
           <Route path="/dashboard" element={<DashboardPage />} />
           <Route path="/details" element={<DetailsPage />} />
           <Route path="/analytics" element={<AnalyticsPage />} />
