@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import "./style.css";
 import { Routes, Route } from "react-router-dom";
-import { RatingsRedirectPage, SignInPage } from "./components";
+import {  SignInPage } from "./components";
 // import PrivateOutlet from "./utils/privateOutlet";
 import {
   HomePage,
@@ -41,8 +41,7 @@ function App() {
         {/* Protected routes */}
         {/* <Route element={<PrivateOutlet />}> */}
           <Route path="/filecomplaints" element={<FileComplaintsPage />} />
-          <Route path="/ratings" element={<RatingsPage />} />
-          <Route path="/ratingsredirect" element={<RatingsRedirectPage />} />
+          <Route path="/ratings" element={<RatingsPage />} />          
           <Route path="/logcomplaint" element={<LogComplaintsPage />} />
           <Route path="/eligibilityprocess" element={<EligibilityPage />} />
           <Route path="/applicationprocess" element={<ApplicationsPage />} />

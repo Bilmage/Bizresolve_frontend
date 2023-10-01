@@ -58,7 +58,12 @@ const BusinessRegistration = ({ className }) => {
         <div className="avatar">
           <h5>Click to Upload Your Business logo</h5>
           <label htmlFor="logoInput">
-            <img src={safaricom} alt="Profile" className="logo-image" />
+          <div className='avatarr'>
+          
+          <img src={safaricom} alt="Profile" />
+
+       
+      </div>
           </label>
           <input
             accept=".png, .jpg, .jpeg"
@@ -130,6 +135,7 @@ const BusinessRegistration = ({ className }) => {
           <textarea
             id="businessDescription"
             name="businessDescription"
+            type="description"
             rows={3}
             value={formData.businessDescription}
             onChange={handleFormChange}
@@ -154,7 +160,7 @@ const BusinessRegistration = ({ className }) => {
 
         </div>
         <hr />
-        <button type="submit">Submit</button>
+        <button type="submit" >Submit</button>
       </form>
     </div>
 

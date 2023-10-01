@@ -44,11 +44,11 @@ export default function DashboardPage() {
 
               <div className="logo">
                 <Link to="/"><img src={Logo} alt="Logo" /></Link>
-              <li>
-                <button className="close-button" onClick={toggleSidebar}>
-                  <i className="fas fa-times"></i>
-                </button>
-              </li>
+                <li>
+                  <button className="close-button" onClick={toggleSidebar}>
+                    <i className="fas fa-times"></i>
+                  </button>
+                </li>
               </div>
               <li>
                 <Link to="/dashboard">
@@ -88,12 +88,12 @@ export default function DashboardPage() {
                 </Link>
               </li>
               <li>
-                <Link to="#" className="logout">
-                  <i className="fas fa-sign-out-alt" />
+                <Link to="#">
+                  <i class="fa fa-sign-out" aria-hidden="true"></i>
                   <span className="nav-item">Logout</span>
                 </Link>
               </li>
-              </ul>
+            </ul>
           </div>
         </nav>
         <main className={`main ${sidebarOpen ? 'active' : ''}`}>

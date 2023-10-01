@@ -7,7 +7,7 @@ import Banner from "../../assets/images/contact.png";
 
 export const ContactSection = ({ className }) => {
     return (
-        
+        <div className="container">
             <div className={`contact-section ${className}`}>
                 <div className="individuals">
                     <div className="headline">
@@ -36,7 +36,7 @@ export const ContactSection = ({ className }) => {
                         </p>
                     </div>
                     <div className="paragraph">
-                        <img className="img" alt="Map marker" src={MapMarker } />
+                        <img className="img" alt="Map marker" src={MapMarker} />
                         <p className="div">
                             <span className="text-wrapper">Address </span>
                             <span className="span">
@@ -51,7 +51,8 @@ export const ContactSection = ({ className }) => {
                     <img className="contact-us-2" alt="Contact us" src={Banner} />
                 </div>
             </div>
-        
+        </div>
+
     );
 };
 export default ContactSection;

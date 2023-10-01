@@ -8,7 +8,17 @@
     position: relative;
     /* width: 1035px; */
 }
-
+@media (max-width: 768px) {
+    
+  .accredititation {
+    width: 400px;
+   
+  }
+}
+.check{
+  
+  color: #A95B1F;
+}
 .accredititation .acrreditation {
     align-items: center;
     align-self: stretch;
@@ -68,7 +78,7 @@
 }
 @media (max-width: 767px) {
     .accredititation .text-wrapper {
-      font-size: 15px;
+      font-size: 14px;
       
     }
   }

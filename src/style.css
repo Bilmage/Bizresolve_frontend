@@ -6,6 +6,8 @@
   display: flex;
   overflow: hidden;
   align-items: center;
+  justify-content: center;
+  
 }
 
 /* Small mobile view styles */
@@ -14,7 +16,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 100%; /* Adjust this width as needed */
+    max-width: 500px; /* Adjust this width as needed */
     padding: 20px; /* Adjust the padding for small mobile view */
   }
   .sidebar, .content {

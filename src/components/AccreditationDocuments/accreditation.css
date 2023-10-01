@@ -8,7 +8,13 @@
     position: relative;
     
 }
-
+@media (max-width: 768px) {
+    
+  .accreditation  {
+    width: 400px;
+   
+  }
+}
 .accreditation .p-wrapper {
    align-items: center;
     align-self: stretch;
@@ -73,7 +79,7 @@
 }
 @media (max-width: 767px) {
     .accreditation .at-bizresolve-kenya {
-      font-size: 15px;
+      font-size: 14px;
       
     }
   }
