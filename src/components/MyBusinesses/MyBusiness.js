@@ -74,7 +74,7 @@ export default function MyBusiness() {
   );
 
   return (
-    <div className='container-fluid' style={{ display: 'flex', flexDirection: 'column' }}>
+    <div className='container' style={{ display: 'flex', flexDirection: 'column' }}>
       <div style={{ display: 'flex', alignItems: 'center', marginBottom: '1rem' }}>
         {/* Add the search input field */}
         <input

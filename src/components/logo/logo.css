@@ -121,10 +121,7 @@
 
 /* Logo Animations */
 
-.container {
-    width: 100%; /* Adjust as needed */
-    overflow: hidden;
-  }
+
   
   .logos {
     display: flex;

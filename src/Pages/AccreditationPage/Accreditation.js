@@ -1,10 +1,10 @@
 import React from 'react';
 import Navigation from '../../components/Navigation/Navigation';
-import  { Accreditation1 } from '../../components/AccreditationSection1/Accreditation1';
-import Accredititation2 from '../../components/AccreditationSection2/Accreditation2';
-import ApplicationContent from '../../components/ApplicationContent/ApplicationContent';
+import  { Accreditation1 } from '../../components/AccreditationDocuments/Accreditation1';
+import Accredititation2 from '../../components/AccreditationDocuments/Accreditation2';
+import ApplicationContent from '../../components/AccreditationDocuments/Accreditation2';
 import AccreditationDocuments from '../../components/AccreditationDocuments/AccreditationDocuments';
-import AdditionalMessage from '../../components/AdditionalMessage/AdditionalMessage';
+import AdditionalMessage from '../../components/AccreditationDocuments/AdditionalMessage';
 import { BackToTopButton } from "../../components/BackToTop/BackToTopButton";
 import BottomNav from '../../components/BottomNav/BottomNav';
 

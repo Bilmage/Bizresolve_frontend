@@ -1,27 +1,66 @@
 .container {
-    max-width: auto;
-    margin: 0 auto;
-    padding: 20px;
-    /* flex-direction: column; */
-    /* border: 1px solid #ccc; */
-    border-radius: 5px;
-    display: flex;
-   
-   
+  max-width: auto;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+/* Small mobile view styles */
+@media (max-width: 576px) {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px; /* Adjust this width as needed */
+    padding: 20px; /* Adjust the padding for small mobile view */
   }
-  @media (max-width: 768px) {
-    .container {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      
-    }
+  .sidebar, .content {
+    width: 100%; /* Full width for both sidebar and content on small mobile */
   }
-  .body
-   {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #fff;
-    
+}
+
+/* Medium mobile view styles */
+@media (min-width: 577px) and (max-width: 991px) {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%; /* Adjust this width as needed */
+    padding: 30px; /* Adjust the padding for medium mobile view */
   }
+  .sidebar {
+    width: 30%; /* Adjust the width of the sidebar for medium mobile */
+  }
+  .content {
+    width: 70%; /* Adjust the width of the content for medium mobile */
+  }
+}
+
+/* Large mobile view styles */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%; /* Adjust this width as needed */
+    padding: 20px; /* Adjust the padding for large mobile view */
+  }
+  .sidebar {
+    width: 25%; /* Adjust the width of the sidebar for large mobile */
+  }
+  .content {
+    width: 75%; /* Adjust the width of the content for large mobile */
+  }
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

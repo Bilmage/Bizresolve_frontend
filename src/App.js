@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import "./style.css";
 import { Routes, Route } from "react-router-dom";
-import { RatingsRedirectPage, SignInPage } from "./components";
+import {  SignInPage } from "./components";
 // import PrivateOutlet from "./utils/privateOutlet";
 import {
   HomePage,
@@ -14,15 +14,17 @@ import {
   EligibilityPage,
   ApplicationsPage,
   BusinessRegistrationPage,
-  AccreditationPage,
-  MyBusinessPage,
-  FeaturedReviewsPage,
+  AccreditationPage, 
   LogComplaintsPage,
-  Forgot,
-  LandingPage,
+  Forgot,  
   DashboardPage,
-  BusinessProfilePage,
+  DetailsPage,  
   SearchAccreditedPage,
+  ProfilePage,
+  AnalyticsPage,
+  ReportsPage,
+  SettingsPage,
+  HelpPage,
 } from "./Pages";
 
 
@@ -35,23 +37,24 @@ function App() {
         <Route path="/SignIn" element={<SignInPage />} />
         <Route path="/forgotpassword" element={<Forgot />} />
         <Route path="/about" element={<AboutPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/landing" element={<LandingPage />} />
+        <Route path="/contact" element={<ContactPage />} />        
         {/* Protected routes */}
         {/* <Route element={<PrivateOutlet />}> */}
           <Route path="/filecomplaints" element={<FileComplaintsPage />} />
-          <Route path="/ratings" element={<RatingsPage />} />
-          <Route path="/ratingsredirect" element={<RatingsRedirectPage />} />
+          <Route path="/ratings" element={<RatingsPage />} />          
           <Route path="/logcomplaint" element={<LogComplaintsPage />} />
           <Route path="/eligibilityprocess" element={<EligibilityPage />} />
           <Route path="/applicationprocess" element={<ApplicationsPage />} />
           <Route path="/businessregistration" element={<BusinessRegistrationPage />} />
-          <Route path="/accreditationprocess" element={<AccreditationPage />} />
-          <Route path="/featuredreviews" element={<FeaturedReviewsPage />} />
+          <Route path="/accreditationprocess" element={<AccreditationPage />} />          
           <Route path="/search" element={<SearchAccreditedPage />} />
+          <Route path="/profile" element={<ProfilePage/>} />
           <Route path="/dashboard" element={<DashboardPage />} />
-          <Route path="/my-business" element={<MyBusinessPage />} />
-          <Route path="/business-profile" element={<BusinessProfilePage />} />
+          <Route path="/details" element={<DetailsPage />} />
+          <Route path="/analytics" element={<AnalyticsPage />} />
+          <Route path="/reports" element={<ReportsPage/>} />
+          <Route path="/settings" element={<SettingsPage />} />
+          <Route path="/help" element={<HelpPage />} />
           
         {/* </Route> */}
       </Routes>

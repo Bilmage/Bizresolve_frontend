@@ -78,7 +78,13 @@ img {
 .newsletter .section-title p {
     color: #fff;
 }
-
+.newsletter-form {
+    display: flex;
+    justify-content: center; /* Center-align the buttons horizontally */
+    align-items: center; /* Center-align the buttons vertically */
+    margin-top: 20px; /* Add some top margin for spacing */
+    margin: auto;
+  }
 
 
 /* Media query for stacking buttons on top of each other on smaller screens */
@@ -88,6 +94,7 @@ img {
         align-items: center;
         justify-content: center;
         width: auto;
+        margin: auto;
     }
 }
 

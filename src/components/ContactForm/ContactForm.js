@@ -1,17 +1,5 @@
 import React, { useState } from "react";
-import {
-  Container,
-  Grid,
-  Card,
-  CardContent,
-  Typography,
-  TextField,
-  Button,
-  FormControl,  
-  InputLabel,
-  Select,
-  MenuItem,
-} from "@mui/material";
+import "../BusinessRegistrationForm/registration.css";
 
 export const ContactForm = ({ className }) => {
   const [formData, setFormData] = useState({
@@ -19,6 +7,7 @@ export const ContactForm = ({ className }) => {
     email: "",
     phone: "",
     county: "",
+    city: "",
     description: "",
     
   });
@@ -42,175 +31,74 @@ export const ContactForm = ({ className }) => {
   };
 
   return (
-    <Container maxWidth="lg" sx={{ mt: 5 }}>
-      <form onSubmit={handleFormSubmit}>
-      <Grid container justifyContent="center">
-        <Grid item xs={12} md={9}>
-          <Typography
-            variant="h4"
-            style={{ color: "#a95b1f", fontWeight: 700 }}
-            sx={{ mb: 4 }}
-          >
-            Get in touch
-          </Typography>
-          <Typography style={{ color: "#a95b1f" }} sx={{ mb: 4 }}>
-          Bizresolve will use this information to contact you via phone or
-          email
-          </Typography>
-
-          <Card variant="outlined">
-            <CardContent sx={{ px: 4 }}>
-              <Grid container spacing={2} sx={{ pt: 4, pb: 3 }}>
-                <Grid item xs={12} md={3}>
-                  <Typography variant="subtitle1">
-                  Name
-                  </Typography>
-                </Grid>
-                <Grid item xs={12} md={9}>
-                  <TextField
-                    fullWidth
-                    label="Name"
-                    variant="outlined"
-                    size="small"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleFormChange}
-                  />
-                </Grid>
-              </Grid>
-
-              <hr className="mx-n3" />
-              {/* <Grid container spacing={2} sx={{ pt: 4, pb: 3 }}>
-                <Grid item xs={12} md={3}>
-                  <Typography variant="subtitle1">
-                    Physical Addresses
-                  </Typography>
-                </Grid>
-                <Grid item xs={12} md={9}>
-                  <TextField
-                    fullWidth
-                    label="Physical Addresses"
-                    variant="outlined"
-                    size="small"
-                    name="physicalAddresses"
-                    value={formData.physicalAddress}
-                    onChange={handleFormChange}
-                  />
-                </Grid>
-              </Grid>
-
-              <hr className="mx-n3" /> */}
-
-              <Grid container spacing={2} sx={{ pt: 4, pb: 3 }}>
-                <Grid item xs={12} md={3}>
-                  <Typography variant="subtitle1">
-                     Email address
-                  </Typography>
-                </Grid>
-                <Grid item xs={12} md={9}>
-                  <TextField
-                    fullWidth
-                    label="Email"
-                    variant="outlined"
-                    size="small"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleFormChange}
-                  />
-                </Grid>
-              </Grid>
-
-              <hr className="mx-n3" />
-
-              <Grid container spacing={2} sx={{ pt: 4, pb: 3 }}>
-                <Grid item xs={12} md={3}>
-                  <Typography variant="subtitle1">
-                     Phone Number (optional)
-                  </Typography>
-                </Grid>
-                <Grid item xs={12} md={9}>
-                  <TextField
-                    fullWidth
-                    label="Phone Number"
-                    variant="outlined"
-                    size="small"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleFormChange}
-                  />
-                </Grid>
-              </Grid>
-
-              <hr className="mx-n3" />
-
-              <Grid container spacing={2} sx={{ pt: 4, pb: 3 }}>
-                <Grid item xs={12} md={3}>
-                  <Typography variant="subtitle1">County</Typography>
-                </Grid>
-                <Grid item xs={12} md={9}>
-                  <FormControl fullWidth variant="outlined" size="small">
-                    <InputLabel id="subject-label">
-                      County
-                    </InputLabel>
-                    <Select
-                      labelId="subject-label"
-                      label="County"
-                      name="county"
-                      value={formData.county}
-                      onChange={handleFormChange}
-                    >
-                      <MenuItem value="">
-                        <em>None</em>
-                      </MenuItem>
-                      <MenuItem value={1}>Nairobi</MenuItem>
-                      <MenuItem value={2}>Nakuru</MenuItem>
-                      <MenuItem value={3}>Mombasa</MenuItem>
-                      <MenuItem value={3}>Kisumu</MenuItem>
-                    </Select>
-                  </FormControl>
-                </Grid>
-              </Grid>
-
-              <hr className="mx-n3" />
-
-              <Grid container spacing={2} sx={{ pt: 4, pb: 3 }}>
-                <Grid item xs={12} md={3}>
-                  <Typography variant="subtitle1">
-                  Get in Touch
-                  </Typography>
-                </Grid>
-                <Grid item xs={12} md={9}>
-                  <TextField
-                    fullWidth
-                    label="Ask us about anything..."
-                    variant="outlined"
-                    size="small"
-                    multiline
-                    rows={3}
-                    name="Description"
-                    value={formData.description}
-                    onChange={handleFormChange}
-                  />
-                </Grid>
-              </Grid>
-
-              <hr className="mx-n3" />
-
-              
-
-              <hr className="mx-n3" />
-
-             
-
-              <Button variant="contained" size="large" fullWidth sx={{ my: 4 }} style={{backgroundColor: '#F78431'}}>
-                Submit
-              </Button>
-            </CardContent>
-          </Card>
-        </Grid>
-      </Grid>
-      </form>
-    </Container>
+    <div className="container">
+    <form className="form" onSubmit={handleFormSubmit}>
+      <h4>Get in touch</h4>
+      <p>
+        Bizresolve will use this information to contact you via phone or email 
+      </p>      
+      
+      <div className="text-input">
+        <label htmlFor="Name">Name</label>
+        <input type="text" id="Name" name="Name" placeholder="Enter your name" value={formData.name}
+          onChange={handleFormChange} />
+      </div>
+      <hr />
+      <div className="text-input">
+        <label htmlFor="Email">Email address</label>
+        <input type="email" id="businessEmail" name="Email" placeholder="Enter email address" value={formData.email}
+          onChange={handleFormChange} />
+      </div>
+      <hr />
+      <div className="text-input">
+        <label htmlFor="Phone">Phone Number (optional)</label>
+        <input type="tel" id="Phone" name="Phone" placeholder="Enter phone number" value={formData.phone}
+          onChange={handleFormChange} />
+      </div>
+      <hr />
+      <div className="text-input">
+        <label htmlFor="Category">Physical Address</label>
+        <select id="County" name="County" value={formData.county}
+          onChange={handleFormChange}>
+          <option value="">County</option>
+          <option value={1}>Nairobi</option>
+          <option value={2}>Kisumu</option>
+          <option value={3}>Mombasa</option>
+          <option value={4}>Nakuru</option>
+          <option value={5}>Naivasha</option>
+          <option value={6}>Kisii</option>
+        </select>
+        &nbsp; &nbsp;
+        <select id="City" name="City" value={formData.city}
+          onChange={handleFormChange}>
+          <option value="">City</option>
+          <option value={1}>Nairobi</option>
+          <option value={2}>Kisumu</option>
+          <option value={3}>Mombasa</option>
+          <option value={4}>Nakuru</option>
+          <option value={5}>Naivasha</option>
+          <option value={6}>Kisii</option>
+        </select>
+      </div>
+      <hr />
+     
+      <div className="description-input">
+        <label htmlFor="businessDescription" className="text-input">Get in touch</label>
+        <textarea
+          id="businessDescription"
+          name="businessDescription"
+          type="description"
+          rows={3}
+          value={formData.description}
+          onChange={handleFormChange}
+        />
+      </div>
+      <hr />
+     
+      
+      <button type="submit">Submit</button>
+    </form>
+  </div>
   );
 };
 
