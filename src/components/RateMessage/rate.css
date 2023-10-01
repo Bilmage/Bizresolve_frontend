@@ -1,0 +1,82 @@
+.rate-message {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 405px;
+    justify-content: center;
+    padding: 50px 10px;
+    position: relative;
+    width: 1128px;
+}
+
+.rate-message .rate-your-experience {
+    color: #ec6809;
+    font-family: "Inter-ExtraBold", Helvetica;
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: 0;
+    line-height: 96px;
+    margin-top: -0.97px;
+    position: relative;
+    white-space: nowrap;
+    align-items: center;
+    justify-content: center;
+    /* width: fit-content; */
+}
+@media (max-width: 768px) {
+    .rate-message .rate-your-experience {
+     font-size: 20px;
+     
+        } 
+    }
+    
+.rate-message .are-you-satisfied {
+    color: #a95b1f;
+    font-family: "Inter-SemiBold", Helvetica;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 72px;
+    position: relative;
+    white-space: nowrap;
+    /* width: fit-content; */
+}
+@media (max-width: 768px) {
+    .rate-message .are-you-satisfied {
+     font-size: 18px;
+     
+        } 
+    }
+.rate-message .size-default-instance {
+    gap: 32.32px !important;
+}
+
+.rate-message .design-component-instance-node {
+    height: 96.95px !important;
+    min-width: 96.95px !important;
+    position: relative !important;
+}
+.additionally-you-ll {
+    color: #5c6670;
+    flex: 1;
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    line-height: 25.9px;
+    margin-top: -0.7px;
+    position: relative;
+    margin-left: 10px;
+    letter-spacing: 0.05em;
+
+
+
+}
+.text-wrapper {
+    color: #5c6670;
+}
+span {
+    color: #f78431;
+    
+}

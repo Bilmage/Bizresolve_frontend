@@ -6,7 +6,7 @@ export const AboutText = ({ className }) => {
         <div className="container">
         <div className={`about-text ${className}`}>
             <p className="paragraph">
-                We are dedicated to assisting businesses in Kenya in effectively managing complaints and delivering solutions
+                we are dedicated to assisting businesses in Kenya in effectively managing complaints and delivering solutions
                 that cater to their customers&#39; needs.
             </p>
         </div>

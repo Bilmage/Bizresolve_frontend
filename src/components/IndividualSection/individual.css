@@ -1,18 +1,15 @@
 /**Individual Section*/
 
 .individual-right {
-    align-items: flex-start;
+    align-items: flex-end;
     display: flex;
     flex-direction: column;
     gap: 4.88px;
     height: 394px;
     justify-content: center;
     position: relative;
-    width: 100%;   
-    padding-left: 40px;
-    
-    
-    
+    width: auto;
+    margin-left: 20px;
 }
 
 .individual-right .headline {
@@ -35,7 +32,6 @@
     line-height: normal;
     margin-top: -0.53px;
     position: relative;
-    text-align: start;
 }
 @media (max-width: 767px) {
     .individual-right .for-consumers {    
@@ -52,10 +48,6 @@
     position: relative;
     width: auto;
     
-    
-    
-    
-    
 }
 
 .individual-right .Line1 {
@@ -65,10 +57,9 @@
     font-size: 15.8px;
     font-weight: 500;
     letter-spacing: 0.05em;
-    line-height: normal;   
+    line-height: normal;
+    margin-top: -0.53px;
     position: relative;
-    text-align: start;
-    
 }
 @media (max-width: 767px) {
     .individual-right .Line1 {    
@@ -83,10 +74,9 @@
     font-size: 15.8px;
     font-weight: 500;
     letter-spacing: 0.05em;
-    line-height: normal;   
+    line-height: normal;
+    margin-top: -0.53px;
     position: relative;
-    text-align: start;
-    
 }
 @media (max-width: 767px) {
     .individual-right .Line2 {    
@@ -101,10 +91,9 @@
     font-size: 15.8px;
     font-weight: 500;
     letter-spacing: 0.05em;
-    line-height: normal;    
+    line-height: normal;
+    margin-top: -0.53px;
     position: relative;
-    text-align: start;
-     
 }
 @media (max-width: 767px) {
     .individual-right .Line3 {    
@@ -119,10 +108,9 @@
     font-size: 15.8px;
     font-weight: 500;
     letter-spacing: 0.05em;
-    line-height: normal;    
+    line-height: normal;
+    margin-top: -0.53px;
     position: relative;
-    text-align: start;
-    
 }
 @media (max-width: 767px) {
     .individual-right .Line4 {    
@@ -147,7 +135,6 @@
     min-width: 360px;
     object-fit: cover;
     position: relative;
-    
 }
 @media (max-width: 767px) {
     .individualleft .image {
@@ -159,10 +146,7 @@
     }
 }
 
-.check{
-  
-    color: #A95B1F;
-  }
+
 
 
 

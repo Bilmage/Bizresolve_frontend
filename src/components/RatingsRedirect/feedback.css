@@ -1,0 +1,53 @@
+.feedback-message {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    /* width: 1128px; */
+}
+
+.feedback-message .thumb-up {
+    height: 96px;
+    min-width: 96px;
+    position: relative;
+}
+
+.feedback-message .text {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    position: relative;
+}
+
+.feedback-message .thank-you {
+    color: #a95b1f;
+    flex: 1;
+    font-family: "Poppins-SemiBold", Helvetica;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 96px;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.feedback-message .message {
+    color: #5c6670;
+    flex: 1;
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    line-height: 25.9px;
+    margin-top: -0.7px;
+    position: relative;
+    margin-left: 10px;
+    letter-spacing: 0.05em;
+}

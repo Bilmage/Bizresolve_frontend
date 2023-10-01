@@ -1,23 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import ChevronLeft from "../../assets/icons/Chevron Left.png";
+import ChevronRight from "../../assets/icons/Chevron Right.png";
 import "./bottomnav.css";
 
-export const BottomNav = ({ className, nextPath }) => {
+export const BottomNav = ({ className, backPath, nextPath }) => {
   return (
     <div className="container">
       <div className={`bottom-nav ${className}`}>
-        <Link to="/">
+        <Link to={backPath}>
           <div className="div">
-            <FontAwesomeIcon icon={faChevronLeft} className="icon-style"/>
+            <img src={ChevronLeft} alt="img" />
             <div className="back-to-home">Back to home</div>
           </div>
         </Link>
         <Link to={nextPath}>
           <div className="div">
             <div className="next">Next</div>
-            <FontAwesomeIcon icon={faChevronRight} className="icon-style right"/>
+            <img src={ChevronRight} alt="img" />
           </div>
         </Link>
       </div>

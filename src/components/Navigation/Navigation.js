@@ -54,7 +54,8 @@ export const Navigation = ({ navigation }) => {
           {auth && auth.user ? (
             <div className="d-flex flex-row w-100">
               <div className="dropdown">
-                <Link to="#"                  
+                <a
+                  href="#"
                   role="button"
                   id="avatar-dropdown"
                   onClick={handleToggleDropdown}
@@ -62,21 +63,18 @@ export const Navigation = ({ navigation }) => {
                 >
                   <img
                     src="https://robohash.org/mail@ashallendesign.co.uk"
-                    alt="avatar-img"
+                    alt="avatar-image"
                     className="avatar-logo"
                   />
-                </Link>
+                </a>
                 <ul
                   className={`dropdown-menu${isOpen ? " show" : ""}`}
                   aria-labelledby="avatar-dropdown"
                 >
                   <li>
-                    <Link to="#" onClick={handleLogout} className="logout-link">
+                    <a href="#" onClick={handleLogout} className="logout-link">
                       Logout
-                    </Link>
-                    <Link to="#" className="logout-link">
-                      Dashboard
-                    </Link>
+                    </a>
                   </li>
                   <li>
                     <a href="/dashboard" className="logout-link">

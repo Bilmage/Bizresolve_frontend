@@ -1,0 +1,87 @@
+.accredititation {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    padding: 15px;
+    position: relative;
+    /* width: 1035px; */
+}
+
+.accredititation .acrreditation {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.accredititation .div {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 6.28px;
+    padding: 6.28px;
+    position: relative;
+    /* width: 100%; */
+}
+
+.accredititation .what-is-bizresolve {
+    color: #a95b1f;
+    flex: 1;
+    font-family: "Poppins-SemiBold", Helvetica;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    line-height: normal;
+    margin-top: -0.63px;
+    position: relative;
+    margin: auto;
+}
+@media (max-width: 767px) {
+    .accredititation .what-is-bizresolve {
+      font-size: 23px;
+      
+    }
+  }
+.accredititation .text-wrapper {
+  color: #5c6670;
+  flex: 1;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  line-height: 25.9px;
+  margin-top: -0.7px;
+  position: relative;
+  margin-left: 10px;
+  letter-spacing: 0.05em;
+
+
+
+}
+@media (max-width: 767px) {
+    .accredititation .text-wrapper {
+      font-size: 15px;
+      
+    }
+  }
+.accredititation .accredited-questions {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 50.85px;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+

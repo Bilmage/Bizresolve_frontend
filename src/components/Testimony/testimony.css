@@ -4,13 +4,11 @@
     max-width: 24rem;
   }
   .cardtitle {
-    font-weight: 700;
+    font-weight: bold;
     /* --tw-text-opacity: 1; */
-    color: #a95b1f !important; 
+    color: #35393cff;
     text-align: center;
   }
-
-
   .cardimg {
     margin-left: auto;
     margin-right: auto;
@@ -21,9 +19,8 @@
   }
   .carddescription {
     /* --tw-text-opacity: 1; */
-    color: #35393cff !important;
+    color: #35393cff;
     text-align: center;
-    font-weight: 500;
   }
   
   body {

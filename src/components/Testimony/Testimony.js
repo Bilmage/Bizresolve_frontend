@@ -13,7 +13,7 @@ export default function Testimony({className}) {
   <div className="testimonials mb-8">
     <label className="item" htmlFor="t-1">
       <div className="mycard">
-        <p className="cardtitle" >Práctica</p>
+        <p className="cardtitle">Práctica</p>
         <div>
           <img
             src="https://i.pravatar.cc/200"
@@ -30,7 +30,7 @@ export default function Testimony({className}) {
     </label>
     <label className="item" htmlFor="t-2">
       <div className="mycard">
-        <p className="cardtitle" >Práctica</p>
+        <p className="cardtitle">Práctica</p>
         <div>
           <img
             src="https://i.pravatar.cc/200"

@@ -8,14 +8,12 @@ export {default as EligibilityPage} from "./EligibilityPage/Eligibility";
 export {default as ApplicationsPage} from "./ApplicationsPage/Applications";
 export {default as AccreditationPage} from "./AccreditationPage/Accreditation";
 export {default as LogComplaintsPage} from "./LogComplaintPage/LogComplaint";
+export {default as FeaturedReviewsPage} from "./FeaturedreviewsPage/FeaturedReviews"
+export {default as LandingPage} from "./LandingPage/Landing";
 export {default as BusinessRegistrationPage} from "./BusinessRegistrationPage/BusinessRegistration"
-export {default as DashboardPage} from "./DashboardPage/DashboardPage";
-export {default as DetailsPage} from "./DetailsPage/DetailsPage";
-export {default as AnalyticsPage} from "./AnalyticsPage/AnalyticsPage";
-export {default as ReportsPage} from "./ReportsPage/ReportsPage";
-export {default as SettingsPage} from "./SettingsPage/SettingsPage";
-export {default as HelpPage} from "./HelpPage/HelpPage";
-export {default as Forgot} from "./RegistrationPage/Forgot";
+export {default as DashboardPage} from "./DashboardPage/Dashboard";
+export {default as Forgot} from "./ForgotPasswordPage/Forgot";
+export {default as MyBusinessPage} from "./BusinessName/BusinessName";
+export {default as BusinessProfilePage} from "./BusinessprofilePage/Profile";
 export {default as SearchAccreditedPage} from "./SearchAccreditedPage/SearchAccreditedPage";
-export {default as ProfilePage} from "./ProfilePage/ProfilePage";
  

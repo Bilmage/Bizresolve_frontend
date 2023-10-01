@@ -5,7 +5,7 @@ import "./features.css";
 const featuresData = [
   {
     title: "Users",
-    count: "11 345",
+    count: "1 345",
     icon: <FaUsers size={24} color="white" />,
     bgColor: "#63ccca",
   },
@@ -17,7 +17,7 @@ const featuresData = [
   },
   {
     title: "Ratings",
-    count: "10 456",
+    count: "21",
     icon: <FaStar size={24} color="white" />,
     bgColor: "#f78431",
   },

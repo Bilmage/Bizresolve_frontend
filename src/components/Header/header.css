@@ -20,12 +20,6 @@
     position: relative;
     width: fit-content;
 }
-@media (max-width: 768px) {
-    .header .our-services  {
-      font-size: 18px;
-    }
-  }
-
 
 .header .text-wrapper {
     color: #a95b1f;

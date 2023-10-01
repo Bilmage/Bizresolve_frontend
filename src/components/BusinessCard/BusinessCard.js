@@ -8,8 +8,6 @@ import "./business.css";
 import BusinessLogo from "../../assets/images/Safaricom.png";
 import CertifiedIcon from "../../assets/icons/Certified.png";
 import HeartIcon from "../../assets/icons/Heart.svg";
-import { useGetAllBusinessesQuery } from "../../app/services";
-import { useAuth } from "../../hooks";
 
 const businessData = [
   {
@@ -27,10 +25,6 @@ const businessData = [
 ];
 
 const BusinessCard = ({ business }) => {
-  const auth = useAuth()
-  const { data: businesses, isLoading } = useGetAllBusinessesQuery();
-  console.log("Businesses", businesses)
-  console.log("Auth", auth)
   return (
     <div className="container">
       <div className="business-card">

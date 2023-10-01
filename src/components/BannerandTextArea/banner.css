@@ -42,7 +42,7 @@
 
 @media (max-width: 768px) {  /* Adjust styles for tablets */
     .text-area {
-        width: 400px;
+        width: 100%;
         padding: 0px;
         font-size: 16px;
     }
@@ -125,8 +125,7 @@
     gap: 7.04px;
     padding: 0px 10px;
     position: relative;
-    width: auto;
-    
+    width: auto
     
 }
 
@@ -142,7 +141,6 @@
     position: relative;
     margin-left: 10px;
     letter-spacing: 0.05em;
-    text-align: start;
     
 }
 

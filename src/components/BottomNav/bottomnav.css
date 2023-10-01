@@ -39,7 +39,7 @@
     position: relative;
     text-align: center;
     white-space: nowrap;
-    /* width: fit-content; */
+    width: fit-content;
 }
 
 .bottom-nav .div {
@@ -56,29 +56,14 @@
     font-family: "Poppins-Bold", Helvetica;
     font-size: 16px;
     font-weight: 700;
-    letter-spacing: 0.05em;    
+    letter-spacing: 0.05em;
+    line-height: 183.7px;
+    margin-bottom: -76.39px;
+    margin-top: -80.06px;
     position: relative;
     text-align: center;
     white-space: nowrap;
-    /* width: fit-content; */
+    width: fit-content;
 }
 
 
-.icon-style {
-    color: #f78431;
-    font-weight: 1000;
-    transition: transform 0.3s, box-shadow 0.4s; 
-    cursor: pointer; 
-  }
-  
-  .icon-style:hover {
-    transform: translateX(-10px); 
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); 
-  }
-  
-  .icon-style.right:hover {
-    transform: translateX(10px); 
-  }
-
-  
-  

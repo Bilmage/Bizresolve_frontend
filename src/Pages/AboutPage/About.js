@@ -1,7 +1,7 @@
 import React from "react";
 import { Navigation } from "../../components/Navigation/Navigation";
 import { AboutHeadlineText } from "../../components/AboutHeadline/AboutHeadlineText";
-import { AboutBanner } from "../../components/AboutHeadline/AboutBanner";
+import { AboutBanner } from "../../components/AboutBanner/AboutBanner";
 import { MissionSection } from "../../components/MissionSection/MissionSection";
 import { VisionSection } from "../../components/VisionSection/VisionSection";
 import { Header } from '../../components/Header/Header';
@@ -9,7 +9,6 @@ import { Services } from "../../components/Services/Services";
 import { ContactSection } from "../../components/ContactSection/ContactSection";
 import { BackToTopButton } from "../../components/BackToTop/BackToTopButton";
 import { BizFooter } from '../../components/Footer/BizFooter';
-import Frequents from "../../components/Faqs/Faqs";
 
 export default function AboutPage() {
   return (
@@ -17,7 +16,7 @@ export default function AboutPage() {
       <Navigation />
       <AboutHeadlineText />
       <AboutBanner />
-      <hr className="mx-n3" />
+      {/* <hr className="mx-n3" /> */}
       <MissionSection />
       <hr className="mx-n3" />
       <VisionSection />
@@ -28,11 +27,6 @@ export default function AboutPage() {
       </div>
       <Services />
       <ContactSection />
-      <div>
-        <Header mainText="Frequently" secondaryText="Asked Questions" />
-
-      </div>
-      <Frequents />
       <BackToTopButton />
       <BizFooter />
     </>

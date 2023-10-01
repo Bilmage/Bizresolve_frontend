@@ -1,0 +1,79 @@
+.accreditation {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    padding: 15px;
+    position: relative;
+    
+}
+
+.accreditation .p-wrapper {
+   align-items: center;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 6.28px;
+    padding: 6.28px;
+    position: relative;
+}
+
+.accreditation .get-ready-to-be {
+    color: #ec6809;
+    flex: 1;
+    font-family: "Poppins-SemiBold", Helvetica;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    line-height: normal;
+    margin-top: -0.66px;
+    position: relative;
+}
+@media (max-width: 767px) {
+    .accreditation .get-ready-to-be {
+      font-size: 26px;
+      
+    }
+  }
+.accreditation .are-you-a-new {
+    color: #a95b1f;
+    flex: 1;
+    font-family: "Poppins-SemiBold", Helvetica;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    line-height: normal;
+    margin-top: -0.66px;
+    position: relative;
+    display: flex;
+    
+}
+@media (max-width: 767px) {
+    .accreditation .are-you-a-new {
+      font-size: 23px;
+      
+    }
+  }
+.accreditation .at-bizresolve-kenya {
+  color: #5c6670;
+  flex: 1;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  line-height: 25.9px;
+  margin-top: -0.7px;
+  position: relative;
+  margin-left: 10px;
+  letter-spacing: 0.05em;
+
+
+
+}
+@media (max-width: 767px) {
+    .accreditation .at-bizresolve-kenya {
+      font-size: 15px;
+      
+    }
+  }

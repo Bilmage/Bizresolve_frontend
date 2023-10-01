@@ -1,0 +1,36 @@
+.addtional-message {
+    align-items: flex-start;
+    display: flex;
+    gap: 4.14px;
+    height: auto;
+    padding: 4.14px;
+    position: relative;
+    margin-left: 20px;
+   
+}
+
+.addtional-message .additionally-you-ll {
+    color: #5c6670;
+    flex: 1;
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    line-height: 25.9px;
+    margin-top: -0.7px;
+    position: relative;
+    margin-left: 10px;
+    letter-spacing: 0.05em;
+
+
+
+}
+
+.addtional-message .text-wrapper {
+    color: #5c6670;
+}
+
+.addtional-message .span {
+    color: #f78431;
+    text-decoration: underline;
+}

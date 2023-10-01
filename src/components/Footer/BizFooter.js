@@ -57,7 +57,7 @@ export const BizFooter = ({ footer }) => {
               <h6>For Consumers</h6>
               <ul className="footer-links">
                 <li>
-                  <a href="/">Search for a Biz-resolve Accredited business</a>
+                  <a href="/">Search for a Bizresolve Accredited business</a>
                 </li>
                 <li>
                   <a href="/ratings">Start a review</a>
@@ -77,7 +77,7 @@ export const BizFooter = ({ footer }) => {
                   <a href="/">Get Accredited</a>
                 </li>
                 <li>
-                  <a href="/">Apply for Biz-resolve Accreditation</a>
+                  <a href="/">Apply for Bizresolve Accreditation</a>
                 </li>
                 <li>
                   <a href="/">Become a partner</a>

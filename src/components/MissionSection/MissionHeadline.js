@@ -1,7 +1,7 @@
 import React from "react";
 import "./mission.css";
 
-export const MissionHeadline = ({ className }) => {
+const MissionHeadline = ({ className }) => {
   return (
     <div className="container">
     <h1 className={`mission-headline ${className}`}>

@@ -1,7 +1,6 @@
 import React from "react";
 import "./testimonial.css";
-import { Link } from "react-router-dom";
-
+// import ProfilePic from "../../assets/images/Profilepic1.png";
 
 export const TestimonialCarousel = ({ className, testimonials }) => {
   return (
@@ -11,9 +10,9 @@ export const TestimonialCarousel = ({ className, testimonials }) => {
         {testimonials.map((testimonial, index) => (
           <li key={index} className={index % 2 === 0 ? "" : "timeline-inverted"}>
             <div className="timeline-badge">
-              <Link to="#">
+              <a>
                 <i className={`fa fa-circle ${index % 2 === 0 ? "" : "invert"}`} id="" />
-              </Link>
+              </a>
             </div>
             <div className="timeline-panel">
               <div className="timeline-heading">

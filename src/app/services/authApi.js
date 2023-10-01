@@ -15,8 +15,6 @@ export const authApi = createApi({
       return headers
     },
   }),
-
-  // tagTypes: ["businesses"],
   endpoints: (builder) => ({
     signup: builder.mutation({
       query: (credentials) => ({
@@ -32,19 +30,7 @@ export const authApi = createApi({
         body: credentials,
       }),
     }),
-    getAllBusinesses: builder.query({
-      query: () => `business-entities`,
-      // providesTags: ["businesses"],
-    }),
-    registerBusiness: builder.mutation({
-      query: (body) => ({
-        url: `business-entities`,
-        method: "POST",
-        body
-      }),
-      // invalidatesTags: ["relationshipManagers", "portfolios"],
-    }),
   }),
 })
 
-export const { useLoginMutation, useSignupMutation, useGetAllBusinessesQuery, useRegisterBusinessMutation } = authApi
+export const { useLoginMutation, useSignupMutation } = authApi
