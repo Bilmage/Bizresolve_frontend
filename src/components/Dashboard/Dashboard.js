@@ -3,7 +3,9 @@ import "./dashboard.css";
 import Features from "../../components/Features/Features";
 import { Link } from 'react-router-dom';
 import safaricom from "../../assets/images/Safaricom.png";
+import Dropbox from "../../assets/images/Dropbox logo.png"
 import Eye from "../../assets/icons/Redeye.svg";
+import BusinessList from '../BusinessCard/BusinessCard';
 
 const businessData = [
   {
@@ -11,7 +13,14 @@ const businessData = [
     businessCategory: 'Internet',
     status: 'Accredited',
     postedAgo: '1 day ago',
-    logoSrc: 'safaricom',
+    logoSrc: safaricom,
+  },
+    {
+    businessName: 'Dropbox',
+    businessCategory: 'Cloud',
+    status: 'Accredited',
+    postedAgo: '3 days ago',
+    logoSrc: Dropbox,
   },
 
 ];
@@ -64,6 +73,13 @@ export default function Dashboard() {
             <Features />
             <div className="row">
               <p>
+                There are more than <span>20</span> Certified business, swipe to see more
+              </p>
+              {/* <Link to="#">See all</Link> */}
+            </div>
+            <BusinessList />
+            <div className="row">
+              <p>
                 You have more than <span>40</span> Registered business
               </p>
               <Link to="#">See all</Link>
@@ -74,7 +90,7 @@ export default function Dashboard() {
                 <div className="business_card" key={index}>
                   <div className="business_details">
                     <div className="img">
-                      <img src={safaricom} alt="Logo" />
+                      <img src={business.logoSrc} alt="Logo" />
                     </div>
                     <div className="text">
                       <h2>{business.businessName}</h2>
@@ -83,15 +99,17 @@ export default function Dashboard() {
                   </div>
                   <div className="status">
                     <h4>{business.status}</h4>
-                    <span>{business.postedAgo}</span>                    
+                    <span>{business.postedAgo}</span>
                   </div>
-                  <div><Link to="/"> {/* Specify the URL for the Eye icon */}
-                <img className="description" alt="Description" src={Eye} />
-              </Link></div>
+                  <div><Link to="/profile"> {/* Specify the URL for the Eye icon */}
+                    <img className="description" alt="Description" src={Eye} />
+                  </Link></div>
                 </div>
               ))}
             </div>
+
           </div>
+          
         </section>
       </div>
     </>

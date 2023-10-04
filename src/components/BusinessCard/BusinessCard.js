@@ -4,7 +4,8 @@ import { faStar, faBookmark } from '@fortawesome/free-solid-svg-icons';
 import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import "./business.css";
-
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 import BusinessLogo from "../../assets/images/Safaricom.png";
 import CertifiedIcon from "../../assets/icons/Certified.png";
 import HeartIcon from "../../assets/icons/Heart.svg";
@@ -14,7 +15,7 @@ import { useAuth } from "../../hooks";
 const businessData = [
   {
     name: "Safaricom",
-    type: "Business",
+    type: "Internet",
     imageSrc: BusinessLogo,
     description:
       "It is the largest telecommunications provider in Kenya, and one of the most profitable companies in the East and Central Africa region.",
@@ -23,7 +24,17 @@ const businessData = [
     isCertified: true,
     rating: 4,
   },
-  // Add more business entries if needed
+  {
+    name: "Safaricom",
+    type: "Internet",
+    imageSrc: BusinessLogo,
+    description:
+      "It is the largest telecommunications provider in Kenya, and one of the most profitable companies in the East and Central Africa region.",
+    location: "Nairobi, Westlands",
+    isNew: true,
+    isCertified: true,
+    rating: 4,
+  },
 ];
 
 const BusinessCard = ({ business }) => {
@@ -77,7 +88,7 @@ const BusinessCard = ({ business }) => {
           <Link to="/ratings">
             <Button text="Leave a review" icon={faStar} size="small" ></Button>
           </Link>
-          <Link to="#">
+          <Link to="/profile">
             <Button text="View profile" icon={faBookmark} size="small" disabled={true} ></Button>
           </Link>
         </div>
@@ -89,10 +100,12 @@ const BusinessCard = ({ business }) => {
 
 export const BusinessList = () => {
   return (
-    <div className="business-list-container"> {/* Add the "container" class to wrap the list */}
-      {businessData.map((business, index) => (
-        <BusinessCard key={index} business={business} />
-      ))}
+    <div className="business-list-container">
+      <Carousel showArrows={true} showStatus={false} showThumbs={false}>
+        {businessData.map((business, index) => (
+          <BusinessCard key={index} business={business} />
+        ))}
+      </Carousel>
     </div>
     
   );

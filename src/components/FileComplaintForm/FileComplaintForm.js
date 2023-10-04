@@ -65,8 +65,8 @@ export const FileComplaintForm = ({ className }) => {
         </div>
         <hr />
         <div className="text-input">
-          <label htmlFor="businessPhysicalAddress">Business Physical address</label>
-          <input type="physicalAddress" id="businessPhysicalAddress" name="businessPhysicalAddress" placeholder="Business Physical address" value={formData.businessPhysicalAddress}
+          <label htmlFor="businessPhysicalAddress">Business Physical Address</label>
+          <input type="text" id="businessPhysicalAddress" name="businessPhysicalAddress" placeholder="Enter business physical address" value={formData.businessPhysicalAddress}
             onChange={handleFormChange} />
         </div>
         <hr />
