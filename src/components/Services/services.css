@@ -64,7 +64,11 @@
   
     /* Additional styles if needed */
   }
-  
+  @media (max-width: 768px) {
+    .services .p  {
+     font-size: 14px;
+    }
+  }
   /* Media queries for responsiveness */
   @media (max-width: 1199px) {
     .services {

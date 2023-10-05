@@ -96,6 +96,13 @@
     width: 15% !important;
     height: 15% !important;
 }
+@media screen and (max-width: 768px) {
+    .image {
+        width: 60px !important;
+        height: 60px !important;
+    }
+}
+
 .business-card .frame {
     align-items: flex-start;
     display: flex;
@@ -173,7 +180,7 @@
 @media screen and (max-width: 768px) {
     .business-card .heart {
       
-      width: 10px; 
+      width: 17px !important; 
       
       
     }
@@ -285,10 +292,10 @@
 }
 
 .business-card .element {
-    height: 10%;
+    height: 60px !important; 
     object-fit: cover;
     position: relative;
-    width: 10%;
+    width: 60px !important; 
 }
 
 .business-card .text-wrapper-6 {

@@ -100,12 +100,14 @@ const BusinessCard = ({ business }) => {
 
 export const BusinessList = () => {
   return (
+    <div className="container">
     <div className="business-list-container">
       <Carousel showArrows={true} showStatus={false} showThumbs={false}>
         {businessData.map((business, index) => (
           <BusinessCard key={index} business={business} />
         ))}
       </Carousel>
+    </div>
     </div>
     
   );
