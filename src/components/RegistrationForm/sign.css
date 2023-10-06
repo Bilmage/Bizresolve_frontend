@@ -166,3 +166,15 @@ form {
     max-width: 100%;
     height: auto;
   }
+   /* googleButton.css */
+.google-button {
+
+  border-radius: 6px; 
+  height: 50px;
+  margin: auto; 
+  
+}
+
+.link-text {
+  color: #5c6670;
+}

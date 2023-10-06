@@ -180,11 +180,11 @@ export const SignUp = () => {
           </form>
           <div className="form-footer">
             <hr className="mx-n3" />
-            <p style={{ color: "#5c6670" }}>
+            <p className="link-text">
               Already have an account ?{" "}
               <Link
                 to="/signIn"
-                style={{ textDecoration: "underline", color: "#ec6809" }}
+                className="link-text"
               >
                 Log in
               </Link>
@@ -195,7 +195,7 @@ export const SignUp = () => {
 
             <div className="line"></div>
             <GoogleButton
-              style={{ borderRadius: "6px", height: "50px", margin: "auto" }}
+              className="google-button"
               type="light"
               label="Sign up with Google"
               onClick={() => {
