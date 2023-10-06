@@ -46,7 +46,8 @@ export const SignIn = () => {
       <div className="flex-container">
         {/* Left side with input fields */}
         <div className="form-wrapper">
-          <h1>Log In</h1>
+        <p className="welcome">Welcome back 👋 </p>
+          <h1>Log In</h1>          
           <form>
             <div className="form-item">
             <label htmlFor="email"/>

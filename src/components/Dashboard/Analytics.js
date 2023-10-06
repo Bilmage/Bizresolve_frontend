@@ -16,7 +16,7 @@ export default function Analytics() {
       <div className="container">
         <section className="main">
           <div className="main-top">
-            <p className='welcome'>Hi John doe ! Welcome to your dashboard !</p>
+          <p className='welcome'>Hi John doe 👋 <br/><br/>Welcome to your dashboard !</p>
           </div>
           <div className="main-body">
             <h1>Analytics</h1>

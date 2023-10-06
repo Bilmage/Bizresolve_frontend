@@ -196,8 +196,8 @@ const BusinessRegistration = ({ className }) => {
 
       <div className="grid-container">
         <div className="grid-item">
-          <button className="outlined-button" onClick={handleSetLocation}>
-            Set Location
+        <button className="outlined-button" onClick={handleSetLocation}>
+        <FaMapPin />Set Location
           </button>
         </div>
       </div>

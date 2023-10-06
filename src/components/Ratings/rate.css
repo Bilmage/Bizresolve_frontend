@@ -7,7 +7,7 @@
     justify-content: center;
     padding: 50px 10px;
     position: relative;
-    width: 1128px;
+    /* width: 1128px; */
 }
 
 .rate-message .rate-your-experience {
@@ -48,15 +48,7 @@
      
         } 
     }
-.rate-message .size-default-instance {
-    gap: 32.32px !important;
-}
 
-.rate-message .design-component-instance-node {
-    height: 96.95px !important;
-    min-width: 96.95px !important;
-    position: relative !important;
-}
 .additionally-you-ll {
     color: #5c6670;
     flex: 1;
@@ -69,12 +61,14 @@
     position: relative;
     margin-left: 10px;
     letter-spacing: 0.05em;
+    white-space: normal;
 
 
 
 }
 .text-wrapper {
     color: #5c6670;
+    
 }
 span, strong {
     color: #f78431;
@@ -87,7 +81,7 @@ span, strong {
   
 .star-icon {
     cursor: pointer;
-    font-size: 50px;
+    font-size: 30px;
     margin-right: 5px;
     
    
@@ -114,7 +108,7 @@ span, strong {
   }
   @media screen and (max-width: 768px) {
     .form-control  {
-      width: 80%; 
+      width: 70%; 
     }
   }
 

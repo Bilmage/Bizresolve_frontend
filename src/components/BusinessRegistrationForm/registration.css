@@ -98,7 +98,6 @@ body {
 .form .text-input input[type="text"],
 .form .text-input input[type="email"],
 .form .text-input input[type="tel"],
-.form .text-input input[type="physicalAddress"]
 .form .text-input input[type="description"]  {
     flex: 2;
     border: 1px solid #ddd;
