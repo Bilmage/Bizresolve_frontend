@@ -48,9 +48,9 @@ export const Navigation = ({ navigation }) => {
       <Link to="/"><img src={Logo} alt="Logo" /></Link>
         
         <div className='nav_right'>
-        {/* <Link to='#' className={`menu-bars ${sidebarOpen ? 'close' : ''}`} onClick={toggleSidebar}>
+        <Link to='#' className={`menu-bars ${sidebarOpen ? 'close' : ''}`} onClick={toggleSidebar}>
           {sidebarOpen ? <FaIcons.FaTimes /> : <FaIcons.FaBars />}
-        </Link> */}
+        </Link>
         </div>
       </div>
         

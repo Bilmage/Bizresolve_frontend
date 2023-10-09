@@ -99,7 +99,7 @@ span, strong {
     color: gray;
   }
   .form-control {
-    width: 50%;
+    width: 80%;
     padding: 10px;
     margin-top: 10px;
     border: 1px solid #ccc;
@@ -138,4 +138,5 @@ span, strong {
   .submit-button:hover {
     background-color: #d76a21;
   }
+  
   
