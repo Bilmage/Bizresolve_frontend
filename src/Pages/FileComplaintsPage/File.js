@@ -1,6 +1,5 @@
 import React from 'react';
 import { Navigation } from '../../components/Navigation/Navigation';
-import { BusinessText } from '../../components/FileComplaintForm/BusinessText';
 import { Header } from '../../components/Header/Header';
 import { FileComplaintForm } from '../../components/FileComplaintForm/FileComplaintForm';
 import { BackToTopButton } from "../../components/BackToTop/BackToTopButton";
@@ -14,7 +13,7 @@ export default function FileComplaintsPage() {
         <Header mainText="File a" secondaryText="complaint" />
 
       </div>
-      <BusinessText />
+     
 
       <FileComplaintForm />
       <BackToTopButton />

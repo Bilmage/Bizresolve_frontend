@@ -149,11 +149,11 @@
     position: relative;
     
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .individualleft .image {
-        height: auto;
-        min-width: auto; 
-        width: 60%; 
+        height: 250px;
+        min-width: 250px; 
+        width: 100%; 
         object-fit: cover;
         position: relative;
     }

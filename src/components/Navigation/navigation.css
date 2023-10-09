@@ -16,23 +16,18 @@
   z-index: 100;
   border-bottom: 1px solid #ccc;
 }
-
-.navigation .logo {
-  height: 52px;
-  min-width: 100px;
-  position: relative;
-  background-image: url("../../assets/images/logoipsum.svg");
-  background-size: contain; /* Adjust the background size as needed */
-  background-repeat: no-repeat; /* Prevent the background from repeating */
-  background-position: center; /* Center the background image */
-}
-
-/* avatar logo css */
-.avatar-logo {
-  height: 52px;
-  border-radius: 50%;
-  border: solid 1px #a95b1f;
-  margin-right: 10px;
+.menu-icon {
+  
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #a95b1f;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-100%, 250%);
+  font-size: 1.8rem;
+  cursor: pointer;
 }
 
 
@@ -129,5 +124,109 @@
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
+
+/* Media Query for responsiveness */
+@media (max-width: 768px) {
+  .navigation {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 270px; 
+    position: fixed;
+    top: 0;  
+    height: 100%;
+    background: #fff;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+    z-index: 2; 
+    transition: left 0.3s ease;
+    margin-bottom: 50%
+  }
+
+  .nav-items {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding-top: 20px;
+    
+  }
+
+  .nav-item {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+  
+
+}
+.nav{
+  background-color: #fff;  
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+ 
+  
+}
+
+
+
+
+
+/* Navigation Styles */
+
+.menu-icon {
+  cursor: pointer;  
+  font-size: 1.5rem;
+  color: #a95b1f;
+  display: block;
+  position: absolute;
+  display: none;
+  
+}
+
+
+
+/* Other Navigation Styles */
+
+/* Add your other navigation styles here */
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .navigation {
+    
+    flex-direction: column;
+    align-items: flex-start;
+    width: 270px;
+    position: fixed;
+    top: 0;
+    left: 180px;
+    /* background: #fff; */
+    display: block;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    transition: left 0.3s ease;
+  }
+
+
+  .sidecontent.active {
+    display: flex;
+    right: 0;
+    opacity: 0;
+    display: none; 
+    transition: 300ms;
+  }
+  .sidecontent {
+    /* Styles when sidebar is open */
+    margin-bottom: 100%;         
+    transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+  }
+}
+
+
 
 

@@ -154,7 +154,7 @@ const BusinessRegistration = ({ className }) => {
         <hr />
         <div className="date-picker">
           <p>Select today's date (Required)</p>
-          <label htmlFor="registrationDate">Registration Date</label>
+          <label htmlFor="registrationDate"></label>
           <input type="date" id="registrationDate" name="registrationDate" value={formData.registrationDate}
             onChange={handleFormChange} />
 

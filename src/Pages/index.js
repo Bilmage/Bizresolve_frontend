@@ -16,6 +16,5 @@ export {default as ReportsPage} from "./ReportsPage/ReportsPage";
 export {default as SettingsPage} from "./SettingsPage/SettingsPage";
 export {default as HelpPage} from "./HelpPage/HelpPage";
 export {default as Forgot} from "./RegistrationPage/Forgot";
-export {default as SearchAccreditedPage} from "./SearchAccreditedPage/SearchAccreditedPage";
 export {default as ProfilePage} from "./ProfilePage/ProfilePage";
  

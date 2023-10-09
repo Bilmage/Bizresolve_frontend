@@ -98,7 +98,7 @@ export default function DashboardPage() {
         </nav>
         <main className={`main ${sidebarOpen ? 'active' : ''}`}>
           <Dashboard />
-          <BizFooter />
+          <BizFooter />                 
         </main>
       </div>
     </>

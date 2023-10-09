@@ -43,7 +43,7 @@ export const RatingAndComment = () => {
         <p className="additionally-you-ll">
           <span className="text-wrapper">
             Alternatively, you can search for another business by clicking{' '}
-            <Link to="/search">
+            <Link to="/dashboard">
               <strong >here</strong>
             </Link>
           </span>
