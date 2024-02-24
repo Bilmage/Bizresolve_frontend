@@ -14,6 +14,7 @@ import {
   EligibilityPage,
   ApplicationsPage,
   BusinessRegistrationPage,
+  BusinessInteractionPage,
   AccreditationPage, 
   LogComplaintsPage,
   Forgot,  
@@ -45,6 +46,7 @@ function App() {
           <Route path="/eligibilityprocess" element={<EligibilityPage />} />
           <Route path="/applicationprocess" element={<ApplicationsPage />} />
           <Route path="/businessregistration" element={<BusinessRegistrationPage />} />
+          <Route path="/businessinteraction" element={<BusinessInteractionPage />} />
           <Route path="/accreditationprocess" element={<AccreditationPage />} />         
           <Route path="/profile" element={<ProfilePage/>} />
           <Route path="/dashboard" element={<DashboardPage />} />

@@ -9,6 +9,7 @@ export {default as ApplicationsPage} from "./ApplicationsPage/Applications";
 export {default as AccreditationPage} from "./AccreditationPage/Accreditation";
 export {default as LogComplaintsPage} from "./LogComplaintPage/LogComplaint";
 export {default as BusinessRegistrationPage} from "./BusinessRegistrationPage/BusinessRegistration"
+export {default as BusinessInteractionPage} from "../components/BusinessInteraction/BusinessInteraction"
 export {default as DashboardPage} from "./DashboardPage/DashboardPage";
 export {default as DetailsPage} from "./DetailsPage/DetailsPage";
 export {default as AnalyticsPage} from "./AnalyticsPage/AnalyticsPage";
