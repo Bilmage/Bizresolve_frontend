@@ -37,7 +37,7 @@ body {
 .panel-content {
   font-size: 14px;
   padding: 0px 14px;
-  color: #35393cff !important;
+  font-family: 'inter-medium', Arial, Helvetica, sans-serif;
   margin: 0 40px;
   height: 0;
   overflow: hidden;
@@ -49,7 +49,15 @@ body {
   -o-transition: .4s ease;
   transition: .4s ease;
 }
+@media (max-width: 768px) {
+  .panel-title {
+   font-size: 14px;
+   
+    
 
+      
+  }
+}
 .panel:checked ~ .panel-content{
   height: auto;
   opacity: 1;

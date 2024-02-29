@@ -1,6 +1,6 @@
 import React from 'react';
-import "./dashboard.css";
-import Features from "../../components/Features/Features";
+import "./business.css";
+import Features from "../Features/Features";
 import { Link } from 'react-router-dom';
 import safaricom from "../../assets/images/Safaricom.png";
 import Dropbox from "../../assets/images/Dropbox logo.png"
@@ -11,21 +11,21 @@ const businessData = [
   {
     businessName: 'Safaricom',
     businessCategory: 'Internet',
-    status: 'Accredited',
-    postedAgo: '1 day ago',
+    CTA1: 'File a complaint',
+    CTA2: 'Leave a Review',    
     logoSrc: safaricom,
   },
     {
     businessName: 'Dropbox',
     businessCategory: 'Cloud',
-    status: 'Accredited',
-    postedAgo: '3 days ago',
+    CTA1: 'File a complaint',
+    CTA2: 'Leave a Review',    
     logoSrc: Dropbox,
   },
 
 ];
 
-export default function Dashboard() {
+export default function BusinessInteraction() {
 
 
   return (
@@ -98,8 +98,10 @@ export default function Dashboard() {
                     </div>
                   </div>
                   <div className="status">
-                    <h4>{business.status}</h4>
-                    <span>{business.postedAgo}</span>
+                    <h4>{business.CTA1}</h4>                   
+                  </div>
+                  <div className="status">
+                    <h4>{business.CTA2}</h4>                    
                   </div>
                   <div><Link to="/profile"> {/* Specify the URL for the Eye icon */}
                     <img className="description" alt="Description" src={Eye} />
