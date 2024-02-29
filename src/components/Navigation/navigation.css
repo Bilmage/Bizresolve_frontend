@@ -14,20 +14,35 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
   width: 100vw;
   z-index: 100;
+  justify-content: space-between;
   border-bottom: 1px solid #ccc;
 }
-.menu-icon {
-  
-  cursor: pointer;
-  font-size: 1.5rem;
-  color: #a95b1f;
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: translate(-100%, 250%);
-  font-size: 1.8rem;
-  cursor: pointer;
+
+.toggle-sidebar-btn {
+  display: none; /* Hide the toggle button by default on large screens */
+}
+
+
+.hidden {
+  display: none;
+}
+
+.navigation .logo {
+  height: 52px;
+  min-width: 100px;
+  position: relative;
+  background-image: url("../../assets/images/logoipsum.svg");
+  background-size: contain; /* Adjust the background size as needed */
+  background-repeat: no-repeat; /* Prevent the background from repeating */
+  background-position: center; /* Center the background image */
+}
+
+/* avatar logo css */
+.avatar-logo {
+  height: 52px;
+  border-radius: 50%;
+  border: solid 1px #a95b1f;
+  margin-right: 10px;
 }
 
 
@@ -85,19 +100,20 @@
   letter-spacing: 0.05em;
   line-height: normal;
   position: relative;
+  list-style: none;
   /* width: fit-content; */
   cursor: pointer; /* Add pointer cursor for interactivity */
   transition: 0.3s ease-in-out; /* Add a smooth transition for hover effects */
 }
 
 .nav-items {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 20px;
 }
 
-.nav-item {
-  list-style: none;
+.nav-items-hidden {
+  display: none;
 }
 
 .nav-item a {
@@ -125,108 +141,105 @@
   transform-origin: bottom left;
 }
 
-
-/* Media Query for responsiveness */
-@media (max-width: 768px) {
-  .navigation {
-    flex-direction: column;
-    align-items: flex-start;
-    width: 270px; 
-    position: fixed;
-    top: 0;  
-    height: 100%;
-    background: #fff;
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
-    z-index: 2; 
-    transition: left 0.3s ease;
-    margin-bottom: 50%
-  }
-
-  .nav-items {
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    padding-top: 20px;
-    
-  }
-
-  .nav-item {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-
-  .menu-icon {
-    display: block;
-  }
-  
-
-}
-.nav{
-  background-color: #fff;  
-  height: 80px;
-  width: 100%;
+/* .container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  
- 
-  
+} */
+
+/* .container > div {
+  margin-bottom: 10px;
+} */
+
+.mobile-toggle {
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
 }
 
 
+.hidden {
+  display: none;
+}
+.fa-bars {
+  color: #a95b1f !important ;
+  font-size: 2rem;
+  cursor: pointer;
+}
 
-
-
-/* Navigation Styles */
-
-.menu-icon {
-  cursor: pointer;  
-  font-size: 1.5rem;
-  color: #a95b1f;
-  display: block;
-  position: absolute;
+/* Hide the toggle button by default on large screens */
+.toggle-sidebar-btn {
   display: none;
   
 }
 
+/* ... Your existing styles ... */
 
-
-/* Other Navigation Styles */
-
-/* Add your other navigation styles here */
-
-/* Mobile Responsive Styles */
+/* Media query for small screens */
 @media (max-width: 768px) {
   .navigation {
-    
-    flex-direction: column;
-    align-items: flex-start;
-    width: 270px;
-    position: fixed;
-    top: 0;
-    left: 180px;
-    /* background: #fff; */
-    display: block;
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
-    z-index: 2;
-    transition: left 0.3s ease;
+    width: 100%;
+    align-items: flex-start; 
   }
 
+  .navigation .nav-items{
+    display:none;     
+  }
 
-  .sidecontent.active {
+  .navigation.sidebar-open .nav-items {
     display: flex;
-    right: 0;
-    opacity: 0;
-    display: none; 
-    transition: 300ms;
+    align-items: center;
+    gap: 20px;
   }
-  .sidecontent {
-    /* Styles when sidebar is open */
-    margin-bottom: 100%;         
-    transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  /* Display the toggle button on small screens */
+  .toggle-sidebar-btn {
+    display: block;      
+    cursor: pointer;
+    font-size: 25px;
+  }
+
+  /* Initially hide the nav items on small screens */
+  .nav-items {
+    flex-direction: column;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    padding-top: 0%;
+  }
+
+  .nav-item {
+    margin: 10px 0;
+  }
+
+  /* Show the nav items when the sidebar is open */
+  .nav-items.open {
+    display: flex;
+  }
+
+  .toggle-sidebar-btn {
+    display: block;
+    color: rgb(252, 65, 8);
+    background-color: rgba(4, 0, 0, 0.033);
+    cursor: pointer;
+    
   }
 }
 
+.mobile-nav-items {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
 
-
-
+.mobile-nav-items a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  margin-bottom: 10px;
+}

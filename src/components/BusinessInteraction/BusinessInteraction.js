@@ -6,20 +6,22 @@ import safaricom from "../../assets/images/Safaricom.png";
 import Dropbox from "../../assets/images/Dropbox logo.png"
 import Eye from "../../assets/icons/Redeye.svg";
 import BusinessList from '../BusinessCard/BusinessCard';
+import { Navigation } from "../../components/Navigation/Navigation";
+import { BizFooter } from '../../components/Footer/BizFooter';
 
 const businessData = [
   {
     businessName: 'Safaricom',
     businessCategory: 'Internet',
     CTA1: 'File a complaint',
-    CTA2: 'Leave a Review',    
+    CTA2: 'Leave a Review',
     logoSrc: safaricom,
   },
-    {
+  {
     businessName: 'Dropbox',
     businessCategory: 'Cloud',
     CTA1: 'File a complaint',
-    CTA2: 'Leave a Review',    
+    CTA2: 'Leave a Review',
     logoSrc: Dropbox,
   },
 
@@ -30,10 +32,11 @@ export default function BusinessInteraction() {
 
   return (
     <>
+      <Navigation />
       <div className="container">
         <section className="main">
           <div className="main-top">
-            <p className='welcome'>Hi John doe 👋 <br/><br/>Welcome to your dashboard !</p>
+            <p className='welcome'>Hi John doe 👋 <br /><br />Welcome to your dashboard !</p>
           </div>
           <div className="main-body">
             <h1>Registered Businesses </h1>
@@ -80,7 +83,7 @@ export default function BusinessInteraction() {
             <BusinessList />
             <div className="row">
               <p>
-                You have more than <span>40</span> Registered business
+                There are more than <span>40</span> Registered business at Biz-resolve
               </p>
               <Link to="#">See all</Link>
             </div>
@@ -98,10 +101,19 @@ export default function BusinessInteraction() {
                     </div>
                   </div>
                   <div className="status">
-                    <h4>{business.CTA1}</h4>                   
+                  <Link to="/logcomplaint">
+                    <div className="tag">                      
+                      <span>{business.CTA1}</span>
+                    </div> 
+                    </Link>
                   </div>
+
                   <div className="status">
-                    <h4>{business.CTA2}</h4>                    
+                  <Link to="/ratings">
+                    <div className="tag">                      
+                      <span>{business.CTA2}</span>
+                    </div> 
+                    </Link>
                   </div>
                   <div><Link to="/profile"> {/* Specify the URL for the Eye icon */}
                     <img className="description" alt="Description" src={Eye} />
@@ -111,9 +123,10 @@ export default function BusinessInteraction() {
             </div>
 
           </div>
-          
+
         </section>
       </div>
+      <BizFooter />
     </>
 
   );
