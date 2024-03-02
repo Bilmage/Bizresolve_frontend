@@ -28,6 +28,8 @@ import MyBusiness from '../MyBusinesses/MyBusiness';
 // import Deposits from './Deposits';
 // import Orders from './Orders';
 import LogoIpsum from "../../assets/images/logoipsum.svg";
+import { useGetAllBusinessesQuery, useGetMyBusinessesQuery } from '../../app/services';
+import { useAuth } from '../../hooks';
 
 function Copyright(props) {
   return (
@@ -93,6 +95,10 @@ const defaultTheme = createTheme();
 
 
 export default function MyBusinessPage() {
+  const auth = useAuth()
+  console.log("User", auth.user)
+  const { data : businesses } = useGetMyBusinessesQuery(auth?.user?.id)
+  console.log("My Businesses", businesses)
   const data = [10, 20, 30, 40, 50];
   const testimonials = [
     {

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Avatar from '@mui/material/Avatar';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+import Avatar from "@mui/material/Avatar";
+import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Profile1 from "../../assets/images/Profilepic1.png";
 import {
   Container,
@@ -10,13 +10,23 @@ import {
   Typography,
   TextField,
   Button,
-  FormControl,  
+  FormControl,
   InputLabel,
   Select,
   MenuItem,
 } from "@mui/material";
+import {
+  useAddBusinessFileMutation,
+  useRegisterBusinessMutation,
+} from "../../app/services";
+import { useAuth } from "../../hooks";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const BusinessRegistration = ({ className }) => {
+  const { user } = useAuth();
+  const navigate = useNavigate();
+  const [selectedFile, setSelectedFile] = useState(null);
   const [formData, setFormData] = useState({
     businessName: "",
     businessEmail: "",
@@ -24,11 +34,13 @@ const BusinessRegistration = ({ className }) => {
     businessCategory: "",
     businessDescription: "",
     hasBeenInBusiness: "Yes", // Default value
-    location: null, // Initialize location as null
-    logo: null, // Initialize logo as null
+    // location: null, // Initialize location as null
+    // logo: null, // Initialize logo as null
   });
 
-<<<<<<< HEAD
+  const [registerBusiness, { isLoading }] = useRegisterBusinessMutation();
+  const [addBusinessFile, { isLoading: isUploading }] =
+    useAddBusinessFileMutation();
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -40,41 +52,32 @@ const BusinessRegistration = ({ className }) => {
     // Add your form submission logic here
     // For example, you can send the form data to a backend server
   };
-=======
-  const handleFormSubmit = (event) => {
-    event.preventDefault();
-    // Add your form submission logic here
-    // For example, you can send the form data to a backend server
-  };
 
-
->>>>>>> aad2d5e80d37755f223a160908b7f83ba0642c20
-
-
-  const handleLogoUpload = (event) => {
-    const logoFile = event.target.files[0];
-    if (logoFile) {
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        setFormData((prevData) => ({
-          ...prevData,
-          logo: e.target.result,
-        }));
-      };
-      reader.readAsDataURL(logoFile);
-    }
-  };
-  const handleFileUpload = (event) => {
-    const logoFile = event.target.files[0];
-    if (logoFile) {
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        setFormData((prevData) => ({
-          ...prevData,
-          logo: e.target.result,
-        }));
-      };
-      reader.readAsDataURL(logoFile);
+  // const handleLogoUpload = (event) => {
+  //   const logoFile = event.target.files[0];
+  //   if (logoFile) {
+  //     const reader = new FileReader();
+  //     reader.onload = (e) => {
+  //       setFormData((prevData) => ({
+  //         ...prevData,
+  //         logo: e.target.result,
+  //       }));
+  //     };
+  //     reader.readAsDataURL(logoFile);
+  //   }
+  // };
+  const handleFileUpload = (e) => {
+    const file = e.target.files && e.target.files[0];
+    if (file) {
+      setSelectedFile(file);
+      // const reader = new FileReader();
+      // reader.onload = (e) => {
+      //   setFormData((prevData) => ({
+      //     ...prevData,
+      //     logo: e.target.result,
+      //   }));
+      // };
+      // reader.readAsDataURL(file);
     }
   };
   // Handle form change
@@ -84,6 +87,56 @@ const BusinessRegistration = ({ className }) => {
       ...prevData,
       [name]: value,
     }));
+  };
+
+  const handleRegister = async (e) => {
+    e.preventDefault();
+    try {
+      const body = {
+        businessName: formData.businessName,
+        phoneNumber: formData.businessPhone,
+        email: formData.businessEmail,
+        category: formData.businessCategory,
+        businessOwners: [user.id],
+        businessDescription: formData.businessDescription,
+      };
+      console.log("body", body);
+      const result = await registerBusiness(body).unwrap();
+      console.log("Result", result);
+      const { businessEntityID } = result;
+      if (businessEntityID) {
+        toast.success(
+          "You have successfully registered a business on Bizresolve"
+        );
+        setFormData({
+          businessName: "",
+          businessEmail: "",
+          businessPhone: "",
+          businessCategory: "",
+          businessDescription: "",
+          hasBeenInBusiness: "Yes",
+        });
+        // const formBody = new FormData();
+        // console.log("Selected File", selectedFile);
+        // formBody.append("file", selectedFile);
+        // // console.log("Form Body", formBody)
+        // const businessFile = await addBusinessFile(businessEntityID, formBody);
+        // console.log("Business file", businessFile);
+        // if (businessFile.fileID) {
+        //   setFormData({
+        //     businessName: "",
+        //     businessEmail: "",
+        //     businessPhone: "",
+        //     businessCategory: "",
+        //     businessDescription: "",
+        //     hasBeenInBusiness: "Yes",
+        //   });
+        // }
+      }
+    } catch (error) {
+      console.log("Error", error.data.message);
+      toast.error(`${error.data.message}`);
+    }
   };
 
   return (
@@ -102,10 +155,9 @@ const BusinessRegistration = ({ className }) => {
               Bizresolve will use this information to contact you via phone or
               email to learn more about your business
             </Typography>
-
             <Card variant="outlined">
               <CardContent sx={{ px: 4 }}>
-                <div style={{ alignItems: 'center', textAlign: 'center' }}>
+                {/* <div style={{ alignItems: "center", textAlign: "center" }}>
                   <Typography
                     variant="h5"
                     color="textSecondary"
@@ -116,9 +168,23 @@ const BusinessRegistration = ({ className }) => {
                   </Typography>
                   <label htmlFor="logoInput">
                     {Profile1 ? (
-                      <img src={Profile1} alt="Profile" style={{ width: '100px', height: '100px' }} />
+                      <img
+                        src={Profile1}
+                        alt="Profile"
+                        style={{
+                          width: "100px",
+                          height: "100px",
+                          cursor: "pointer",
+                        }}
+                      />
                     ) : (
-                      <Avatar sx={{ m: 1, bgcolor: 'secondary.main', cursor: 'pointer' }}>
+                      <Avatar
+                        sx={{
+                          m: 1,
+                          bgcolor: "secondary.main",
+                          cursor: "pointer",
+                        }}
+                      >
                         <LockOutlinedIcon />
                       </Avatar>
                     )}
@@ -126,12 +192,11 @@ const BusinessRegistration = ({ className }) => {
                       accept=".png, .jpg, .jpeg"
                       id="logoInput"
                       type="file"
-                      style={{ display: 'none' }}
+                      style={{ display: "none", cursor: "pointer" }}
                       onChange={handleLogoUpload}
                     />
                   </label>
-                </div>
-
+                </div> */}
 
                 <Grid container spacing={2} sx={{ pt: 4, pb: 3 }}>
                   <Grid item xs={12} md={3}>
@@ -193,14 +258,12 @@ const BusinessRegistration = ({ className }) => {
                     />
                   </Grid>
                 </Grid>
-
                 <hr className="mx-n3" />
-
-
-
                 <Grid container spacing={2} sx={{ pt: 4, pb: 3 }}>
                   <Grid item xs={12} md={3}>
-                    <Typography variant="subtitle1">Business Category</Typography>
+                    <Typography variant="subtitle1">
+                      Business Category
+                    </Typography>
                   </Grid>
                   <Grid item xs={12} md={9}>
                     <FormControl fullWidth variant="outlined" size="small">
@@ -215,18 +278,26 @@ const BusinessRegistration = ({ className }) => {
                         onChange={handleFormChange}
                       >
                         <MenuItem value="">
-                          <em>None</em>
+                          <em>Select a category</em>
                         </MenuItem>
-                        <MenuItem value={1}>Subject 1</MenuItem>
-                        <MenuItem value={2}>Subject 2</MenuItem>
-                        <MenuItem value={3}>Subject 3</MenuItem>
+                        <MenuItem value="building & construction">
+                          Building & construction
+                        </MenuItem>
+                        <MenuItem value="JuaKali artisan">
+                          JuaKali artisan
+                        </MenuItem>
+                        <MenuItem value="Bookshop">Bookshop</MenuItem>
+                        <MenuItem value="">Pharmacy</MenuItem>
+                        <MenuItem value="car wash">Car wash</MenuItem>
+                        <MenuItem value="laundramat">Laundramat</MenuItem>
+                        <MenuItem value="mini supermaket">
+                          Mini supermaket
+                        </MenuItem>
                       </Select>
                     </FormControl>
                   </Grid>
                 </Grid>
-
                 <hr className="mx-n3" />
-
                 <Grid container spacing={2} sx={{ pt: 4, pb: 3 }}>
                   <Grid item xs={12} md={3}>
                     <Typography variant="subtitle1">
@@ -247,9 +318,7 @@ const BusinessRegistration = ({ className }) => {
                     />
                   </Grid>
                 </Grid>
-
                 <hr className="mx-n3" />
-
                 <Grid container spacing={2} sx={{ pt: 4, pb: 3 }}>
                   <Grid item xs={12} md={3}>
                     <Typography variant="subtitle1">Upload Document</Typography>
@@ -272,19 +341,21 @@ const BusinessRegistration = ({ className }) => {
                       color="textSecondary"
                       sx={{ mt: 2 }}
                     >
-                      Upload your business license (Required) Max
-                      file size 50 MB
+                      Upload your business license (Required) Max file size 50
+                      MB
                     </Typography>
                   </Grid>
                 </Grid>
-
                 <hr className="mx-n3" />
-
-
-
-
-
-                <Button variant="contained" size="large" fullWidth sx={{ my: 4 }} style={{ backgroundColor: '#F78431' }}>
+                <Button
+                  variant="contained"
+                  size="large"
+                  fullWidth
+                  type="submit"
+                  sx={{ my: 4 }}
+                  style={{ backgroundColor: "#F78431" }}
+                  onClick={(e) => handleRegister(e)}
+                >
                   Submit
                 </Button>
               </CardContent>

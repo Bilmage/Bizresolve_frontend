@@ -27,10 +27,10 @@ const businessData = [
 ];
 
 const BusinessCard = ({ business }) => {
-  const auth = useAuth()
+  // const auth = useAuth()
   const { data: businesses, isLoading } = useGetAllBusinessesQuery();
   console.log("Businesses", businesses)
-  console.log("Auth", auth)
+  // console.log("Auth", auth)
   return (
     <div className="container">
       <div className="business-card">

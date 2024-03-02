@@ -57,8 +57,8 @@ export const RegistrationForm = () => {
     try {
       const response = await signup(formData).unwrap();
       const { user, accessToken } = response;
-      console.log("User", user);
-      console.log("Access token", accessToken);
+      // console.log("User", user);
+      // console.log("Access token", accessToken);
       if (user && accessToken) {
         dispatch(setCredentials({ user, accessToken }));
         // toast.success("You have logged in successfully");

@@ -26,6 +26,7 @@
     "d3": "^7.8.5",
     "faker": "^6.6.6",
     "fast-glob": "^3.3.1",
+    "formik": "^2.4.4",
     "framer-motion": "^10.16.1",
     "lottie-react": "^2.4.0",
     "react": "^18.2.0",
@@ -42,7 +43,8 @@
     "redux-persist": "^6.0.0",
     "styled-components": "^6.0.7",
     "web-vitals": "^2.1.4",
-    "yarn": "^1.22.19"
+    "yarn": "^1.22.19",
+    "yup": "^1.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
