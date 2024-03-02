@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+// Navigation.js
+
+import React, { useState, useEffect } from "react";
 import "./navigation.css";
 import { Link } from "react-router-dom";
-import * as FaIcons from 'react-icons/fa';
 import Button from "../Button/Button";
-import Logo from '../../assets/images/logoipsum.svg';
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { useAuth } from "../../hooks";
 import { useDispatch } from "react-redux";
+import Sidebar from "./Sidebar";
 import { logout } from "../../features/auth/authSlice";
 
 const navigationItems = [
@@ -18,109 +19,142 @@ const navigationItems = [
 export const Navigation = ({ navigation }) => {
   const auth = useAuth();
   const dispatch = useDispatch();
-  const [isOpen, setIsOpen] = useState(false);
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 768);
 
   const handleToggleDropdown = () => {
-    setIsOpen(!isOpen);
+    setSidebarOpen(false); // Close the sidebar when dropdown is toggled
   };
 
   const handleLogout = () => {
     dispatch(logout());
   };
 
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-
   const toggleSidebar = () => {
-    setSidebarOpen(!sidebarOpen);
+    setSidebarOpen(!isSidebarOpen);
   };
 
-  const closeSidebar = () => {
-    if (sidebarOpen) {
-      setSidebarOpen(false);
-    }
-  };
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
-    <>
-    <div className={`overlay ${sidebarOpen ? 'active' : ''}`} onClick={closeSidebar}></div>
-      <div className="navigation">
-      <div className='nav'>
-      <Link to="/"><img src={Logo} alt="Logo" /></Link>
-        
-        <div className='nav_right'>
-        <Link to='#' className={`menu-bars ${sidebarOpen ? 'close' : ''}`} onClick={toggleSidebar}>
-          {sidebarOpen ? <FaIcons.FaTimes /> : <FaIcons.FaBars />}
-        </Link>
-        </div>
-      </div>
-        
     <div className="container-fluid">
-        <div className={`sidecontent ${sidebarOpen ? "active" : "sidebar-hidden"}`}>
-          <ul className="nav-items">
-            {navigationItems.map((item, index) => (
-              <div className="nav-item" key={index}>
-                <Link to={item.path} >
-                  {item.label}
-                </Link>
-              </div>
-            ))}
-            <div className="nav-items">
-              <Link to="/businessregistration">
-                <Button text="Register your Business" icon={faPlus} size="small"></Button>
-              </Link>
-              &nbsp; &nbsp;
-              <Link to="/Registration">
-                <Button text="Sign up" size="small" />
-              </Link>
-              &nbsp; &nbsp;
-              <Link to="/SignIn" >
-                <Button text="Log in" size="small" />
+      <div
+        className={`navigation ${
+          isSidebarOpen && isSmallScreen ? "sidebar-open" : ""
+        }`}
+        style={navigation}
+      >
+        <Link to="/">
+          <div className="logo">{/* Your logo content here */}</div>
+        </Link>
+        {isSmallScreen && (
+          <div className="toggle-sidebar-btn" onClick={toggleSidebar}>
+            <i class="fa fa-bars"></i>
+          </div>
+        )}
+        {isSidebarOpen && isSmallScreen && (
+          <div className="sidebar-backdrop" onClick={toggleSidebar}></div>
+        )}
+        <Sidebar isOpen={isSidebarOpen} onClose={toggleSidebar} />
+        <div
+          className={`nav-items ${
+            isSmallScreen && !isSidebarOpen ? "hidden" : ""
+          }`}
+        >
+          {navigationItems.map((item, index) => (
+            <div className="nav-item" key={index}>
+              <Link
+                to={item.path}
+                onClick={isSmallScreen ? handleToggleDropdown : undefined}
+              >
+                {item.label}
               </Link>
             </div>
-            {auth && auth.user ? (
-              <div className="d-flex flex-column">
-                <div className="dropdown">
-                  <Link
-                    to="#"
-                    role="button"
-                    id="avatar-dropdown"
-                    onClick={handleToggleDropdown}
-                    aria-expanded={isOpen}
-                  >
-                    <img
-                      src="https://robohash.org/mail@ashallendesign.co.uk"
-                      alt="avatar-img"
-                      className="avatar-logo"
-                    />
-                  </Link>
-                  <ul
-                    className={`dropdown-menu ${isOpen ? "show" : ""}`}
-                    aria-labelledby="avatar-dropdown"
-                  >
-                    <li>
-                      <Link to="#" onClick={handleLogout} className="logout-link">
-                        Logout
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/dashboard" className="logout-link">
-                        Dashboard
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-                <p className="welcome-text">
-                  Welcome 👋{auth.user.firstName} {auth.user.lastName}
-                </p>
+          ))}
+          <div>
+            <Link
+              to="/businessregistration"
+              onClick={isSmallScreen ? handleToggleDropdown : undefined}
+            >
+              <Button text="Register your Business" icon={faPlus}></Button>
+            </Link>
+          </div>
+
+          {/* when Auth is true */}
+          {auth && auth.user ? (
+            <div className="d-flex flex-row w-100">
+              <div className="dropdown">
+                <Link
+                  to="#"
+                  role="button"
+                  id="avatar-dropdown"
+                  onClick={isSmallScreen ? handleToggleDropdown : undefined}
+                  // eslint-disable-next-line no-undef
+                  aria-expanded={isOpen}
+                >
+                  <img
+                    src="https://robohash.org/mail@ashallendesign.co.uk"
+                    alt="avatar-img"
+                    className="avatar-logo"
+                  />
+                </Link>
+                <ul
+                  className={`dropdown-menu${setSidebarOpen ? " show" : ""}`}
+                  aria-labelledby="avatar-dropdown"
+                >
+                  <li>
+                    <Link to="#" onClick={handleLogout} className="logout-link">
+                      Logout
+                    </Link>
+                    <Link to="#" className="logout-link">
+                      Dashboard
+                    </Link>
+                  </li>
+                  <li>
+                    <a href="/dashboard" className="logout-link">
+                      Dashboard
+                    </a>
+                  </li>
+                </ul>
               </div>
-            ) : (
-              <div className="container"></div>
-            )}
-          </ul>
+              <p className="welcome-text">
+                Welcome {auth.user.firstName} {auth.user.lastName}
+              </p>
+            </div>
+          ) : (
+            <div className="container">
+              <div>
+                <Link
+                  to="/Registration"
+                  onClick={isSmallScreen ? handleToggleDropdown : undefined}
+                >
+                  <Button text="Sign up" />
+                </Link>
+              </div>
+              &nbsp; &nbsp;
+              <div>
+                <Link
+                  to="/SignIn"
+                  onClick={isSmallScreen ? handleToggleDropdown : undefined}
+                >
+                  <Button text="Log in" />
+                </Link>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>
-    </>
   );
 };
 

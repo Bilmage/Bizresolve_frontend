@@ -21,7 +21,7 @@ const Sidebar = ({ isOpen, onClose }) => {
   return (
     <div className={`sidebar-mobile ${isOpen ? 'open' : ''}`} onClick={toggleSidebar}>
       <div className="close-btn">
-        ×
+      <i class="fa fa-times"></i>
       </div>
       <div className="nav-items">
         {navigationItems.map((item, index) => (
